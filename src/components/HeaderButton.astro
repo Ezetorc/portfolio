@@ -1,0 +1,7 @@
+---
+const { class: extraClass = "" } = Astro.props;
+---
+
+<button class={`desktop:cursor-pointer desktop:hover:brightness-110 ${extraClass}`}>
+  <slot />
+</button>

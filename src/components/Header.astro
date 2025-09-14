@@ -1,0 +1,50 @@
+---
+import MoonIcon from "../icons/MoonIcon.astro";
+import OptionsIcon from "../icons/OptionsIcon.astro";
+import WorldIcon from "../icons/WorldIcon.astro";
+import HeaderButton from "./HeaderButton.astro";
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<header
+  class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-header flex items-center justify-center drop-shadow-2xl"
+>
+  <div
+    class="w-[clamp(360px,100%,1280px)] flex px-4 justify-between items-center"
+  >
+    <div>
+      <h2
+        class="text-white mobile:text-[20px] desktop:text-[24px] font-poppins-semibold"
+      >
+        Ezequias Torczuk
+      </h2>
+
+      <h3 class="text-muted mobile:text-[16px] desktop:text-[20px]">
+        FullStack Developer
+      </h3>
+    </div>
+
+    <div class="flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]">
+      <nav
+        class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]"
+      >
+        <HeaderLink href="/work">Work</HeaderLink>
+        <HeaderLink href="/about-me">About Me</HeaderLink>
+        <HeaderLink href="/contact">Contact</HeaderLink>
+        <HeaderLink href="/technologies">Technologies</HeaderLink>
+      </nav>
+
+      <HeaderButton>
+        <MoonIcon />
+      </HeaderButton>
+
+      <HeaderButton>
+        <WorldIcon />
+      </HeaderButton>
+
+      <HeaderButton class="desktop:hidden">
+        <OptionsIcon />
+      </HeaderButton>
+    </div>
+  </div>
+</header>

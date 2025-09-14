@@ -1,1 +1,49 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-mobile: 360px;
+  --breakpoint-desktop: 860px;
+
+  --font-poppins-light: "Poppins-Light", sans-serif;
+  --font-poppins-regular: "Poppins-Regular", sans-serif;
+  --font-poppins-semibold: "Poppins-Semibold", sans-serif;
+
+  --color-muted: #bdf8ff;
+  --color-highlight: #30679a;
+  --color-header: #02172baa;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Semibold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #001f58;
+  background: radial-gradient(circle at 30% -20%, #001f58 0%, #000b1f 100%);
+}
