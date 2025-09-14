@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
@@ -11,9 +12,13 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Ezequias Torczuk Portfolio</title>
   </head>
-  <body class="font-poppins font-light relative overflow-auto">
+  <body class="font-poppins font-light flex flex-col items-center">
     <Header />
 
-    <slot />
+    <div class="w-[clamp(320px,100%,1280px)] mt-10 mobile:pl-4">
+      <slot />
+    </div>
+
+    <Footer />
   </body>
 </html>

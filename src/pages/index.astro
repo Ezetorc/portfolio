@@ -1,6 +1,37 @@
 ---
+import PrimaryButton from "../components/PrimaryButton.astro";
+import PrimaryLink from "../components/PrimaryLink.astro";
+import SecondaryButton from "../components/SecondaryButton.astro";
+import SecondaryLink from "../components/SecondaryLink.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <main class="w-full flex flex-col desktop:items-center gap-y-[32px]">
+    <div class="flex flex-col mobile:gap-y-[10px] desktop:gap-y-[24px]">
+      <h1
+        class="text-white mobile:text-left desktop:text-center mobile:text-4xl desktop:text-7xl font-poppins-semibold"
+      >
+        Ezequias Torczuk
+      </h1>
+      <h2
+        class="text-[#BDF8FF] mobile:text-left desktop:text-center mobile:text-[28px] desktop:text-5xl font-poppins-semibold"
+      >
+        FullStack Developer
+      </h2>
+
+      <p
+        class="text-[#E6E6E6] mobile:text-left desktop:text-center mobile:text-[16px] desktop:text-2xl"
+      >
+        From Argentina with around <strong class="font-poppins-regular"
+          >2 years of experience</strong
+        >.
+      </p>
+    </div>
+
+    <div class="flex gap-x-[30px]">
+      <PrimaryLink href="/work">View all works</PrimaryLink>
+      <SecondaryLink href="/about-me">Read about me</SecondaryLink>
+    </div>
+  </main>
 </Layout>

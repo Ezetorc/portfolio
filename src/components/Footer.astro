@@ -1,0 +1,40 @@
+---
+import DiscordIcon from "../icons/DiscordIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import FooterLink from "./FooterLink.astro";
+---
+
+<footer
+  class="left-0 bottom-0 fixed w-full flex justify-center mobile:h-[90px] desktop:h-[110px] bg-[#02172B]"
+>
+  <div
+    class="w-[clamp(320px,100%,1280px)] flex justify-center items-center gap-x-[26px]"
+  >
+    <div class="flex flex-col gap-x-[7px] items-center justify-center">
+      <span class="text-[#BDF8FF] font-poppins-semibold text-[20px]"
+        >Updated on</span
+      >
+      <span class="text-[#7EB6EE] font-poppins-regular text-[16px]"
+        >02/10/2025</span
+      >
+    </div>
+
+    <hr class="bg-[#0F4A7B] w-[2px] h-[60%] rounded-[8px]" />
+
+    <div class="flex gap-x-[26px]">
+      <FooterLink
+        ariaLabel="Ezetorc's Github"
+        href="https://github.com/Ezetorc"
+      >
+        <GithubIcon />
+      </FooterLink>
+
+      <FooterLink
+        ariaLabel="Ezetorc's Discord"
+        href="https://discord.com/users/457597163183144970"
+      >
+        <DiscordIcon />
+      </FooterLink>
+    </div>
+  </div>
+</footer>
