@@ -3,6 +3,7 @@
 
 @theme {
   --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 430px;
   --breakpoint-desktop: 860px;
 
   --font-poppins-light: "Poppins-Light", sans-serif;
@@ -11,7 +12,7 @@
 
   --color-muted: #bdf8ff;
   --color-highlight: #30679a;
-  --color-header: #02172baa;
+  --color-header: #02172b;
 }
 
 @font-face {
@@ -46,4 +47,13 @@ body {
   min-height: 100vh;
   background: #001f58;
   background: radial-gradient(circle at 30% -20%, #001f58 0%, #000b1f 100%);
+  scroll-behavior: smooth;
+}
+
+strong {
+  font-family: "Poppins-Regular";
+}
+
+.icon-wrapper svg {
+  @apply mobile:w-[69px] mobile:h-[69px] tablet:w-[94px] tablet:h-[94px];
 }

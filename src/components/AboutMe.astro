@@ -1,0 +1,55 @@
+---
+import Image from "astro/components/Image.astro";
+import H2 from "./H2.astro";
+import profilePictureImage from "../assets/images/profile-picture.webp";
+import argentineFlagImage from "../assets/images/argentine-flag.webp";
+import Paragraph from "./Paragraph.astro";
+---
+
+<section id="about-me" class="w-full flex-col">
+  <H2 class="mb-[16px]">About Me</H2>
+
+  <div class="mobile:flex mobile:flex-col mobile:gap-y-[100px] desktop:grid desktop:grid-cols-[1.2fr_1fr]">
+    <article class="flex flex-col gap-y-8">
+      <Paragraph>
+        <strong>Full-stack</strong> developer from <strong>Argentina</strong> with
+        <strong>2 years of experience</strong>.
+      </Paragraph>
+
+      <Paragraph>
+        Skilled in <strong>React</strong> and <strong>NodeJS</strong>, with
+        hands-on expertise in building scalable applications and collaborating
+        in team projects.
+      </Paragraph>
+
+      <Paragraph>
+        Currently contributing to <strong>Bolsillo Feliz</strong>, an expense
+        management platform, enhancing skills in <strong>teamwork</strong>,
+        problem-solving, and delivering functional solutions.
+      </Paragraph>
+
+      <Paragraph>
+        <strong>Studying English</strong> at a <strong>B2 level</strong>,
+        strengthening communication skills for international collaboration.
+      </Paragraph>
+    </article>
+
+    <div class="relative flex items-end justify-end">
+      <Image
+        src={profilePictureImage}
+        class="rounded-[8px] w-[210px] tablet:w-[275px] aspect-square absolute z-10 tablet:-translate-x-[clamp(100px,10vw,176px)] -translate-y-14 drop-shadow-2xl mobile:-translate-x-[105px]"
+        alt="My face"
+        decoding="async"
+        loading="lazy"
+      />
+
+      <Image
+        src={argentineFlagImage}
+        class="rounded-[8px] w-[210px] tablet:w-[275px] aspect-square relative z-0"
+        alt="Argentine Flag"
+        decoding="async"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>

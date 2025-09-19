@@ -7,10 +7,10 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header
-  class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-header flex items-center justify-center drop-shadow-2xl"
+  class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-header flex items-center justify-center drop-shadow-2xl z-50 px-4"
 >
   <div
-    class="w-[clamp(320px,100%,1280px)] flex mobile:px-4 desktop:px-0 justify-between items-center"
+    class="w-[clamp(320px,100%,1280px)] flex justify-between items-center"
   >
     <div>
       <h2
@@ -28,10 +28,10 @@ import HeaderLink from "./HeaderLink.astro";
       <nav
         class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]"
       >
-        <HeaderLink href="/work">Work</HeaderLink>
-        <HeaderLink href="/about-me">About Me</HeaderLink>
-        <HeaderLink href="/contact">Contact</HeaderLink>
-        <HeaderLink href="/technologies">Technologies</HeaderLink>
+        <HeaderLink href="#work">Work</HeaderLink>
+        <HeaderLink href="#about-me">About Me</HeaderLink>
+        <HeaderLink href="#contact">Contact</HeaderLink>
+        <HeaderLink href="#technologies">Technologies</HeaderLink>
       </nav>
 
       <HeaderButton>

@@ -1,0 +1,27 @@
+---
+interface Props {
+  name: string;
+  description: string;
+}
+
+const { name, description } = Astro.props;
+---
+
+<li class="flex mobile:gap-x-[16px] tablet:gap-x-[22px]">
+  <div class="icon-wrapper">
+    <slot />
+  </div>
+
+  <div class="flex flex-col justify-center">
+    <h3
+      class="text-[#BDF8FF] mobile:text-[24px] tablet:text-[32px] font-poppins-semibold"
+    >
+      {name}
+    </h3>
+    <h4
+      class="text-[#7EB6EE] mobile:text-[16px] tablet:text-[20px] font-poppins-regular"
+    >
+      {description}
+    </h4>
+  </div>
+</li>

@@ -1,0 +1,35 @@
+---
+import H2 from "./H2.astro";
+import Subheading from "./Subheading.astro";
+import WorkPreview from "./WorkPreview.astro";
+---
+
+<section id="work" class="w-full flex-col">
+  <H2>Work</H2>
+  <Subheading>Some of my featured projects.</Subheading>
+
+  <div
+    class="w-full flex mobile:flex-col desktop:flex-row mt-[32px] gap-x-[32px] gap-y-[32px] justify-between"
+  >
+    <WorkPreview
+      title="Bolsillo Feliz"
+      description="Web Application for managing your incomes and expenses."
+      colorFrom="#E5C598"
+      colorTo="#875D22"
+    />
+
+    <WorkPreview
+      title="Vibe Network"
+      description="Social network to connect with other people and have a lot fun!"
+      colorFrom="#63B5B1"
+      colorTo="#1D3C3B"
+    />
+
+    <WorkPreview
+      title="Cinetro Backend"
+      description="Backend application of movie infrastructure."
+      colorFrom="#D33F3F"
+      colorTo="#681313"
+    />
+  </div>
+</section>
