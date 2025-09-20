@@ -1,14 +1,13 @@
----
-interface Props {
-  href: string;
-}
-
-const { href } = Astro.props;
----
-
 <a
-  class="cursor-pointer w-fit content-center font-poppins-semibold mobile:h-[48px] desktop:h-[64px] desktop:text-[20px] mobile:text-[16px] text-white mobile:px-3 desktop:px-6 rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B] drop-shadow-2xl tablet:active:scale-95 transition-transform duration-200 ease-in-out"
-  href={href}
+  class="inline-flex items-center justify-center
+         mobile:h-[48px] desktop:h-[64px]
+         mobile:px-3 desktop:px-6
+         font-poppins-semibold text-white
+         mobile:text-[16px] desktop:text-[20px]
+         rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B]
+         drop-shadow-2xl tablet:active:scale-95
+         transition-transform duration-200 ease-in-out"
+  {...Astro.props}
 >
   <slot />
 </a>

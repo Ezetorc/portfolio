@@ -1,3 +1,7 @@
-<p class="font-poppins-regular text-[#7EB6EE] text-[20px]">
+---
+const { class: extraClass = "" } = Astro.props;
+---
+
+<p class={`font-poppins-regular text-[#7EB6EE] text-[20px] ${extraClass}`}>
   <slot />
 </p>

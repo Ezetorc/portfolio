@@ -1,7 +1,6 @@
----
-const { class: extraClass = "" } = Astro.props;
----
-
-<button class={`desktop:cursor-pointer desktop:hover:brightness-110 ${extraClass}`}>
+<button
+  {...Astro.props}
+  class="desktop:cursor-pointer desktop:hover:brightness-110"
+>
   <slot />
 </button>

@@ -1,0 +1,159 @@
+---
+import Image from "astro/components/Image.astro";
+import Paragraph from "../components/Paragraph.astro";
+import SecondaryLink from "../components/SecondaryLink.astro";
+import Section from "../components/Section.astro";
+import Subheading from "../components/Subheading.astro";
+import Layout from "../layouts/Layout.astro";
+import vibeLoginPageImage from "../assets/images/vibe-login-page.webp";
+import Technology from "../components/Technology.astro";
+import HTMLIcon from "../icons/HTMLIcon.astro";
+import CSSIcon from "../icons/CSSIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
+import NodeJSIcon from "../icons/NodeJSIcon.astro";
+import ExpressIcon from "../icons/ExpressIcon.astro";
+import MySQLIcon from "../icons/MySQLIcon.astro";
+---
+
+<Layout>
+  <Section>
+    <h1
+      class="text-white mobile:text-4xl mb-[16px] tablet:text-[36px] desktop:text-[40px] font-poppins-semibold"
+    >
+      Vibe Network
+    </h1>
+
+    <Subheading class="w-[50ch] mb-[32px]">
+      A social network project where users can create profiles, share posts,
+      connect with others, and interact in real time.
+    </Subheading>
+
+    <SecondaryLink
+      target="_blank"
+      href="https://github.com/Ezetorc/vibe-frontend"
+    >
+      View Code
+    </SecondaryLink>
+  </Section>
+
+  <Section>
+    <h3
+      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
+    >
+      Overview
+    </h3>
+
+    <div class="grid grid-cols-[1fr_1fr]">
+      <article class="flex flex-col gap-y-[36px]">
+        <Paragraph>
+          Full-stack social network showcasing skills in authentication, user
+          management, and interactive features.
+        </Paragraph>
+        <Paragraph>
+          Implemented secure login with JWT and password encryption, profile
+          creation, posting, commenting, and following system, simulating a
+          real-world social media environment.
+        </Paragraph>
+        <Paragraph>
+          Implemented secure login with JWT and password encryption, profile
+          creation, posting, commenting, and following system, simulating a
+          real-world social media environment.
+        </Paragraph>
+      </article>
+
+      <Image
+        class="justify-self-end"
+        src={vibeLoginPageImage}
+        alt="Vibe Login Page"
+      />
+    </div>
+  </Section>
+
+  <Section>
+    <h3
+      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
+    >
+      Technologies
+    </h3>
+
+    <article class="grid grid-cols-2">
+      <div>
+        <Subheading class="mb-[8px]">Frontend</Subheading>
+
+        <ul class="flex flex-col gap-y-8">
+          <Technology name="HTML" description="Markup Language">
+            <HTMLIcon />
+          </Technology>
+
+          <Technology name="CSS" description="Style Sheet Language">
+            <CSSIcon />
+          </Technology>
+
+          <Technology name="TypeScript" description="Programming Language">
+            <TypeScriptIcon />
+          </Technology>
+
+          <Technology name="React" description="UI Library">
+            <ReactIcon />
+          </Technology>
+        </ul>
+      </div>
+
+      <div>
+        <Subheading class="mb-[8px]">Backend</Subheading>
+
+        <ul class="flex flex-col gap-y-8">
+          <Technology name="NodeJS" description="Runtime Environment">
+            <NodeJSIcon />
+          </Technology>
+
+          <Technology name="Express" description="Framework">
+            <ExpressIcon />
+          </Technology>
+
+          <Technology name="TypeScript" description="Programming Language">
+            <TypeScriptIcon />
+          </Technology>
+
+          <Technology name="MySQL" description="Relational Database">
+            <MySQLIcon />
+          </Technology>
+        </ul>
+      </div>
+    </article>
+  </Section>
+
+  <Section>
+    <h3
+      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
+    >
+      Process
+    </h3>
+
+    <div class="grid grid-cols-[1fr_1fr]">
+      <article class="flex flex-col gap-y-[36px]">
+        <Paragraph>
+          Gained first experience implementing authentication in a
+          production-level project.
+        </Paragraph>
+        <Paragraph>
+          Developed skills in JWT, password encryption, and session handling
+          while addressing scalability challenges.
+        </Paragraph>
+        <Paragraph>
+          Strengthened ability to design complex systems and translate
+          theoretical knowledge into practical solutions.
+        </Paragraph>
+      </article>
+
+      <Image
+        class="justify-self-end"
+        src={vibeLoginPageImage}
+        alt="Vibe Login Page"
+      />
+    </div>
+  </Section>
+
+  <SecondaryLink href="/">Go back</SecondaryLink>
+</Layout>

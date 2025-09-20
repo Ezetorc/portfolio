@@ -7,12 +7,14 @@ interface Props {
   colorFrom: string;
   colorTo: string;
   image?: ImageMetadata;
+  href: string;
 }
 
-const { title, description, colorFrom, colorTo, image } = Astro.props;
+const { title, description, colorFrom, colorTo, image, href } = Astro.props;
 ---
 
-<button
+<a
+  href={href}
   class="w-[clamp(320px,80%,360px)] aspect-[9/11] rounded-[8px] cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[4%] desktop:p-[2%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
   style={`background: radial-gradient(circle at top, ${colorFrom} 0%, ${colorTo} 100%)`}
 >
@@ -36,4 +38,4 @@ const { title, description, colorFrom, colorTo, image } = Astro.props;
       {description}
     </p>
   </div>
-</button>
+</a>

@@ -2,6 +2,8 @@
 const { class: extraClass = "" } = Astro.props;
 ---
 
-<h2 class={`font-poppins-semibold mb-[10px] text-white text-4xl ${extraClass}`}>
+<h2
+  class={`font-poppins-semibold mb-[10px] text-white text-4xl ${extraClass}`}
+>
   <slot />
 </h2>
