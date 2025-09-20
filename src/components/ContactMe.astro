@@ -1,12 +1,14 @@
 ---
+import { INFORMATION } from "../constants/INFORMATION";
+import CopyButton from "./CopyButton";
 import H2 from "./H2.astro";
 import Paragraph from "./Paragraph.astro";
 import PrimaryButton from "./PrimaryButton.astro";
-import SecondaryButton from "./SecondaryButton.astro";
+import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
 ---
 
-<section id="contact" class="w-full flex-col">
+<Section id="contact">
   <H2>Contact me</H2>
   <Subheading>
     Let's connect and create innovative solutions together.
@@ -18,25 +20,29 @@ import Subheading from "./Subheading.astro";
   </Paragraph>
 
   <div class="flex gap-x-[32px] mt-[48px]">
-    <SecondaryButton>Copy Email</SecondaryButton>
-    <SecondaryButton>Copy Discord</SecondaryButton>
+    <CopyButton client:load label="Copy Email" text={INFORMATION.email} />
+    <CopyButton client:load label="Copy Discord" text={INFORMATION.discord} />
   </div>
 
   <form
     class="bg-[#02172B] w-full p-9 flex flex-col gap-y-[40px] mt-11 rounded-[8px]"
+    action={INFORMATION.formLink}
+    method="POST"
   >
     <input
       class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] h-16 text-[24px] bg-[#000E1C] rounded-[8px]"
       type="email"
+      name="email"
       placeholder="jhon-doe@email.com"
       required
     />
 
     <textarea
-      class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] text-[24px] bg-[#000E1C] rounded-[8px] h-[290px]"
+      class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] text-[24px] bg-[#000E1C] rounded-[8px] h-[290px] resize-none"
       placeholder="Hi! I'm Jhon Doe and I've an idea for a project..."
+      name="message"
       required></textarea>
 
     <PrimaryButton>Send Message</PrimaryButton>
   </form>
-</section>
+</Section>

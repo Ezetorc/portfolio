@@ -1,23 +1,32 @@
 ---
+import Image from "astro/components/Image.astro";
+
 interface Props {
   title: string;
   description: string;
   colorFrom: string;
   colorTo: string;
+  image?: ImageMetadata;
 }
 
-const { title, description, colorFrom, colorTo } = Astro.props;
+const { title, description, colorFrom, colorTo, image } = Astro.props;
 ---
 
 <button
-  class="w-[clamp(320px,80%,360px)] aspect-[9/11] rounded-[8px] cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[4%] desktop:p-[2%] justify-between"
+  class="w-[clamp(320px,80%,360px)] aspect-[9/11] rounded-[8px] cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[4%] desktop:p-[2%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
   style={`background: radial-gradient(circle at top, ${colorFrom} 0%, ${colorTo} 100%)`}
 >
-  <div
-    class="mt-[12%] w-[70%] aspect-square border-white border-4 rounded-[8px]"
-  >
-    Logo
-  </div>
+  {
+    image && (
+      <Image
+        src={image}
+        alt={`${title} Icon`}
+        class="mt-[12%] w-[70%] aspect-square border-white border-4 rounded-[8px]"
+        decoding="async"
+        loading="eager"
+      />
+    )
+  }
 
   <div>
     <h3 class="text-white font-poppins-semibold text-left w-full text-[30px]">

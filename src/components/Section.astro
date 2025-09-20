@@ -1,0 +1,7 @@
+---
+const { id = undefined } = Astro.props;
+---
+
+<section id={id} class="w-full flex-col scroll-mt-48">
+  <slot />
+</section>

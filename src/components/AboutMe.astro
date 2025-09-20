@@ -4,12 +4,15 @@ import H2 from "./H2.astro";
 import profilePictureImage from "../assets/images/profile-picture.webp";
 import argentineFlagImage from "../assets/images/argentine-flag.webp";
 import Paragraph from "./Paragraph.astro";
+import Section from "./Section.astro";
 ---
 
-<section id="about-me" class="w-full flex-col">
+<Section id="about-me">
   <H2 class="mb-[16px]">About Me</H2>
 
-  <div class="mobile:flex mobile:flex-col mobile:gap-y-[100px] desktop:grid desktop:grid-cols-[1.2fr_1fr]">
+  <div
+    class="mobile:flex mobile:flex-col mobile:gap-y-[100px] desktop:grid desktop:grid-cols-[1.2fr_1fr]"
+  >
     <article class="flex flex-col gap-y-8">
       <Paragraph>
         <strong>Full-stack</strong> developer from <strong>Argentina</strong> with
@@ -52,4 +55,4 @@ import Paragraph from "./Paragraph.astro";
       />
     </div>
   </div>
-</section>
+</Section>

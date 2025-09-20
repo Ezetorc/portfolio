@@ -5,11 +5,13 @@ import PrimaryLink from "../components/PrimaryLink.astro";
 import SecondaryLink from "../components/SecondaryLink.astro";
 import Technologies from "../components/Technologies.astro";
 import Work from "../components/Work.astro";
-import WorkPreview from "../components/WorkPreview.astro";
 import Layout from "../layouts/Layout.astro";
+import { Toaster } from "react-hot-toast";
 ---
 
 <Layout>
+  <Toaster client:load position="top-center" reverseOrder={false} />
+
   <main class="w-full flex flex-col tablet:items-center gap-y-[32px]">
     <div class="flex flex-col mobile:gap-y-[10px] desktop:gap-y-[24px]">
       <h1
@@ -26,9 +28,7 @@ import Layout from "../layouts/Layout.astro";
       <p
         class="text-[#E6E6E6] font-poppins-regular mobile:text-left tablet:text-center mobile:text-[16px] desktop:text-2xl"
       >
-        From Argentina with around <strong class="font-poppins-semibold"
-          >2 years of experience</strong
-        >.
+        From Argentina with around <strong>2 years of experience</strong>.
       </p>
     </div>
 

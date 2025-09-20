@@ -1,10 +1,12 @@
 ---
 import H2 from "./H2.astro";
+import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
+import bolsilloFelizImage from "../assets/images/bolsillo_feliz_icon.webp";
 import WorkPreview from "./WorkPreview.astro";
 ---
 
-<section id="work" class="w-full flex-col">
+<Section id="work">
   <H2>Work</H2>
   <Subheading>Some of my featured projects.</Subheading>
 
@@ -14,6 +16,7 @@ import WorkPreview from "./WorkPreview.astro";
     <WorkPreview
       title="Bolsillo Feliz"
       description="Web Application for managing your incomes and expenses."
+      image={bolsilloFelizImage}
       colorFrom="#E5C598"
       colorTo="#875D22"
     />
@@ -32,4 +35,4 @@ import WorkPreview from "./WorkPreview.astro";
       colorTo="#681313"
     />
   </div>
-</section>
+</Section>
