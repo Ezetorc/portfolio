@@ -1,0 +1,52 @@
+---
+import WorldIcon from "./icons/WorldIcon.astro";
+import { LANGUAGES } from "../configuration/i18n.configuration";
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslatedPath } from "../utilities/useTranslatedPath";
+
+const currentLang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(currentLang);
+---
+
+<div class="relative">
+  <button
+    id="lang-button"
+    class="p-2 rounded-full hover:bg-gray-700 transition-colors cursor-pointer"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <WorldIcon />
+  </button>
+
+  <ul
+    id="lang-menu"
+    class="absolute overflow-hidden cursor-pointer right-0 mt-2 w-40 bg-[#BDF8FF] text-[#000E1C] font-poppins-semibold rounded-lg shadow-lg hidden"
+  >
+    {
+      Object.entries(LANGUAGES).map(([lang, label]) => (
+        <li>
+          <a
+            href={translatePath("/", lang)}
+            class={`block px-4 py-2 text-sm hover:bg-gray-100 transition-colors
+              ${lang === currentLang ? "font-semibold text-blue-600" : ""}
+            `}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <script>
+    const $langButton = document.getElementById("lang-button");
+    const $langMenu = document.getElementById("lang-menu");
+
+    $langButton?.addEventListener("click", () => {
+      const isOpen = $langMenu?.classList.contains("hidden") === false;
+
+      $langMenu?.classList.toggle("hidden", isOpen);
+      $langButton.setAttribute("aria-expanded", String(!isOpen));
+    });
+  </script>
+</div>

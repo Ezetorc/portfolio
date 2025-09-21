@@ -1,21 +1,27 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+const lang = getLangFromUrl(Astro.url);
 import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang={lang} class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Ezequias Torczuk Portfolio</title>
+    <ClientRouter />
   </head>
   <body class="font-poppins font-light flex flex-col items-center">
     <Header />
 
-    <div class="w-[clamp(320px,100%,1280px)] mt-10 mobile:px-4 flex flex-col gap-y-[64px] mobile:pb-[130px] desktop:pb-[150px]">
+    <div
+      class="w-[clamp(320px,100%,1280px)] mt-10 mobile:px-4 flex flex-col gap-y-[64px] mobile:pb-[130px] desktop:pb-[150px]"
+    >
       <slot />
     </div>
 

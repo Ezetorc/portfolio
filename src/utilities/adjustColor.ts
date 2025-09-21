@@ -9,8 +9,9 @@ export function adjustColor(hex: string, percent: number): string {
   g = Math.min(255, Math.max(0, g + (g * percent) / 100));
   b = Math.min(255, Math.max(0, b + (b * percent) / 100));
 
-  return (
-    "#" +
-    [r, g, b].map((x) => Math.round(x).toString(16).padStart(2, "0")).join("")
-  );
+  const result = [r, g, b]
+    .map((x) => Math.round(x).toString(16).padStart(2, "0"))
+    .join("");
+
+  return `#${result}`;
 }

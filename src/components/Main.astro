@@ -1,0 +1,34 @@
+---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
+import PrimaryLink from "./PrimaryLink.astro";
+import SecondaryLink from "./SecondaryLink.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<main class="w-full flex flex-col tablet:items-center gap-y-[32px]">
+  <div class="flex flex-col mobile:gap-y-[10px] desktop:gap-y-[24px]">
+    <h1
+      class="text-white mobile:text-left tablet:text-center mobile:text-4xl tablet:text-[44px] desktop:text-7xl font-poppins-semibold"
+    >
+      Ezequias Torczuk
+    </h1>
+    <h2
+      class="text-[#BDF8FF] mobile:text-left tablet:text-center mobile:text-[28px] tablet:text-4xl desktop:text-5xl font-poppins-semibold"
+    >
+      {t("main.subtitle")}
+    </h2>
+
+    <p
+      set:html={t("main.description")}
+      class="text-[#E6E6E6] font-poppins-regular mobile:text-left tablet:text-center mobile:text-[16px] desktop:text-2xl"
+    />
+  </div>
+
+  <div class="flex gap-x-[30px]">
+    <PrimaryLink href="#work">View all work</PrimaryLink>
+    <SecondaryLink href="#about-me">Read about me</SecondaryLink>
+  </div>
+</main>

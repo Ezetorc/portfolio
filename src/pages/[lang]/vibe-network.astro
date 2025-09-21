@@ -1,19 +1,24 @@
 ---
 import Image from "astro/components/Image.astro";
-import Paragraph from "../components/Paragraph.astro";
-import SecondaryLink from "../components/SecondaryLink.astro";
-import Section from "../components/Section.astro";
-import Subheading from "../components/Subheading.astro";
-import Layout from "../layouts/Layout.astro";
-import vibeLoginPageImage from "../assets/images/vibe-login-page.webp";
-import Technology from "../components/Technology.astro";
-import HTMLIcon from "../icons/HTMLIcon.astro";
-import CSSIcon from "../icons/CSSIcon.astro";
-import ReactIcon from "../icons/ReactIcon.astro";
-import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
-import NodeJSIcon from "../icons/NodeJSIcon.astro";
-import ExpressIcon from "../icons/ExpressIcon.astro";
-import MySQLIcon from "../icons/MySQLIcon.astro";
+import vibeLoginPageImage from "../../assets/images/vibe-login-page.webp";
+import Paragraph from "../../components/Paragraph.astro";
+import SecondaryLink from "../../components/SecondaryLink.astro";
+import Section from "../../components/Section.astro";
+import Subheading from "../../components/Subheading.astro";
+import Technology from "../../components/Technology.astro";
+
+import Layout from "../../layouts/Layout.astro";
+import CSSIcon from "../../components/icons/CSSIcon.astro";
+import ExpressIcon from "../../components/icons/ExpressIcon.astro";
+import HTMLIcon from "../../components/icons/HTMLIcon.astro";
+import MySQLIcon from "../../components/icons/MySQLIcon.astro";
+import NodeJSIcon from "../../components/icons/NodeJSIcon.astro";
+import ReactIcon from "../../components/icons/ReactIcon.astro";
+import TypeScriptIcon from "../../components/icons/TypeScriptIcon.astro";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
+}
 ---
 
 <Layout>

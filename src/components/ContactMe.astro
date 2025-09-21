@@ -1,5 +1,9 @@
 ---
-import { INFORMATION } from "../constants/INFORMATION";
+import {
+  DISCORD,
+  EMAIL,
+  FORM_LINK,
+} from "../configuration/contact.configuration";
 import CopyButton from "./CopyButton";
 import H2 from "./H2.astro";
 import Paragraph from "./Paragraph.astro";
@@ -20,13 +24,13 @@ import Subheading from "./Subheading.astro";
   </Paragraph>
 
   <div class="flex gap-x-[32px] mt-[48px]">
-    <CopyButton client:load label="Copy Email" text={INFORMATION.email} />
-    <CopyButton client:load label="Copy Discord" text={INFORMATION.discord} />
+    <CopyButton client:load label="Copy Email" text={EMAIL} />
+    <CopyButton client:load label="Copy Discord" text={DISCORD} />
   </div>
 
   <form
     class="bg-[#02172B] w-full p-9 flex flex-col gap-y-[40px] mt-11 rounded-[8px]"
-    action={INFORMATION.formLink}
+    action={FORM_LINK}
     method="POST"
   >
     <input

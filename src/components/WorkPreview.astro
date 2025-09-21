@@ -1,5 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslatedPath } from "../utilities/useTranslatedPath";
 
 interface Props {
   title: string;
@@ -11,10 +13,12 @@ interface Props {
 }
 
 const { title, description, colorFrom, colorTo, image, href } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <a
-  href={href}
+  href={translatePath(href, lang)}
   class="w-[clamp(320px,80%,360px)] aspect-[9/11] rounded-[8px] cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[4%] desktop:p-[2%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
   style={`background: radial-gradient(circle at top, ${colorFrom} 0%, ${colorTo} 100%)`}
 >

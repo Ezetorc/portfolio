@@ -1,17 +1,14 @@
 ---
-import MoonIcon from "../icons/MoonIcon.astro";
-import OptionsIcon from "../icons/OptionsIcon.astro";
-import WorldIcon from "../icons/WorldIcon.astro";
-import HeaderButton from "./HeaderButton.astro";
 import HeaderLink from "./HeaderLink.astro";
+import MoonIcon from "./icons/MoonIcon.astro";
+import OptionsIcon from "./icons/OptionsIcon.astro";
+import LanguageSelector from "./LanguageSelector.astro";
 ---
 
 <header
   class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-header flex items-center justify-center drop-shadow-2xl z-50 px-4"
 >
-  <div
-    class="w-[clamp(320px,100%,1280px)] flex justify-between items-center"
-  >
+  <div class="w-[clamp(320px,100%,1280px)] flex justify-between items-center">
     <div>
       <h2
         class="text-white mobile:text-[20px] desktop:text-[24px] font-poppins-semibold"
@@ -28,23 +25,23 @@ import HeaderLink from "./HeaderLink.astro";
       <nav
         class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]"
       >
-        <HeaderLink href="/#work">Work</HeaderLink>
-        <HeaderLink href="/#about-me">About Me</HeaderLink>
-        <HeaderLink href="/#contact">Contact</HeaderLink>
-        <HeaderLink href="/#technologies">Technologies</HeaderLink>
+        <HeaderLink href="#work">Work</HeaderLink>
+        <HeaderLink href="#about-me">About Me</HeaderLink>
+        <HeaderLink href="#contact">Contact</HeaderLink>
+        <HeaderLink href="#technologies">Technologies</HeaderLink>
       </nav>
 
-      <HeaderButton>
+      <button
+        class="p-2 rounded-full hover:bg-gray-700 transition-colors cursor-pointer"
+      >
         <MoonIcon />
-      </HeaderButton>
+      </button>
 
-      <HeaderButton>
-        <WorldIcon />
-      </HeaderButton>
+      <LanguageSelector client:load />
 
-      <HeaderButton class="desktop:hidden">
+      <button class="desktop:hidden desktop:cursor-pointer desktop:hover:brightness-110">
         <OptionsIcon />
-      </HeaderButton>
+      </button>
     </div>
   </div>
 </header>

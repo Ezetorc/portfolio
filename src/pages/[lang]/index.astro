@@ -1,0 +1,23 @@
+---
+import { Toaster } from "react-hot-toast";
+import AboutMe from "../../components/AboutMe.astro";
+import ContactMe from "../../components/ContactMe.astro";
+import Main from "../../components/Main.astro";
+import Technologies from "../../components/Technologies.astro";
+import Work from "../../components/Work.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
+}
+---
+
+<Layout>
+  <Toaster client:load position="top-center" reverseOrder={false} />
+
+  <Main />
+  <Work />
+  <AboutMe />
+  <Technologies />
+  <ContactMe />
+</Layout>
