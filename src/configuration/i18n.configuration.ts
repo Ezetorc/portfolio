@@ -28,6 +28,25 @@ export const DICTIONARY = {
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
       "Social network to connect with other people and have a lot fun!",
+    "work.vibe-network.detailed-description": `A social network project where users can create profiles, share posts,
+      connect with others, and interact in real time.`,
+    "work.view-code": "View Code",
+    "work.overview.title": "Overview",
+    "work.vibe-network.overview.paragraph.1": `Full-stack social network showcasing skills in authentication, user management, and interactive features.`,
+    "work.vibe-network.overview.paragraph.2": `Implemented secure login with JWT and password encryption, profile creation, posting, commenting, and following system, simulating a real-world social media environment.`,
+    "work.vibe-network.image.1.alt": "Vibe Login Page",
+    "work.vibe-network.image.2.alt": "Vibe Login Page",
+    "work.frontend": "Frontend",
+    "work.backend": "Backend",
+    "work.process": "Process",
+    "work.vibe-network.process.paragraph.1": `Gained first experience implementing authentication in a
+          production-level project.`,
+    "work.vibe-network.process.paragraph.2": `Developed skills in JWT, password encryption, and session handling
+          while addressing scalability challenges.`,
+    "work.vibe-network.process.paragraph.3": `Strengthened ability to design complex systems and translate
+          theoretical knowledge into practical solutions.`,
+    "work.vibe-network.overview.paragraph.3": `Full-stack social network showcasing skills in authentication, user management, and interactive features.`,
+    "work.go-back": "Go Back",
     "work.cinetro-backend.title": "Cinetro Backend",
     "work.cinetro-backend.description":
       "Backend application of movie infrastructure.",
@@ -107,6 +126,28 @@ export const DICTIONARY = {
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
       "Red social para conectar con otros y divertirse mucho!",
+    "work.vibe-network.detailed-description":
+      "Un proyecto de red social donde los usuarios pueden crear perfiles, compartir publicaciones, conectarse con otros e interactuar en tiempo real.",
+    "work.view-code": "Ver Código",
+    "work.overview.title": "Resúmen",
+    "work.vibe-network.overview.paragraph.1":
+      "Red social full-stack que muestra habilidades en autenticación, gestión de usuarios y funciones interactivas.",
+    "work.vibe-network.overview.paragraph.2":
+      "Implementación de inicio de sesión seguro con JWT y cifrado de contraseñas, creación de perfiles, publicaciones, comentarios y sistema de seguimiento, simulando un entorno real de red social.",
+    "work.vibe-network.image.1.alt": "Página de inicio de sesión de Vibe",
+    "work.vibe-network.image.2.alt": "Página de inicio de sesión de Vibe",
+    "work.frontend": "Frontend",
+    "work.backend": "Backend",
+    "work.process": "Proceso",
+    "work.vibe-network.process.paragraph.1":
+      "Adquirí la primera experiencia implementando autenticación en un proyecto a nivel de producción.",
+    "work.vibe-network.process.paragraph.2":
+      "Desarrollé habilidades en JWT, cifrado de contraseñas y manejo de sesiones mientras abordaba desafíos de escalabilidad.",
+    "work.vibe-network.process.paragraph.3":
+      "Fortalecí la capacidad de diseñar sistemas complejos y traducir conocimientos teóricos en soluciones prácticas.",
+    "work.vibe-network.overview.paragraph.3":
+      "Red social full-stack que muestra habilidades en autenticación, gestión de usuarios y funciones interactivas.",
+    "work.go-back": "Volver",
     "work.cinetro-backend.title": "Cinetro Backend",
     "work.cinetro-backend.description":
       "Aplicación backend para infraestructura de cine.",

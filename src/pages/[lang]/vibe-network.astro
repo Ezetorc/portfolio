@@ -15,6 +15,11 @@ import MySQLIcon from "../../components/icons/MySQLIcon.astro";
 import NodeJSIcon from "../../components/icons/NodeJSIcon.astro";
 import ReactIcon from "../../components/icons/ReactIcon.astro";
 import TypeScriptIcon from "../../components/icons/TypeScriptIcon.astro";
+import { getLangFromUrl } from "../../utilities/getLangFromUrl";
+import { useTranslations } from "../../utilities/useTranslations";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 export async function getStaticPaths() {
   return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
@@ -26,19 +31,18 @@ export async function getStaticPaths() {
     <h1
       class="text-white mobile:text-4xl mb-[16px] tablet:text-[36px] desktop:text-[40px] font-poppins-semibold"
     >
-      Vibe Network
+      {t("work.vibe-network.title")}
     </h1>
 
     <Subheading class="w-[50ch] mb-[32px]">
-      A social network project where users can create profiles, share posts,
-      connect with others, and interact in real time.
+      {t("work.vibe-network.detailed-description")}
     </Subheading>
 
     <SecondaryLink
       target="_blank"
       href="https://github.com/Ezetorc/vibe-frontend"
     >
-      View Code
+      {t("work.view-code")}
     </SecondaryLink>
   </Section>
 
@@ -46,31 +50,26 @@ export async function getStaticPaths() {
     <h3
       class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
     >
-      Overview
+      {t("work.overview.title")}
     </h3>
 
     <div class="grid grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
-          Full-stack social network showcasing skills in authentication, user
-          management, and interactive features.
+          {t("work.vibe-network.overview.paragraph.1")}
         </Paragraph>
         <Paragraph>
-          Implemented secure login with JWT and password encryption, profile
-          creation, posting, commenting, and following system, simulating a
-          real-world social media environment.
+          {t("work.vibe-network.overview.paragraph.2")}
         </Paragraph>
         <Paragraph>
-          Implemented secure login with JWT and password encryption, profile
-          creation, posting, commenting, and following system, simulating a
-          real-world social media environment.
+          {t("work.vibe-network.overview.paragraph.3")}
         </Paragraph>
       </article>
 
       <Image
         class="justify-self-end"
         src={vibeLoginPageImage}
-        alt="Vibe Login Page"
+        alt={t("work.vibe-network.image.1.alt")}
       />
     </div>
   </Section>
@@ -79,49 +78,49 @@ export async function getStaticPaths() {
     <h3
       class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
     >
-      Technologies
+      {t("technologies.title")}
     </h3>
 
     <article class="grid grid-cols-2">
       <div>
-        <Subheading class="mb-[8px]">Frontend</Subheading>
+        <Subheading class="mb-[8px]">{t("work.frontend")}</Subheading>
 
         <ul class="flex flex-col gap-y-8">
-          <Technology name="HTML" description="Markup Language">
+          <Technology id="html">
             <HTMLIcon />
           </Technology>
 
-          <Technology name="CSS" description="Style Sheet Language">
+          <Technology id="css">
             <CSSIcon />
           </Technology>
 
-          <Technology name="TypeScript" description="Programming Language">
+          <Technology id="typescript">
             <TypeScriptIcon />
           </Technology>
 
-          <Technology name="React" description="UI Library">
+          <Technology id="react">
             <ReactIcon />
           </Technology>
         </ul>
       </div>
 
       <div>
-        <Subheading class="mb-[8px]">Backend</Subheading>
+        <Subheading class="mb-[8px]">{t("work.backend")}</Subheading>
 
         <ul class="flex flex-col gap-y-8">
-          <Technology name="NodeJS" description="Runtime Environment">
+          <Technology id="nodejs">
             <NodeJSIcon />
           </Technology>
 
-          <Technology name="Express" description="Framework">
+          <Technology id="express">
             <ExpressIcon />
           </Technology>
 
-          <Technology name="TypeScript" description="Programming Language">
+          <Technology id="typescript">
             <TypeScriptIcon />
           </Technology>
 
-          <Technology name="MySQL" description="Relational Database">
+          <Technology id="mysql">
             <MySQLIcon />
           </Technology>
         </ul>
@@ -133,32 +132,29 @@ export async function getStaticPaths() {
     <h3
       class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
     >
-      Process
+      {t("work.process")}
     </h3>
 
     <div class="grid grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
-          Gained first experience implementing authentication in a
-          production-level project.
+          {t("work.vibe-network.process.paragraph.1")}
         </Paragraph>
         <Paragraph>
-          Developed skills in JWT, password encryption, and session handling
-          while addressing scalability challenges.
+          {t("work.vibe-network.process.paragraph.2")}
         </Paragraph>
         <Paragraph>
-          Strengthened ability to design complex systems and translate
-          theoretical knowledge into practical solutions.
+          {t("work.vibe-network.process.paragraph.3")}
         </Paragraph>
       </article>
 
       <Image
         class="justify-self-end"
         src={vibeLoginPageImage}
-        alt="Vibe Login Page"
+        alt={t("work.vibe-network.image.2.alt")}
       />
     </div>
   </Section>
 
-  <SecondaryLink href="/">Go back</SecondaryLink>
+  <SecondaryLink href="/">{t("work.go-back")}</SecondaryLink>
 </Layout>
