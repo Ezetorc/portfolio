@@ -1,10 +1,15 @@
 ---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
+
 interface Props {
-  name: string;
-  description: string;
+  id: string;
 }
 
-const { name, description } = Astro.props;
+const { id } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <li class="flex mobile:gap-x-[16px] tablet:gap-x-[22px]">
@@ -16,12 +21,12 @@ const { name, description } = Astro.props;
     <h3
       class="text-[#BDF8FF] mobile:text-[24px] tablet:text-[32px] font-poppins-semibold"
     >
-      {name}
+      {t(`technology.${id}.name` as keyof typeof t)}
     </h3>
     <h4
       class="text-[#7EB6EE] mobile:text-[16px] tablet:text-[20px] font-poppins-regular"
     >
-      {description}
+      {t(`technology.${id}.description` as keyof typeof t)}
     </h4>
   </div>
 </li>

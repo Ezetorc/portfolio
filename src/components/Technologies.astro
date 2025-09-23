@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
 import H2 from "./H2.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import CSSIcon from "./icons/CSSIcon.astro";
@@ -17,68 +19,69 @@ import ViteIcon from "./icons/ViteIcon.astro";
 import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
 import Technology from "./Technology.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Section id="technologies">
-  <H2>Technologies</H2>
-  <Subheading
-    >Tools and technologies I rely on to build and grow my projects.</Subheading
-  >
+  <H2>{t("technologies.title")}</H2>
+  <Subheading>{t("technologies.subtitle")}</Subheading>
 
   <ul class="grid tablet:grid-cols-3 mt-[42px] gap-[28px]">
-    <Technology name="HTML" description="Markup Language">
+    <Technology id="html">
       <HTMLIcon />
     </Technology>
 
-    <Technology name="React" description="UI Library">
+    <Technology id="react">
       <ReactIcon />
     </Technology>
 
-    <Technology name="NodeJS" description="Runtime Environment">
+    <Technology id="nodejs">
       <NodeJSIcon />
     </Technology>
 
-    <Technology name="CSS" description="Style Sheet Language">
+    <Technology id="css">
       <CSSIcon />
     </Technology>
 
-    <Technology name="Tailwind" description="Utility Framework">
+    <Technology id="tailwind">
       <TailwindIcon />
     </Technology>
 
-    <Technology name="Express" description="Framework">
+    <Technology id="express">
       <ExpressIcon />
     </Technology>
 
-    <Technology name="JavaScript" description="Programming Language">
+    <Technology id="javascript">
       <JavaScriptIcon />
     </Technology>
 
-    <Technology name="Astro" description="Frontend Framework">
+    <Technology id="astro">
       <AstroIcon />
     </Technology>
 
-    <Technology name="NestJS" description="Backend Framework">
+    <Technology id="nestjs">
       <NestJSIcon />
     </Technology>
 
-    <Technology name="TypeScript" description="Programming Language">
+    <Technology id="typescript">
       <TypeScriptIcon />
     </Technology>
 
-    <Technology name="Vite" description="Build Tool">
+    <Technology id="vite">
       <ViteIcon />
     </Technology>
 
-    <Technology name="Git" description="Version Control">
+    <Technology id="git">
       <GitIcon />
     </Technology>
 
-    <Technology name="Github" description="Code Hosting">
+    <Technology id="github">
       <GithubIcon />
     </Technology>
 
-    <Technology name="MySQL" description="Relational Database">
+    <Technology id="mysql">
       <MySQLIcon />
     </Technology>
   </ul>

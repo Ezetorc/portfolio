@@ -4,28 +4,34 @@ import {
   EMAIL,
   FORM_LINK,
 } from "../configuration/contact.configuration";
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
 import CopyButton from "./CopyButton";
 import H2 from "./H2.astro";
 import Paragraph from "./Paragraph.astro";
 import PrimaryButton from "./PrimaryButton.astro";
 import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Section id="contact">
-  <H2>Contact me</H2>
-  <Subheading>
-    Let's connect and create innovative solutions together.
-  </Subheading>
+  <H2>{t("contact-me.title")}</H2>
+  <Subheading>{t("contact-me.subtitle")}</Subheading>
 
   <Paragraph class="mt-[24px] w-[550px]">
-    Complete the form to send me a message via <strong>email</strong> or contact
-    me directly by my <strong>Discord</strong>.
+    {t("contact-me.instructions")}
   </Paragraph>
 
   <div class="flex gap-x-[32px] mt-[48px]">
-    <CopyButton client:load label="Copy Email" text={EMAIL} />
-    <CopyButton client:load label="Copy Discord" text={DISCORD} />
+    <CopyButton client:load label={t("contact-me.copy-email")} text={EMAIL} />
+    <CopyButton
+      client:load
+      label={t("contact-me.copy-discord")}
+      text={DISCORD}
+    />
   </div>
 
   <form
@@ -37,16 +43,16 @@ import Subheading from "./Subheading.astro";
       class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] h-16 text-[24px] bg-[#000E1C] rounded-[8px]"
       type="email"
       name="email"
-      placeholder="jhon-doe@email.com"
+      placeholder={t("contact-me.email-placeholder")}
       required
     />
 
     <textarea
       class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] text-[24px] bg-[#000E1C] rounded-[8px] h-[290px] resize-none"
-      placeholder="Hi! I'm Jhon Doe and I've an idea for a project..."
+      placeholder={t("contact-me.message-placeholder")}
       name="message"
       required></textarea>
 
-    <PrimaryButton>Send Message</PrimaryButton>
+    <PrimaryButton>{t("contact-me.send-message")}</PrimaryButton>
   </form>
 </Section>

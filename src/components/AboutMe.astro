@@ -5,43 +5,31 @@ import argentineFlagImage from "../assets/images/argentine-flag.webp";
 import H2 from "./H2.astro";
 import Paragraph from "./Paragraph.astro";
 import Section from "./Section.astro";
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Section id="about-me">
-  <H2 class="mb-[16px]">About Me</H2>
+  <H2 class="mb-[16px]">{t("about-me.title")}</H2>
 
   <div
     class="mobile:flex mobile:flex-col mobile:gap-y-[100px] desktop:grid desktop:grid-cols-[1.2fr_1fr]"
   >
     <article class="flex flex-col gap-y-8">
-      <Paragraph>
-        <strong>Full-stack</strong> developer from <strong>Argentina</strong> with
-        <strong>2 years of experience</strong>.
-      </Paragraph>
-
-      <Paragraph>
-        Skilled in <strong>React</strong> and <strong>NodeJS</strong>, with
-        hands-on expertise in building scalable applications and collaborating
-        in team projects.
-      </Paragraph>
-
-      <Paragraph>
-        Currently contributing to <strong>Bolsillo Feliz</strong>, an expense
-        management platform, enhancing skills in <strong>teamwork</strong>,
-        problem-solving, and delivering functional solutions.
-      </Paragraph>
-
-      <Paragraph>
-        <strong>Studying English</strong> at a <strong>B2 level</strong>,
-        strengthening communication skills for international collaboration.
-      </Paragraph>
+      <Paragraph>{t("about-me.paragraph.1")}</Paragraph>
+      <Paragraph>{t("about-me.paragraph.2")}</Paragraph>
+      <Paragraph>{t("about-me.paragraph.3")}</Paragraph>
+      <Paragraph>{t("about-me.paragraph.4")}</Paragraph>
     </article>
 
     <div class="relative flex items-end justify-end">
       <Image
         src={profilePictureImage}
         class="rounded-[8px] w-[210px] tablet:w-[275px] aspect-square absolute z-10 tablet:-translate-x-[clamp(100px,10vw,176px)] -translate-y-14 drop-shadow-2xl mobile:-translate-x-[105px]"
-        alt="My face"
+        alt={t("about-me.face-image.alt")}
         decoding="async"
         loading="lazy"
       />
@@ -49,7 +37,7 @@ import Section from "./Section.astro";
       <Image
         src={argentineFlagImage}
         class="rounded-[8px] w-[210px] tablet:w-[275px] aspect-square relative z-0"
-        alt="Argentine Flag"
+        alt={t("about-me.argentine-flag-image.alt")}
         decoding="async"
         loading="lazy"
       />

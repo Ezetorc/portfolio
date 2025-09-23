@@ -1,8 +1,13 @@
 ---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
 import HeaderLink from "./HeaderLink.astro";
 import MoonIcon from "./icons/MoonIcon.astro";
 import OptionsIcon from "./icons/OptionsIcon.astro";
 import LanguageSelector from "./LanguageSelector.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -17,7 +22,7 @@ import LanguageSelector from "./LanguageSelector.astro";
       </h2>
 
       <h3 class="text-muted mobile:text-[16px] desktop:text-[20px]">
-        FullStack Developer
+        {t("header.subtitle")}
       </h3>
     </div>
 
@@ -25,10 +30,10 @@ import LanguageSelector from "./LanguageSelector.astro";
       <nav
         class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]"
       >
-        <HeaderLink href="#work">Work</HeaderLink>
-        <HeaderLink href="#about-me">About Me</HeaderLink>
-        <HeaderLink href="#contact">Contact</HeaderLink>
-        <HeaderLink href="#technologies">Technologies</HeaderLink>
+        <HeaderLink href="#work">{t("header.work")}</HeaderLink>
+        <HeaderLink href="#about-me">{t("header.about-me")}</HeaderLink>
+        <HeaderLink href="#contact">{t("header.contact")}</HeaderLink>
+        <HeaderLink href="#technologies">{t("header.technologies")}</HeaderLink>
       </nav>
 
       <button
@@ -37,9 +42,11 @@ import LanguageSelector from "./LanguageSelector.astro";
         <MoonIcon />
       </button>
 
-      <LanguageSelector client:load />
+      <LanguageSelector />
 
-      <button class="desktop:hidden desktop:cursor-pointer desktop:hover:brightness-110">
+      <button
+        class="desktop:hidden desktop:cursor-pointer desktop:hover:brightness-110"
+      >
         <OptionsIcon />
       </button>
     </div>
