@@ -15,11 +15,11 @@ export const DICTIONARY = {
     "footer.updated-on": "Updated on",
     "footer.github.aria-label": "Ezetorc's Github",
     "footer.discord.aria-label": "Ezetorc's Discord",
-    "main.subtitle": "FullStack Developer",
-    "main.description":
+    "hero.subtitle": "FullStack Developer",
+    "hero.description":
       "From Argentina with around <strong>2 years of experience</strong>.",
-    "main.view-all-work": "View all work",
-    "main.read-about-me": "Read about me",
+    "hero.view-all-work": "View work",
+    "hero.read-about-me": "About me",
     "work.title": "Work",
     "work.subtitle": "Some of my featured projects.",
     "work.bolsillo-feliz.title": "Bolsillo Feliz",
@@ -113,11 +113,11 @@ export const DICTIONARY = {
     "footer.updated-on": "Actualizado el",
     "footer.github.aria-label": "Github de Ezetorc",
     "footer.discord.aria-label": "Discord de Ezetorc",
-    "main.subtitle": "Desarrollador FullStack",
-    "main.description":
+    "hero.subtitle": "Desarrollador FullStack",
+    "hero.description":
       "Desde Argentina con <strong>alrededor de 2 años de experiencia</strong>.",
-    "main.view-all-work": "Ver todos los trabajos",
-    "main.read-about-me": "Leer sobre mí",
+    "hero.view-all-work": "Ver proyectos",
+    "hero.read-about-me": "Sobre mí",
     "work.title": "Trabajo",
     "work.subtitle": "Algunos de mis proyectos destacados.",
     "work.bolsillo-feliz.title": "Bolsillo Feliz",

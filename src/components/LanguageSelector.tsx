@@ -23,7 +23,7 @@ export default function LanguageSelector({
       <div className="relative">
         <button
           id="lang-button"
-          className="p-2 rounded-full hover:bg-gray-700 transition-colors cursor-pointer"
+          className="rounded-full grid place-items-center hover:bg-gray-700 transition-colors cursor-pointer"
           aria-haspopup="true"
           aria-expanded="false"
           onClick={handleClick}
@@ -51,32 +51,4 @@ export default function LanguageSelector({
       </div>
     </>
   );
-}
-
-{
-  /* // <div className="relative">
-    //   <button
-    //     id="lang-button"
-    //     className="p-2 rounded-full hover:bg-gray-700 transition-colors cursor-pointer"
-    //     aria-haspopup="true"
-    //     aria-expanded="false"
-    //     onClick={() => {
-    //       const menu = document.getElementById("lang-menu");
-
-    //       if (!menu) return;
-
-    //       const isOpen = !menu.classList.contains("hidden");
-    //       menu.classList.toggle("hidden", isOpen);
-    //     }}
-    //   >
-    //     🌐
-    //   </button>
-    //   <ul id="lang-menu" className="hidden absolute mt-2 w-40 bg-[#BDF8FF]">
-    //     {Object.entries(LANGUAGES).map(([lang, label]) => (
-    //       <li key={lang}>
-    //         <a href={translatePath("/", lang)}>{label}</a>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div> */
 }

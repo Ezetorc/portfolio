@@ -1,0 +1,38 @@
+---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
+import PrimaryLink from "./PrimaryLink.astro";
+import SecondaryLink from "./SecondaryLink.astro";
+import Section from "./Section.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Section>
+  <div class="flex flex-col">
+    <h1
+      class="text-white mobile:text-left tablet:text-center mobile:text-[32px] tablet:text-[44px] desktop:text-7xl font-poppins-semibold"
+    >
+      Ezequias Torczuk
+    </h1>
+
+    <h2
+      class="text-[#BDF8FF] mobile:text-left tablet:text-center mobile:text-[24px] tablet:text-4xl desktop:text-5xl font-poppins-semibold tablet:mt-[24px]"
+    >
+      {t("hero.subtitle")}
+    </h2>
+
+    <p
+      set:html={t("hero.description")}
+      class="text-[#E6E6E6] font-poppins-regular mobile:text-left tablet:text-center mobile:text-[16px] desktop:text-2xl mobile:mt-[8px] tablet:mt-[32px]"
+    />
+  </div>
+
+  <div
+    class="flex tablet:justify-center mobile:mt-[24px] tablet:mt-[48px] gap-x-[30px]"
+  >
+    <PrimaryLink href="#work">{t("hero.view-all-work")}</PrimaryLink>
+    <SecondaryLink href="#about-me">{t("hero.read-about-me")}</SecondaryLink>
+  </div>
+</Section>

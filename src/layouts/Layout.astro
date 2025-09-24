@@ -13,17 +13,30 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <title>Ezequias Torczuk Portfolio</title>
+    <meta
+      name="description"
+      content="Web developer specialized in React and NodeJS, building modern, scalable, and creative projects. Explore my work, skills, and experience in software development."
+    />
+
+    <meta property="og:title" content="Ezequias Torczuk Portfolio" />
+    <meta property="og:site_name" content="Ezequias Torczuk Portfolio" />
+    <meta
+      property="og:description"
+      content="Web developer specialized in React and NodeJS, building modern, scalable, and creative projects. Explore my work, skills, and experience in software development."
+    />
+    <meta property="og:type" content="article" />
     <ClientRouter />
   </head>
-  <body class="font-poppins font-light flex flex-col items-center">
+  <body class="flex flex-col min-h-screen">
     <Header />
 
-    <div
-      class="w-[clamp(320px,100%,1280px)] mt-10 mobile:px-4 flex flex-col gap-y-[64px] mobile:pb-[130px] desktop:pb-[150px]"
+    <main
+      class="flex flex-col w-full max-w-[1280px] min-w-[320px] mx-auto tablet:mt-10 mobile:px-4 gap-y-[32px] pb-[50px] desktop:pb-[120px]"
     >
       <slot />
-    </div>
+    </main>
 
     <Footer />
   </body>

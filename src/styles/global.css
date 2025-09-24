@@ -48,6 +48,7 @@ body {
   background: #001f58;
   background: radial-gradient(circle at 30% -20%, #001f58 0%, #000b1f 100%);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 strong {

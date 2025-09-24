@@ -21,7 +21,7 @@ const t = useTranslations(lang);
   <H2>{t("contact-me.title")}</H2>
   <Subheading>{t("contact-me.subtitle")}</Subheading>
 
-  <Paragraph class="mt-[24px] w-[550px]">
+  <Paragraph class="mt-[24px] max-w-[550px]">
     {t("contact-me.instructions")}
   </Paragraph>
 
@@ -35,12 +35,12 @@ const t = useTranslations(lang);
   </div>
 
   <form
-    class="bg-[#02172B] w-full p-9 flex flex-col gap-y-[40px] mt-11 rounded-[8px]"
+    class="bg-[#02172B] w-full mobile:p-4 tablet:p-9 flex flex-col gap-y-[40px] mt-11 rounded-[8px]"
     action={FORM_LINK}
     method="POST"
   >
     <input
-      class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] h-16 text-[24px] bg-[#000E1C] rounded-[8px]"
+      class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] h-16 mobile:text-[20px] tablet:text-[24px] bg-[#000E1C] rounded-[8px]"
       type="email"
       name="email"
       placeholder={t("contact-me.email-placeholder")}
@@ -48,7 +48,7 @@ const t = useTranslations(lang);
     />
 
     <textarea
-      class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] text-[24px] bg-[#000E1C] rounded-[8px] h-[290px] resize-none"
+      class="w-full font-poppins-semibold p-4 text-white placeholder:text-[#7E7E7E] mobile:text-[20px] tablet:text-[24px] bg-[#000E1C] rounded-[8px] h-[290px] resize-none"
       placeholder={t("contact-me.message-placeholder")}
       name="message"
       required></textarea>
