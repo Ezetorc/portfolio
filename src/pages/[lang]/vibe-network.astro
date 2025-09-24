@@ -34,7 +34,7 @@ export async function getStaticPaths() {
       {t("work.vibe-network.title")}
     </h1>
 
-    <Subheading class="w-[50ch] mb-[32px]">
+    <Subheading class="max-w-[50ch] mb-[32px]">
       {t("work.vibe-network.detailed-description")}
     </Subheading>
 
@@ -53,7 +53,7 @@ export async function getStaticPaths() {
       {t("work.overview.title")}
     </h3>
 
-    <div class="grid grid-cols-[1fr_1fr]">
+    <div class="tablet:grid tablet:grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
           {t("work.vibe-network.overview.paragraph.1")}
@@ -67,7 +67,7 @@ export async function getStaticPaths() {
       </article>
 
       <Image
-        class="justify-self-end"
+        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-[8px]"
         src={vibeLoginPageImage}
         alt={t("work.vibe-network.image.1.alt")}
       />
@@ -81,7 +81,9 @@ export async function getStaticPaths() {
       {t("technologies.title")}
     </h3>
 
-    <article class="grid grid-cols-2">
+    <article
+      class="tablet:grid tablet:grid-cols-2 mobile:gap-y-[24px] mobile:flex mobile:flex-col"
+    >
       <div>
         <Subheading class="mb-[8px]">{t("work.frontend")}</Subheading>
 
@@ -135,7 +137,7 @@ export async function getStaticPaths() {
       {t("work.process")}
     </h3>
 
-    <div class="grid grid-cols-[1fr_1fr]">
+    <div class="tablet:grid tablet:grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
           {t("work.vibe-network.process.paragraph.1")}
@@ -149,7 +151,7 @@ export async function getStaticPaths() {
       </article>
 
       <Image
-        class="justify-self-end"
+        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-[8px]"
         src={vibeLoginPageImage}
         alt={t("work.vibe-network.image.2.alt")}
       />
