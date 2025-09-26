@@ -11,7 +11,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Section id="work">
+<Section id="work" disableAnimation>
   <H2>{t("work.title")}</H2>
   <Subheading>{t("work.subtitle")}</Subheading>
 

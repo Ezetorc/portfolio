@@ -1,3 +1,12 @@
-<section {...Astro.props} class="flex-col scroll-mt-48 my-[16px]">
+---
+interface Props {
+  disableAnimation?: boolean;
+  id?: string;
+}
+
+const { disableAnimation = false, id } = Astro.props;
+---
+
+<section id={id} class={`flex-col scroll-mt-48 my-[16px] ${!disableAnimation && "appear-animation"}`}>
   <slot />
 </section>
