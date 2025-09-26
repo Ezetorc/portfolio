@@ -5,8 +5,7 @@ import Paragraph from "../../components/Paragraph.astro";
 import SecondaryLink from "../../components/SecondaryLink.astro";
 import Section from "../../components/Section.astro";
 import Subheading from "../../components/Subheading.astro";
-import Technology from "../../components/Technology.astro";
-
+import Technology from "../../components/Technology.astro"
 import Layout from "../../layouts/Layout.astro";
 import CSSIcon from "../../components/icons/CSSIcon.astro";
 import ExpressIcon from "../../components/icons/ExpressIcon.astro";
@@ -29,7 +28,7 @@ export async function getStaticPaths() {
 <Layout>
   <Section>
     <h1
-      class="text-white mobile:text-4xl mb-[16px] tablet:text-[36px] desktop:text-[40px] font-poppins-semibold"
+      class="text-primary-text mobile:text-4xl mb-[16px] tablet:text-[36px] desktop:text-[40px] font-poppins-semibold"
     >
       {t("work.vibe-network.title")}
     </h1>
@@ -48,7 +47,7 @@ export async function getStaticPaths() {
 
   <Section>
     <h3
-      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
+      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-muted"
     >
       {t("work.overview.title")}
     </h3>
@@ -76,7 +75,7 @@ export async function getStaticPaths() {
 
   <Section>
     <h3
-      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
+      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-muted"
     >
       {t("technologies.title")}
     </h3>
@@ -132,7 +131,7 @@ export async function getStaticPaths() {
 
   <Section>
     <h3
-      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-[#BDF8FF]"
+      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-muted"
     >
       {t("work.process")}
     </h3>

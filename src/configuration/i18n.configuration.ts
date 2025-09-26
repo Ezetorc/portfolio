@@ -17,7 +17,7 @@ export const DICTIONARY = {
     "footer.discord.aria-label": "Ezetorc's Discord",
     "hero.subtitle": "FullStack Developer",
     "hero.description":
-      "From Argentina with around <strong>2 years of experience</strong>.",
+      "From Argentina with <strong>2 years of experience</strong>.",
     "hero.view-all-work": "View work",
     "hero.read-about-me": "Read about me",
     "work.title": "Work",
@@ -115,7 +115,7 @@ export const DICTIONARY = {
     "footer.discord.aria-label": "Discord de Ezetorc",
     "hero.subtitle": "Desarrollador FullStack",
     "hero.description":
-      "Desde Argentina con <strong>alrededor de 2 años de experiencia</strong>.",
+      "Desde Argentina con <strong>2 años de experiencia</strong>.",
     "hero.view-all-work": "Ver proyectos",
     "hero.read-about-me": "Leer sobre mí",
     "work.title": "Trabajo",

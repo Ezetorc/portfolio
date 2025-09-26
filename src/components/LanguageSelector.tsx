@@ -32,16 +32,16 @@ export default function LanguageSelector(props: {
 
         <ul
           id="lang-menu"
-          className="absolute overflow-hidden cursor-pointer right-0 mt-2 w-40 bg-[#BDF8FF] text-[#000E1C] font-poppins-semibold rounded-lg shadow-lg hidden"
+          className="absolute overflow-hidden cursor-pointer right-0 mt-2 w-40 bg-light-bg border-highlight border-[1px] text-primary-text font-poppins-semibold rounded-lg shadow-lg hidden"
         >
           {Object.entries(LANGUAGES).map(([lang, label]) => (
             <li key={lang}>
               <a
                 href={translatePath("/", lang)}
-                className={`block px-4 py-2 text-sm hover:bg-gray-100 transition-colors ${
+                className={`block px-4 py-2 text-sm hover:bg-highlight transition-colors ${
                   lang === props.currentLang
-                    ? "font-semibold text-blue-600"
-                    : ""
+                    ? "font-poppins-semibold"
+                    : "font-poppins-light"
                 } `}
               >
                 {label}

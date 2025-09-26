@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --breakpoint-mobile: 320px;
@@ -10,9 +9,15 @@
   --font-poppins-regular: "Poppins-Regular", sans-serif;
   --font-poppins-semibold: "Poppins-Semibold", sans-serif;
 
-  --color-muted: #bdf8ff;
+  --color-input-bg: #000e1c;
+  --color-light-bg: #02172b;
   --color-highlight: #30679a;
-  --color-header: #02172b;
+
+  --color-muted: #bdf8ff;
+  --color-muted-strong: #7eb6ee;
+  --color-paragraph: #e6e6e6;
+  --color-placeholder: #b3b3b3;
+  --color-primary-text: #ffffff;
 }
 
 @font-face {
@@ -70,7 +75,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background: #001f58;
-  background: radial-gradient(circle at 30% 0, #001f58 0%, #000b1f 60%);
+  background: radial-gradient(circle at 50% 0, #001f58 0%, #000b1f 35%);
   scroll-behavior: smooth;
 }
 
@@ -80,4 +85,12 @@ body {
 
 .icon-wrapper svg {
   @apply mobile:w-[69px] mobile:h-[69px] tablet:w-[94px] tablet:h-[94px];
+}
+
+.primary {
+  @apply font-poppins-semibold mobile:h-[48px] desktop:h-[64px] desktop:text-[20px] mobile:text-[16px] text-primary-text mobile:px-3 desktop:px-6 rounded-lg bg-[radial-gradient(circle_at_top,#FFB35D_0%,#FF8800_100%)] drop-shadow-2xl;
+}
+
+.secondary {
+  @apply mobile:h-[48px] desktop:h-[64px] mobile:px-3 desktop:px-6 font-poppins-semibold text-primary-text mobile:text-[16px] desktop:text-[20px] rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B] drop-shadow-2xl;
 }

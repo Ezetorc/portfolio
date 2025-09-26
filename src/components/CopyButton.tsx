@@ -24,10 +24,7 @@ export default function CopyButton({
 
   return (
     <>
-      <button
-        onClick={handleClick}
-        className="cursor-pointer font-poppins-semibold mobile:h-[48px] desktop:h-[64px] desktop:text-[20px] mobile:text-[16px] text-white mobile:px-3 desktop:px-6 rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B] drop-shadow-2xl clickable"
-      >
+      <button onClick={handleClick} className=" clickable secondary">
         {label}
       </button>
     </>

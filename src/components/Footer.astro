@@ -11,18 +11,18 @@ const t = useTranslations(lang);
 ---
 
 <footer
-  class="w-full flex justify-center items-center mobile:gap-x-[16px] tablet:gap-x-[32px] mobile:h-[90px] desktop:h-[110px] bg-[#02172B]"
+  class="w-full flex justify-center items-center mobile:gap-x-[16px] tablet:gap-x-[32px] mobile:h-[90px] desktop:h-[110px] bg-light-bg"
 >
   <div class="flex flex-col gap-x-[7px] items-center justify-center">
-    <span class="text-[#BDF8FF] font-poppins-semibold text-[20px]"
+    <span class="text-muted font-poppins-semibold text-[20px]"
       >{t("footer.updated-on")}</span
     >
-    <span class="text-[#7EB6EE] font-poppins-regular text-[16px]"
+    <span class="text-muted-strong font-poppins-regular text-[16px]"
       >{LAST_UPDATE_DATE}</span
     >
   </div>
 
-  <hr class="bg-[#0F4A7B] w-[2px] h-[60%] rounded-[8px]" />
+  <hr class="bg-muted-strong w-[2px] h-[60%] rounded-[8px]" />
 
   <div class="flex gap-x-[26px]">
     <FooterLink
