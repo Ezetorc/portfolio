@@ -37,7 +37,7 @@ const t = useTranslations(lang);
       </nav>
 
       <button
-        class="rounded-full desktop:hover:bg-gray-700 p-2 transition-colors cursor-pointer"
+        class="rounded-full clickable"
       >
         <MoonIcon />
       </button>
@@ -45,7 +45,7 @@ const t = useTranslations(lang);
       <LanguageSelector currentLang={lang} client:load />
 
       <button
-        class="desktop:hidden desktop:cursor-pointer desktop:hover:brightness-110"
+        class="desktop:hidden clickable"
       >
         <OptionsIcon />
       </button>

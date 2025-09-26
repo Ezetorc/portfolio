@@ -74,6 +74,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.clickable {
+  @apply active:scale-95 transition-transform duration-75 desktop:duration-200 ease-in-out desktop:hover:-translate-y-1 cursor-pointer;
+}
+
 .icon-wrapper svg {
   @apply mobile:w-[69px] mobile:h-[69px] tablet:w-[94px] tablet:h-[94px];
 }

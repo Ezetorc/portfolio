@@ -1,13 +1,11 @@
-import { DICTIONARY, LANGUAGES } from "../configuration/i18n.configuration";
+import { LANGUAGES } from "../configuration/i18n.configuration";
 import { useTranslatedPath } from "../utilities/useTranslatedPath";
 import { WorldIcon } from "./icons/WorldIcon";
 
-export default function LanguageSelector({
-  currentLang,
-}: {
-  currentLang: keyof typeof DICTIONARY;
+export default function LanguageSelector(props: {
+  currentLang: keyof typeof LANGUAGES;
 }) {
-  const translatePath = useTranslatedPath(currentLang);
+  const translatePath = useTranslatedPath(props.currentLang);
 
   const handleClick = () => {
     const menu = document.getElementById("lang-menu");
@@ -15,6 +13,7 @@ export default function LanguageSelector({
     if (!menu) return;
 
     const isOpen = !menu.classList.contains("hidden");
+
     menu.classList.toggle("hidden", isOpen);
   };
 
@@ -23,7 +22,7 @@ export default function LanguageSelector({
       <div className="relative">
         <button
           id="lang-button"
-          className="rounded-full p-2 grid place-items-center desktop:hover:bg-gray-700 transition-colors cursor-pointer"
+          className="rounded-full p-2 grid place-items-center clickable"
           aria-haspopup="true"
           aria-expanded="false"
           onClick={handleClick}
@@ -40,7 +39,9 @@ export default function LanguageSelector({
               <a
                 href={translatePath("/", lang)}
                 className={`block px-4 py-2 text-sm hover:bg-gray-100 transition-colors ${
-                  lang === currentLang ? "font-semibold text-blue-600" : ""
+                  lang === props.currentLang
+                    ? "font-semibold text-blue-600"
+                    : ""
                 } `}
               >
                 {label}
