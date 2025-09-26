@@ -46,13 +46,8 @@ body {
   width: 100%;
   min-height: 100vh;
   background: #001f58;
-  background: radial-gradient(circle at 30% -20%, #001f58 0%, #000b1f 100%);
+  background: radial-gradient(circle at 30% 0, #001f58 0%, #000b1f 60%);
   scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-strong {
-  font-family: "Poppins-Regular";
 }
 
 .icon-wrapper svg {

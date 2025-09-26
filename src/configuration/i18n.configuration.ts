@@ -19,7 +19,7 @@ export const DICTIONARY = {
     "hero.description":
       "From Argentina with around <strong>2 years of experience</strong>.",
     "hero.view-all-work": "View work",
-    "hero.read-about-me": "About me",
+    "hero.read-about-me": "Read about me",
     "work.title": "Work",
     "work.subtitle": "Some of my featured projects.",
     "work.bolsillo-feliz.title": "Bolsillo Feliz",
@@ -52,13 +52,13 @@ export const DICTIONARY = {
       "Backend application of movie infrastructure.",
     "about-me.title": "About Me",
     "about-me.paragraph.1":
-      "Full-stack developer from Argentina with 2 years of experience.",
+      "<strong>Full-stack</strong> developer from Argentina with <strong>2 years of experience</strong>.",
     "about-me.paragraph.2":
-      "Skilled in React and NodeJS, with hands-on expertise in building scalable applications and collaborating in team projects.",
+      "Skilled in <strong>React and NodeJS</strong>, with hands-on expertise in building scalable applications and collaborating in team projects.",
     "about-me.paragraph.3":
-      "Currently contributing to Bolsillo Feliz, an expense management platform, enhancing skills in teamwork, problem-solving, and delivering functional solutions.",
+      "Currently contributing to Biblioteca Code Cafe, an online library application, enhancing skills in <strong>teamwork</strong>, problem-solving, and delivering functional solutions.",
     "about-me.paragraph.4":
-      "Studying English at a B2 level, strengthening communication skills for international collaboration.",
+      "Studying <strong>English at a B2 level</strong>, strengthening communication skills for international collaboration.",
     "about-me.face-image.alt": "My Face",
     "about-me.argentine-flag-image.alt": "Argentine Flag",
     "technologies.title": "Technologies",
@@ -117,7 +117,7 @@ export const DICTIONARY = {
     "hero.description":
       "Desde Argentina con <strong>alrededor de 2 años de experiencia</strong>.",
     "hero.view-all-work": "Ver proyectos",
-    "hero.read-about-me": "Sobre mí",
+    "hero.read-about-me": "Leer sobre mí",
     "work.title": "Trabajo",
     "work.subtitle": "Algunos de mis proyectos destacados.",
     "work.bolsillo-feliz.title": "Bolsillo Feliz",
@@ -131,7 +131,7 @@ export const DICTIONARY = {
     "work.view-code": "Ver Código",
     "work.overview.title": "Resúmen",
     "work.vibe-network.overview.paragraph.1":
-      "Red social full-stack que muestra habilidades en autenticación, gestión de usuarios y funciones interactivas.",
+      "Red social FullStack que muestra habilidades en autenticación, gestión de usuarios y funciones interactivas.",
     "work.vibe-network.overview.paragraph.2":
       "Implementación de inicio de sesión seguro con JWT y cifrado de contraseñas, creación de perfiles, publicaciones, comentarios y sistema de seguimiento, simulando un entorno real de red social.",
     "work.vibe-network.image.1.alt": "Página de inicio de sesión de Vibe",
@@ -140,24 +140,24 @@ export const DICTIONARY = {
     "work.backend": "Backend",
     "work.process": "Proceso",
     "work.vibe-network.process.paragraph.1":
-      "Adquirí la primera experiencia implementando autenticación en un proyecto a nivel de producción.",
+      "Adquirí experiencia implementando autenticación en un proyecto a nivel de producción.",
     "work.vibe-network.process.paragraph.2":
       "Desarrollé habilidades en JWT, cifrado de contraseñas y manejo de sesiones mientras abordaba desafíos de escalabilidad.",
     "work.vibe-network.process.paragraph.3":
       "Fortalecí la capacidad de diseñar sistemas complejos y traducir conocimientos teóricos en soluciones prácticas.",
     "work.vibe-network.overview.paragraph.3":
-      "Red social full-stack que muestra habilidades en autenticación, gestión de usuarios y funciones interactivas.",
+      "Red social FullStack que muestra habilidades en autenticación, gestión de usuarios y funciones interactivas.",
     "work.go-back": "Volver",
     "work.cinetro-backend.title": "Cinetro Backend",
     "work.cinetro-backend.description":
       "Aplicación backend para infraestructura de cine.",
     "about-me.title": "Sobre mí",
     "about-me.paragraph.1":
-      "Desarrollador full-stack de Argentina con 2 años de experiencia.",
+      "Desarrollador <strong>FullStack</strong> de Argentina con <strong>2 años de experiencia</strong>.",
     "about-me.paragraph.2":
-      "Experto en React y NodeJS, con práctica en apps escalables y trabajo en equipo.",
+      "Experto en <strong>React y NodeJS</strong>, con práctica en apps escalables y trabajo en equipo.",
     "about-me.paragraph.3":
-      "Actualmente colaboro en Bolsillo Feliz, plataforma de gastos, mejorando habilidades en equipo, resolución de problemas y entrega de soluciones.",
+      "Actualmente trabajando en Biblioteca Code Cafe, plataforma de biblioteca online, mejorando habilidades en <strong>equipo</strong>, resolución de problemas y entrega de soluciones.",
     "about-me.paragraph.4":
       "Estudio inglés en nivel B2, reforzando la comunicación para colaborar internacionalmente.",
     "about-me.face-image.alt": "Mi cara",
@@ -168,7 +168,7 @@ export const DICTIONARY = {
     "technology.html.name": "HTML",
     "technology.html.description": "Lenguaje de marcado",
     "technology.css.name": "CSS",
-    "technology.css.description": "Lenguaje de hojas de estilo",
+    "technology.css.description": "Lenguaje de estilado",
     "technology.javascript.name": "JavaScript",
     "technology.javascript.description": "Lenguaje de programación",
     "technology.typescript.name": "TypeScript",

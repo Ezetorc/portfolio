@@ -19,10 +19,10 @@ const t = useTranslations(lang);
     class="mobile:flex mobile:flex-col mobile:gap-y-[100px] desktop:grid desktop:grid-cols-[1.2fr_1fr]"
   >
     <article class="flex flex-col gap-y-8">
-      <Paragraph>{t("about-me.paragraph.1")}</Paragraph>
-      <Paragraph>{t("about-me.paragraph.2")}</Paragraph>
-      <Paragraph>{t("about-me.paragraph.3")}</Paragraph>
-      <Paragraph>{t("about-me.paragraph.4")}</Paragraph>
+      <Paragraph set:html={t("about-me.paragraph.1")} />
+      <Paragraph set:html={t("about-me.paragraph.2")} />
+      <Paragraph set:html={t("about-me.paragraph.3")} />
+      <Paragraph set:html={t("about-me.paragraph.4")} />
     </article>
 
     <div class="relative flex items-end justify-end">

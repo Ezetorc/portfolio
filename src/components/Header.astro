@@ -11,9 +11,9 @@ const t = useTranslations(lang);
 ---
 
 <header
-  class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-header flex items-center justify-center drop-shadow-2xl z-50 px-4"
+  class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-header flex items-center justify-center drop-shadow-2xl z-50 mobile:px-4"
 >
-  <div class="w-full mobile:px-4 max-w-[1280px] min-w-[320px] flex justify-between items-center">
+  <div class="w-full max-w-[1280px] min-w-[320px] flex justify-between items-center">
     <div>
       <h2
         class="text-white mobile:text-[16px] desktop:text-[24px] font-poppins-semibold"
@@ -37,7 +37,7 @@ const t = useTranslations(lang);
       </nav>
 
       <button
-        class="rounded-full hover:bg-gray-700 transition-colors cursor-pointer"
+        class="rounded-full desktop:hover:bg-gray-700 p-2 transition-colors cursor-pointer"
       >
         <MoonIcon />
       </button>

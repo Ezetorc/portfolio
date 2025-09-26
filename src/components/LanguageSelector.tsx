@@ -23,7 +23,7 @@ export default function LanguageSelector({
       <div className="relative">
         <button
           id="lang-button"
-          className="rounded-full grid place-items-center hover:bg-gray-700 transition-colors cursor-pointer"
+          className="rounded-full p-2 grid place-items-center desktop:hover:bg-gray-700 transition-colors cursor-pointer"
           aria-haspopup="true"
           aria-expanded="false"
           onClick={handleClick}
