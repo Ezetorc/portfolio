@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import { getLangFromUrl } from "../utilities/getLangFromUrl";
 import { useTranslatedPath } from "../utilities/useTranslatedPath";
 
@@ -19,7 +19,7 @@ const translatePath = useTranslatedPath(lang);
 
 <a
   href={translatePath(href, lang)}
-  class="w-[clamp(320px,90vw,360px)] aspect-[9/11] rounded-[8px] cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[6%] desktop:p-[2%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
+  class="w-[clamp(320px,90vw,360px)] aspect-[9/11] rounded-default cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[6%] desktop:p-[2%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
   style={`background: radial-gradient(circle at top, ${colorFrom} 0%, ${colorTo} 100%)`}
 >
   {
@@ -27,7 +27,7 @@ const translatePath = useTranslatedPath(lang);
       <Image
         src={image}
         alt={`${title} Icon`}
-        class="mt-[12%] w-[70%] aspect-square border-primary-text border-4 rounded-[8px]"
+        class="mt-[12%] w-[70%] aspect-square border-primary-text border-4 rounded-default"
         decoding="async"
         loading="eager"
       />
@@ -35,7 +35,9 @@ const translatePath = useTranslatedPath(lang);
   }
 
   <div>
-    <h3 class="text-primary-text font-poppins-semibold text-left w-full text-[30px]">
+    <h3
+      class="text-primary-text font-poppins-semibold text-left w-full text-[30px]"
+    >
       {title}
     </h3>
     <p class="text-paragraph font-poppins-light text-left text-[16px]">

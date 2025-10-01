@@ -1,5 +1,6 @@
 ---
 import bolsilloFelizImage from "../assets/images/bolsillo-feliz-icon.webp";
+import vibeNetworkImage from "../assets/images/vibe-network-icon.webp"
 import { getLangFromUrl } from "../utilities/getLangFromUrl";
 import { useTranslations } from "../utilities/useTranslations";
 import H2 from "./H2.astro";
@@ -31,6 +32,7 @@ const t = useTranslations(lang);
       href="/vibe-network"
       title={t("work.vibe-network.title")}
       description={t("work.vibe-network.description")}
+      image={vibeNetworkImage}
       colorFrom="#63B5B1"
       colorTo="#1D3C3B"
     />

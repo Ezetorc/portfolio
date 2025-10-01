@@ -1,16 +1,24 @@
 ---
+import { FULL_NAME } from "../configuration/general.configuration";
 import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslatedPath } from "../utilities/useTranslatedPath";
 import { useTranslations } from "../utilities/useTranslations";
 import HeaderLink from "./HeaderLink.astro";
+import ArrowLeftIcon from "./icons/ArrowLeftIcon.astro";
 import LanguageSelector from "./LanguageSelector";
-import { OptionsMenu } from "./OptionsMenu";
+import NavLinks from "./NavLinks.astro";
+import SectionSelector from "./SectionSelector.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const homePath = translatePath("/", lang);
+const isHome =
+  Astro.url.pathname === homePath || Astro.url.pathname === "/index.html";
 ---
 
 <header
-  class="sticky top-0 left-0 w-full mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-light-bg flex items-center justify-center drop-shadow-2xl z-50 mobile:px-4"
+  class="w-full sticky top-0 left-0 mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-light-bg flex items-center justify-center drop-shadow-2xl z-50 mobile:px-4"
 >
   <div
     class="w-full max-w-[1280px] min-w-[320px] flex justify-between items-center"
@@ -19,7 +27,7 @@ const t = useTranslations(lang);
       <h2
         class="text-primary-text mobile:text-[16px] desktop:text-[24px] font-poppins-semibold"
       >
-        Ezequias Torczuk
+        {FULL_NAME}
       </h2>
 
       <h3 class="text-muted mobile:text-[14px] desktop:text-[20px]">
@@ -31,14 +39,20 @@ const t = useTranslations(lang);
       <nav
         class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]"
       >
-        <HeaderLink href="#work">{t("header.work")}</HeaderLink>
-        <HeaderLink href="#about-me">{t("header.about-me")}</HeaderLink>
-        <HeaderLink href="#contact">{t("header.contact")}</HeaderLink>
-        <HeaderLink href="#technologies">{t("header.technologies")}</HeaderLink>
+        <NavLinks />
       </nav>
 
-      <LanguageSelector currentLang={lang} client:load />
-      <OptionsMenu client:load />
+      <LanguageSelector client:load currentLang={lang} />
+
+      {
+        isHome ? (
+          <SectionSelector />
+        ) : (
+          <HeaderLink href={translatePath("/", lang)}>
+            <ArrowLeftIcon />
+          </HeaderLink>
+        )
+      }
     </div>
   </div>
 </header>

@@ -9,6 +9,8 @@
   --font-poppins-regular: "Poppins-Regular", sans-serif;
   --font-poppins-semibold: "Poppins-Semibold", sans-serif;
 
+  --radius-default: 8px;
+
   --color-input-bg: #000e1c;
   --color-light-bg: #02172b;
   --color-highlight: #30679a;
@@ -25,7 +27,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../assets/fonts/Poppins-Light.ttf") format("truetype");
+  src: url("../assets/fonts/poppins-light.ttf") format("truetype");
 }
 
 @font-face {
@@ -33,7 +35,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/poppins-regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -41,10 +43,10 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  src: url("../assets/fonts/poppins-semibold.ttf") format("truetype");
 }
 
-@keyframes appear {
+@keyframes fade-in {
   from {
     opacity: 0;
     scale: 95%;
@@ -56,14 +58,28 @@
   }
 }
 
-.appear-animation {
-  animation: appear ease-in-out;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
+@keyframes appear-from-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fade-in ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+  }
 }
 
 @media (max-width: 860px) {
-  .appear-animation {
+  .fade-in {
     animation-range: entry 0 cover 20%;
   }
 }
@@ -79,6 +95,14 @@ body {
   scroll-behavior: smooth;
 }
 
+.appear-from-right {
+  animation: appear-from-right 0.3s ease forwards;
+}
+
+.disappear-to-left {
+  animation: appear-from-right 0.3s ease reverse forwards;
+}
+
 .clickable {
   @apply active:scale-95 transition-transform duration-75 desktop:duration-200 ease-in-out desktop:hover:-translate-y-1 cursor-pointer;
 }
@@ -88,9 +112,9 @@ body {
 }
 
 .primary {
-  @apply font-poppins-semibold mobile:h-[48px] desktop:h-[64px] desktop:text-[20px] mobile:text-[16px] text-primary-text mobile:px-3 desktop:px-6 rounded-lg bg-[radial-gradient(circle_at_top,#FFB35D_0%,#FF8800_100%)] drop-shadow-2xl;
+  @apply font-poppins-semibold mobile:py-3 desktop:py-4 mobile:px-3 tablet:px-5 tablet:text-[20px] mobile:text-[16px] text-primary-text rounded-lg bg-[radial-gradient(circle_at_top,#FFB35D_0%,#FF8800_50%)] drop-shadow-2xl;
 }
 
 .secondary {
-  @apply mobile:h-[48px] desktop:h-[64px] mobile:px-3 desktop:px-6 font-poppins-semibold text-primary-text mobile:text-[16px] desktop:text-[20px] rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B] drop-shadow-2xl;
+  @apply mobile:py-3 desktop:py-4 mobile:px-3 tablet:px-5 font-poppins-semibold text-primary-text mobile:text-[16px] tablet:text-[20px] rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B] drop-shadow-2xl;
 }

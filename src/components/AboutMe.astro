@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import profilePictureImage from "../assets/images/profile-picture.webp";
 import argentineFlagImage from "../assets/images/argentine-flag.webp";
 import H2 from "./H2.astro";
@@ -28,7 +28,7 @@ const t = useTranslations(lang);
     <div class="relative flex items-end justify-end">
       <Image
         src={profilePictureImage}
-        class="rounded-[8px] w-[190px] tablet:w-[275px] aspect-square absolute z-10 tablet:-translate-x-[clamp(100px,10vw,176px)] -translate-y-14 drop-shadow-2xl mobile:-translate-x-[100px]"
+        class="rounded-default w-[190px] tablet:w-[275px] aspect-square absolute z-10 tablet:-translate-x-[clamp(100px,10vw,176px)] -translate-y-14 drop-shadow-2xl mobile:-translate-x-[100px]"
         alt={t("about-me.face-image.alt")}
         decoding="async"
         loading="lazy"
@@ -36,7 +36,7 @@ const t = useTranslations(lang);
 
       <Image
         src={argentineFlagImage}
-        class="rounded-[8px] w-[190px] tablet:w-[275px] aspect-square relative z-0"
+        class="rounded-default w-[190px] tablet:w-[275px] aspect-square relative z-0"
         alt={t("about-me.argentine-flag-image.alt")}
         decoding="async"
         loading="lazy"

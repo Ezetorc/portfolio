@@ -1,11 +1,11 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import vibeLoginPageImage from "../../assets/images/vibe-login-page.webp";
 import Paragraph from "../../components/Paragraph.astro";
 import SecondaryLink from "../../components/SecondaryLink.astro";
 import Section from "../../components/Section.astro";
 import Subheading from "../../components/Subheading.astro";
-import Technology from "../../components/Technology.astro"
+import Technology from "../../components/Technology.astro";
 import Layout from "../../layouts/Layout.astro";
 import CSSIcon from "../../components/icons/CSSIcon.astro";
 import ExpressIcon from "../../components/icons/ExpressIcon.astro";
@@ -16,6 +16,7 @@ import ReactIcon from "../../components/icons/ReactIcon.astro";
 import TypeScriptIcon from "../../components/icons/TypeScriptIcon.astro";
 import { getLangFromUrl } from "../../utilities/getLangFromUrl";
 import { useTranslations } from "../../utilities/useTranslations";
+import H2 from "../../components/H2.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -46,12 +47,8 @@ export async function getStaticPaths() {
   </Section>
 
   <Section>
-    <h3
-      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-muted"
-    >
-      {t("work.overview.title")}
-    </h3>
-
+    <H2>{t("work.overview.title")}</H2>
+    
     <div class="tablet:grid tablet:grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
@@ -66,19 +63,16 @@ export async function getStaticPaths() {
       </article>
 
       <Image
-        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-[8px]"
+        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-default"
         src={vibeLoginPageImage}
         alt={t("work.vibe-network.image.1.alt")}
+        loading="eager"
       />
     </div>
   </Section>
 
   <Section>
-    <h3
-      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-muted"
-    >
-      {t("technologies.title")}
-    </h3>
+    <H2>{t("technologies.title")}</H2>
 
     <article
       class="tablet:grid tablet:grid-cols-2 mobile:gap-y-[24px] mobile:flex mobile:flex-col"
@@ -130,11 +124,7 @@ export async function getStaticPaths() {
   </Section>
 
   <Section>
-    <h3
-      class="mobile:text-[24px] tablet:text-[32px] font-poppins-semibold text-muted"
-    >
-      {t("work.process")}
-    </h3>
+    <H2>{t("work.process")}</H2>
 
     <div class="tablet:grid tablet:grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
@@ -150,7 +140,7 @@ export async function getStaticPaths() {
       </article>
 
       <Image
-        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-[8px]"
+        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-default"
         src={vibeLoginPageImage}
         alt={t("work.vibe-network.image.2.alt")}
       />

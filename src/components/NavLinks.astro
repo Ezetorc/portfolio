@@ -1,0 +1,13 @@
+---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
+import HeaderLink from "./HeaderLink.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<HeaderLink href="#work">{t("header.work")}</HeaderLink>
+<HeaderLink href="#about-me">{t("header.about-me")}</HeaderLink>
+<HeaderLink href="#contact">{t("header.contact")}</HeaderLink>
+<HeaderLink href="#technologies">{t("header.technologies")}</HeaderLink>

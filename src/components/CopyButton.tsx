@@ -13,9 +13,10 @@ export default function CopyButton({
       .then(() =>
         toast.success(label, {
           style: {
-            backgroundColor: "#BDF8FF",
+            backgroundColor: "#02172b",
             fontFamily: "Poppins-Semibold",
-            color: "#000E1C",
+            border: "#30679a 1px solid",
+            color: "#FFFFFF",
           },
         })
       )
@@ -24,7 +25,7 @@ export default function CopyButton({
 
   return (
     <>
-      <button onClick={handleClick} className=" clickable secondary">
+      <button onClick={handleClick} className="clickable secondary">
         {label}
       </button>
     </>

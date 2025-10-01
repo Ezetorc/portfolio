@@ -1,0 +1,64 @@
+---
+import MenuIcon from "./icons/MenuIcon.astro";
+import NavLinks from "./NavLinks.astro";
+---
+
+<script>
+  const attachNavListeners = () => {
+    const $nav = document.getElementById("nav");
+    const $button = document.getElementById("nav-opener-button");
+
+    if (!$nav || !$button) return;
+
+    const open = () => {
+      $nav.classList.remove("hidden", "disappear-to-left");
+      $nav.classList.add("flex", "appear-from-right");
+    };
+
+    const close = () => {
+      $nav.classList.remove("appear-from-right");
+      void $nav.offsetWidth;
+      $nav.classList.add("disappear-to-left");
+
+      const onAnimationEnd = () => {
+        $nav.classList.remove("flex", "disappear-to-left");
+        $nav.classList.add("hidden");
+        $nav.removeEventListener("animationend", onAnimationEnd);
+      };
+
+      $nav.addEventListener("animationend", onAnimationEnd);
+    };
+
+    $button.replaceWith($button.cloneNode(true));
+    const newButton = document.getElementById(
+      "nav-opener-button"
+    ) as HTMLElement;
+
+    newButton.addEventListener("click", () => {
+      const isOpen = !$nav.classList.contains("hidden");
+      isOpen ? close() : open();
+    });
+
+    $nav.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (target?.closest("a")) {
+        close();
+      }
+    });
+  };
+
+  attachNavListeners();
+
+  document.addEventListener("astro:after-swap", attachNavListeners);
+</script>
+
+<nav
+  id="nav"
+  class="hidden desktop:hidden flex-col items-end absolute top-[72px] right-0 w-[clamp(280px,50%,560px)] h-[calc(100vh-72px)] bg-light-bg border-l-highlight border-l-[1px] p-6 gap-y-2"
+>
+  <NavLinks />
+</nav>
+
+<button id="nav-opener-button" class="desktop:hidden clickable">
+  <MenuIcon />
+</button>

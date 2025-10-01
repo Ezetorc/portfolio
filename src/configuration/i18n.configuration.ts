@@ -17,7 +17,7 @@ export const DICTIONARY = {
     "footer.discord.aria-label": "Ezetorc's Discord",
     "hero.subtitle": "FullStack Developer",
     "hero.description":
-      "From Argentina with <strong>2 years of experience</strong>.",
+      "From Argentina with 2 years of experience.",
     "hero.view-all-work": "View work",
     "hero.read-about-me": "Read about me",
     "work.title": "Work",
@@ -115,7 +115,7 @@ export const DICTIONARY = {
     "footer.discord.aria-label": "Discord de Ezetorc",
     "hero.subtitle": "Desarrollador FullStack",
     "hero.description":
-      "Desde Argentina con <strong>2 años de experiencia</strong>.",
+      "Desde Argentina con 2 años de experiencia.",
     "hero.view-all-work": "Ver proyectos",
     "hero.read-about-me": "Leer sobre mí",
     "work.title": "Trabajo",
@@ -159,7 +159,7 @@ export const DICTIONARY = {
     "about-me.paragraph.3":
       "Actualmente trabajando en Biblioteca Code Cafe, plataforma de biblioteca online, mejorando habilidades en <strong>equipo</strong>, resolución de problemas y entrega de soluciones.",
     "about-me.paragraph.4":
-      "Estudio inglés en nivel B2, reforzando la comunicación para colaborar internacionalmente.",
+      "Estudio <strong>inglés en nivel B2</strong>, reforzando la comunicación para colaborar internacionalmente.",
     "about-me.face-image.alt": "Mi cara",
     "about-me.argentine-flag-image.alt": "Bandera de Argentina",
     "technologies.title": "Tecnologías",

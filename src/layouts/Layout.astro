@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import { getLangFromUrl } from "../utilities/getLangFromUrl";
 const lang = getLangFromUrl(Astro.url);
 import "../styles/global.css";
+import { FULL_NAME } from "../configuration/general.configuration";
 ---
 
 <!doctype html>
@@ -14,25 +15,27 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <title>Ezequias Torczuk Portfolio</title>
+    <title>{FULL_NAME} Portfolio</title>
     <meta
       name="description"
       content="Web developer specialized in React and NodeJS, building modern, scalable, and creative projects. Explore my work, skills, and experience in software development."
     />
-    <meta property="og:title" content="Ezequias Torczuk Portfolio" />
-    <meta property="og:site_name" content="Ezequias Torczuk Portfolio" />
+
+    <meta property="og:title" content={`${FULL_NAME} Portfolio`} />
+    <meta property="og:site_name" content={`${FULL_NAME} Portfolio`} />
     <meta
       property="og:description"
       content="Web developer specialized in React and NodeJS, building modern, scalable, and creative projects. Explore my work, skills, and experience in software development."
     />
     <meta property="og:type" content="article" />
+
     <ClientRouter />
   </head>
-  <body class="flex flex-col min-h-screen relative">
+  <body class="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
     <Header />
 
     <main
-      class="flex flex-col w-full max-w-[1280px] min-w-[320px] mx-auto tablet:mt-10 mobile:px-4 gap-y-[32px] pb-[50px] desktop:pb-[120px]"
+      class="flex flex-col w-full max-w-[1280px] min-w-[320px] mx-auto tablet:mt-4 desktop:mt-10 mobile:px-4 gap-y-[32px] pb-[50px] desktop:pb-[120px]"
     >
       <slot />
     </main>
