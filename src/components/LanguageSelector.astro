@@ -1,0 +1,56 @@
+---
+import { LANGUAGES } from "../configuration/i18n.configuration";
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslatedPath } from "../utilities/useTranslatedPath";
+import WorldIcon from "./icons/WorldIcon.astro";
+
+const currentLang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(currentLang);
+---
+
+<script>
+  function attachListeners() {
+    const $langButton = document.getElementById("lang-button");
+    const $langMenu = document.getElementById("lang-menu");
+
+    if (!$langButton || !$langMenu) return;
+
+    $langButton.onclick = () => $langMenu.classList.toggle("hidden");
+  }
+
+  attachListeners();
+  document.addEventListener("astro:page-load", attachListeners);
+</script>
+
+<div class="relative">
+  <button
+    id="lang-button"
+    class="rounded-full p-2 grid place-items-center clickable"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <WorldIcon />
+  </button>
+
+  <ul
+    id="lang-menu"
+    class="absolute overflow-hidden cursor-pointer right-0 mt-2 w-40 bg-light-bg border-highlight border-[1px] text-primary-text font-poppins-semibold rounded-lg shadow-lg hidden"
+  >
+    {
+      Object.entries(LANGUAGES).map(([lang, label]) => (
+        <li>
+          <a
+            href={translatePath("/", lang)}
+            class={`block px-4 py-2 text-sm hover:bg-highlight transition-colors ${
+              lang === currentLang
+                ? "font-poppins-semibold"
+                : "font-poppins-light"
+            } `}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

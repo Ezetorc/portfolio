@@ -1,5 +1,4 @@
 ---
-import { Toaster } from "react-hot-toast";
 import AboutMe from "../../components/AboutMe.astro";
 import ContactMe from "../../components/ContactMe.astro";
 import Technologies from "../../components/Technologies.astro";
@@ -13,8 +12,6 @@ export async function getStaticPaths() {
 ---
 
 <Layout>
-  <Toaster client:load position="top-center" reverseOrder={false} />
-
   <Hero />
   <Work />
   <AboutMe />

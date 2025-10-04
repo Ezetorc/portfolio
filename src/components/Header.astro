@@ -5,7 +5,7 @@ import { useTranslatedPath } from "../utilities/useTranslatedPath";
 import { useTranslations } from "../utilities/useTranslations";
 import HeaderLink from "./HeaderLink.astro";
 import ArrowLeftIcon from "./icons/ArrowLeftIcon.astro";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "./LanguageSelector.astro";
 import NavLinks from "./NavLinks.astro";
 import SectionSelector from "./SectionSelector.astro";
 
@@ -42,7 +42,7 @@ const isHome =
         <NavLinks />
       </nav>
 
-      <LanguageSelector client:load currentLang={lang} />
+      <LanguageSelector />
 
       {
         isHome ? (
