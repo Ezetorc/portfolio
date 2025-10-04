@@ -7,6 +7,7 @@ export const LANGUAGES = {
 
 export const DICTIONARY = {
   en: {
+    "toast.copy.error": "Error during copy",
     "header.subtitle": "FullStack Developer",
     "header.work": "Work",
     "header.about-me": "About Me",
@@ -16,8 +17,7 @@ export const DICTIONARY = {
     "footer.github.aria-label": "Ezetorc's Github",
     "footer.discord.aria-label": "Ezetorc's Discord",
     "hero.subtitle": "FullStack Developer",
-    "hero.description":
-      "From Argentina with 2 years of experience.",
+    "hero.description": "From Argentina with 2 years of experience.",
     "hero.view-all-work": "View work",
     "hero.read-about-me": "Read about me",
     "work.title": "Work",
@@ -105,6 +105,7 @@ export const DICTIONARY = {
     "contact-me.send-message": "Send Message",
   },
   es: {
+    "toast.copy.error": "Error al copiar",
     "header.subtitle": "Desarrollador FullStack",
     "header.work": "Trabajo",
     "header.about-me": "Sobre Mí",
@@ -114,8 +115,7 @@ export const DICTIONARY = {
     "footer.github.aria-label": "Github de Ezetorc",
     "footer.discord.aria-label": "Discord de Ezetorc",
     "hero.subtitle": "Desarrollador FullStack",
-    "hero.description":
-      "Desde Argentina con 2 años de experiencia.",
+    "hero.description": "Desde Argentina con 2 años de experiencia.",
     "hero.view-all-work": "Ver proyectos",
     "hero.read-about-me": "Leer sobre mí",
     "work.title": "Trabajo",

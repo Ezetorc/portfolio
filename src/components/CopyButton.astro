@@ -1,0 +1,47 @@
+---
+import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { useTranslations } from "../utilities/useTranslations";
+
+interface Props {
+  text: string;
+  label: string;
+}
+
+const { text, label } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<script>
+  import "toastify-js/src/toastify.css";
+  import { SuccessToast } from "../toasts/success.toast";
+  import { FailureToast } from "../toasts/failure.toast";
+
+  const $button = document.getElementById("copy-button");
+
+  $button?.addEventListener("click", () => {
+    const text = $button.dataset.text;
+    const label = $button.dataset.label;
+    const error = $button.dataset.error;
+
+    if (!text) throw new Error("CopyButton text is missing");
+    if (!label) throw new Error("CopyButton label is missing");
+    if (!error) throw new Error("CopyButton error is missing");
+
+    navigator.clipboard
+      .writeText(text)
+      .then(() => SuccessToast(label).showToast())
+      .catch(() => FailureToast(error).showToast());
+  });
+</script>
+
+<button
+  data-text={text}
+  data-label={label}
+  data-error={t("toast.copy.error")}
+  id="copy-button"
+  class="clickable secondary"
+>
+  {label}
+</button>

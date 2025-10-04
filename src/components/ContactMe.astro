@@ -6,7 +6,7 @@ import {
 } from "../configuration/contact.configuration";
 import { getLangFromUrl } from "../utilities/getLangFromUrl";
 import { useTranslations } from "../utilities/useTranslations";
-import CopyButton from "./CopyButton";
+import CopyButton from "./CopyButton.astro";
 import H2 from "./H2.astro";
 import Paragraph from "./Paragraph.astro";
 import PrimaryButton from "./PrimaryButton.astro";
@@ -26,12 +26,14 @@ const t = useTranslations(lang);
   </Paragraph>
 
   <div class="flex gap-x-[32px] mt-[48px]">
-    <CopyButton client:load label={t("contact-me.copy-email")} text={EMAIL} />
+    <!-- <CopyButton client:load label={t("contact-me.copy-email")} text={EMAIL} />
     <CopyButton
       client:load
       label={t("contact-me.copy-discord")}
       text={DISCORD}
-    />
+    /> -->
+
+    <CopyButton label={t("contact-me.copy-discord")} text={DISCORD} />
   </div>
 
   <form
