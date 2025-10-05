@@ -12,9 +12,11 @@ import SectionSelector from "./SectionSelector.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
-const homePath = translatePath("/", lang);
+const homePath = translatePath("/");
+console.log(homePath);
+console.log(Astro.url.pathname);
 const isHome =
-  Astro.url.pathname === homePath || Astro.url.pathname === "/index.html";
+  homePath.includes(Astro.url.pathname) || Astro.url.pathname === "/index.html";
 ---
 
 <header
@@ -48,7 +50,7 @@ const isHome =
         isHome ? (
           <SectionSelector />
         ) : (
-          <HeaderLink href={translatePath("/", lang)}>
+          <HeaderLink href={translatePath("/")}>
             <ArrowLeftIcon />
           </HeaderLink>
         )

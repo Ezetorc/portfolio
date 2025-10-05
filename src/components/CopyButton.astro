@@ -18,21 +18,23 @@ const t = useTranslations(lang);
   import { SuccessToast } from "../toasts/success.toast";
   import { FailureToast } from "../toasts/failure.toast";
 
-  const $button = document.getElementById("copy-button");
+  const buttons = document.querySelectorAll(".copy-button") as NodeListOf<HTMLButtonElement>;
 
-  $button?.addEventListener("click", () => {
-    const text = $button.dataset.text;
-    const label = $button.dataset.label;
-    const error = $button.dataset.error;
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const text = button.dataset.text;
+      const label = button.dataset.label;
+      const error = button.dataset.error;
 
-    if (!text) throw new Error("CopyButton text is missing");
-    if (!label) throw new Error("CopyButton label is missing");
-    if (!error) throw new Error("CopyButton error is missing");
+      if (!text) throw new Error("CopyButton text is missing");
+      if (!label) throw new Error("CopyButton label is missing");
+      if (!error) throw new Error("CopyButton error is missing");
 
-    navigator.clipboard
-      .writeText(text)
-      .then(() => SuccessToast(label).showToast())
-      .catch(() => FailureToast(error).showToast());
+      navigator.clipboard
+        .writeText(text)
+        .then(() => SuccessToast(label).showToast())
+        .catch(() => FailureToast(error).showToast());
+    });
   });
 </script>
 
@@ -40,8 +42,7 @@ const t = useTranslations(lang);
   data-text={text}
   data-label={label}
   data-error={t("toast.copy.error")}
-  id="copy-button"
-  class="clickable secondary"
+  class="copy-button clickable secondary"
 >
   {label}
 </button>

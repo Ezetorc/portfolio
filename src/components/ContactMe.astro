@@ -26,14 +26,8 @@ const t = useTranslations(lang);
   </Paragraph>
 
   <div class="flex gap-x-[32px] mt-[48px]">
-    <!-- <CopyButton client:load label={t("contact-me.copy-email")} text={EMAIL} />
-    <CopyButton
-      client:load
-      label={t("contact-me.copy-discord")}
-      text={DISCORD}
-    /> -->
-
     <CopyButton label={t("contact-me.copy-discord")} text={DISCORD} />
+    <CopyButton label={t("contact-me.copy-email")} text={EMAIL} />
   </div>
 
   <form
