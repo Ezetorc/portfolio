@@ -7,7 +7,6 @@ import NavLinks from "./NavLinks.astro";
   const attachNavListeners = () => {
     const $nav = document.getElementById("nav");
     const $button = document.getElementById("nav-opener-button");
-
     if (!$nav || !$button) return;
 
     const open = () => {
@@ -20,21 +19,17 @@ import NavLinks from "./NavLinks.astro";
       void $nav.offsetWidth;
       $nav.classList.add("disappear-to-left");
 
-      const onAnimationEnd = () => {
-        $nav.classList.remove("flex", "disappear-to-left");
-        $nav.classList.add("hidden");
-        $nav.removeEventListener("animationend", onAnimationEnd);
-      };
-
-      $nav.addEventListener("animationend", onAnimationEnd);
+      $nav.addEventListener(
+        "animationend",
+        () => {
+          $nav.classList.remove("flex", "disappear-to-left");
+          $nav.classList.add("hidden");
+        },
+        { once: true }
+      );
     };
 
-    $button.replaceWith($button.cloneNode(true));
-    const newButton = document.getElementById(
-      "nav-opener-button"
-    ) as HTMLElement;
-
-    newButton.addEventListener("click", () => {
+    $button.addEventListener("click", () => {
       const isOpen = !$nav.classList.contains("hidden");
       isOpen ? close() : open();
     });
@@ -48,7 +43,6 @@ import NavLinks from "./NavLinks.astro";
   };
 
   attachNavListeners();
-
   document.addEventListener("astro:after-swap", attachNavListeners);
 </script>
 

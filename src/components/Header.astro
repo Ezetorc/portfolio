@@ -36,11 +36,13 @@ const isHome =
     </div>
 
     <div class="flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]">
-      <nav
-        class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]"
-      >
-        <NavLinks />
-      </nav>
+      {
+        isHome && (
+          <nav class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]">
+            <NavLinks />
+          </nav>
+        )
+      }
 
       <LanguageSelector />
 
