@@ -13,8 +13,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const homePath = translatePath("/");
-console.log(homePath);
-console.log(Astro.url.pathname);
 const isHome =
   homePath.includes(Astro.url.pathname) || Astro.url.pathname === "/index.html";
 ---
