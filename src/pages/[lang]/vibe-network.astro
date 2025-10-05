@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import vibeLoginPageImage from "../../assets/images/vibe-login-page.webp";
+import vibeRegisterPage from "../../assets/images/work/vibeNetwork/register-page.webp";
+import vibePostsPage from "../../assets/images/work/vibeNetwork/posts-page.webp";
 import Paragraph from "../../components/Paragraph.astro";
 import SecondaryLink from "../../components/SecondaryLink.astro";
 import Section from "../../components/Section.astro";
@@ -48,8 +49,8 @@ export async function getStaticPaths() {
 
   <Section>
     <H2>{t("work.overview.title")}</H2>
-    
-    <div class="tablet:grid tablet:grid-cols-[1fr_1fr]">
+
+    <div class="tablet:grid gap-x-[5%] tablet:grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
           {t("work.vibe-network.overview.paragraph.1")}
@@ -64,7 +65,7 @@ export async function getStaticPaths() {
 
       <Image
         class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-default"
-        src={vibeLoginPageImage}
+        src={vibeRegisterPage}
         alt={t("work.vibe-network.image.1.alt")}
         loading="eager"
       />
@@ -126,7 +127,7 @@ export async function getStaticPaths() {
   <Section>
     <H2>{t("work.process")}</H2>
 
-    <div class="tablet:grid tablet:grid-cols-[1fr_1fr]">
+    <div class="tablet:grid gap-x-[5%] tablet:grid-cols-[1fr_1fr]">
       <article class="flex flex-col gap-y-[36px]">
         <Paragraph>
           {t("work.vibe-network.process.paragraph.1")}
@@ -141,7 +142,7 @@ export async function getStaticPaths() {
 
       <Image
         class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-default"
-        src={vibeLoginPageImage}
+        src={vibePostsPage}
         alt={t("work.vibe-network.image.2.alt")}
       />
     </div>
