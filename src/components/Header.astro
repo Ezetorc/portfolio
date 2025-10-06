@@ -1,8 +1,8 @@
 ---
 import { FULL_NAME } from "../configuration/general.configuration";
-import { getLangFromUrl } from "../utilities/getLangFromUrl";
-import { useTranslatedPath } from "../utilities/useTranslatedPath";
-import { useTranslations } from "../utilities/useTranslations";
+import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
+import { useTranslatedPath } from "../utilities/use-translated-path.utility";
+import { useTranslations } from "../utilities/use-translations.utility";
 import HeaderLink from "./HeaderLink.astro";
 import ArrowLeftIcon from "./icons/ArrowLeftIcon.astro";
 import LanguageSelector from "./LanguageSelector.astro";
@@ -50,7 +50,7 @@ const isHome =
         isHome ? (
           <SectionSelector />
         ) : (
-          <HeaderLink href={translatePath("/")}>
+          <HeaderLink aria-label={t("work.go-back")} href={translatePath("/")}>
             <ArrowLeftIcon />
           </HeaderLink>
         )

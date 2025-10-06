@@ -1,0 +1,139 @@
+---
+import H2 from "../../../components/H2.astro";
+import HTMLIcon from "../../../components/icons/HTMLIcon.astro";
+import Paragraph from "../../../components/Paragraph.astro";
+import SecondaryLink from "../../../components/SecondaryLink.astro";
+import Section from "../../../components/Section.astro";
+import Subheading from "../../../components/Subheading.astro";
+import Technology from "../../../components/Technology.astro";
+import { WORKS } from "../../../configuration/works.configuration";
+import Layout from "../../../layouts/Layout.astro";
+import type { Work } from "../../../models/work.model";
+import { getLangFromUrl } from "../../../utilities/get-lang-from-url.utility";
+import { useTranslations } from "../../../utilities/use-translations.utility";
+import { LANGUAGES } from "../../../configuration/i18n.configuration";
+
+const { id } = Astro.params;
+const work: Work | undefined = WORKS.find((work) => work.id === id);
+
+export async function getStaticPaths() {
+  return Object.keys(LANGUAGES).flatMap((lang) =>
+    WORKS.map((work) => ({
+      params: { lang, id: work.id },
+    }))
+  );
+}
+
+if (!work) {
+  throw Astro.redirect("/404");
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout>
+  <Section>
+    <h1
+      class="text-primary-text mobile:text-4xl mb-[16px] tablet:text-[36px] desktop:text-[40px] font-poppins-semibold"
+    >
+      {t(`work.${work.id}.title` as any)}
+    </h1>
+
+    <Subheading class="max-w-[50ch] mb-[32px]">
+      {t(`work.${work.id}.detailed-description` as any)}
+    </Subheading>
+
+    <SecondaryLink target="_blank" href={work.links.code}>
+      {t("work.view-code")}
+    </SecondaryLink>
+  </Section>
+
+  <Section>
+    <H2>{t("work.overview.title")}</H2>
+
+    <div class="tablet:grid gap-x-[5%] tablet:grid-cols-[1fr_1fr]">
+      <article class="flex flex-col gap-y-[36px]">
+        <Paragraph>
+          {t(`work.${work.id}.overview.paragraph.1` as any)}
+        </Paragraph>
+        <Paragraph>
+          {t(`work.${work.id}.overview.paragraph.2` as any)}
+        </Paragraph>
+        <Paragraph>
+          {t(`work.${work.id}.overview.paragraph.3` as any)}
+        </Paragraph>
+      </article>
+
+      <img
+        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-default"
+        src={work.images.overview}
+        alt={t(`work.${work.id}.overview.image.alt` as any)}
+        loading="eager"
+      />
+    </div>
+  </Section>
+
+  <Section>
+    <H2>{t("technologies.title")}</H2>
+
+    <article
+      class="tablet:grid tablet:grid-cols-2 mobile:gap-y-[24px] mobile:flex mobile:flex-col"
+    >
+      <div>
+        <Subheading class="mb-[8px]">{t("work.frontend")}</Subheading>
+
+        <ul class="flex flex-col gap-y-8">
+          {
+            work.technologies.frontend.map((technology) => (
+              <Technology id={technology}>
+                <HTMLIcon />
+              </Technology>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <Subheading class="mb-[8px]">{t("work.backend")}</Subheading>
+
+        <ul class="flex flex-col gap-y-8">
+          {
+            work.technologies.backend.map((technology) => (
+              <Technology id={technology} />
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </Section>
+
+  <Section>
+    <H2>{t("work.process")}</H2>
+
+    <div class="tablet:grid gap-x-[5%] tablet:grid-cols-[1fr_1fr]">
+      <article class="flex flex-col gap-y-[36px]">
+        <Paragraph>
+          {t(`work.${work.id}.process.paragraph.1` as any)}
+        </Paragraph>
+        <Paragraph>
+          {t(`work.${work.id}.process.paragraph.2` as any)}
+        </Paragraph>
+        <Paragraph>
+          {t(`work.${work.id}.process.paragraph.3` as any)}
+        </Paragraph>
+      </article>
+
+      <img
+        class="justify-self-end mobile:mt-[24px] tablet:mt-0 rounded-default"
+        src={work.images.process}
+        alt={t(`work.${work.id}.process.image.alt` as any)}
+        loading="lazy"
+      />
+    </div>
+  </Section>
+
+  <SecondaryLink class="w-full mt-[48px]" href="/"
+    >{t("work.go-back")}</SecondaryLink
+  >
+</Layout>

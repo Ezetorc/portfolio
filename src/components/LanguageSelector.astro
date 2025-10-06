@@ -1,7 +1,7 @@
 ---
 import { LANGUAGES } from "../configuration/i18n.configuration";
-import { getLangFromUrl } from "../utilities/getLangFromUrl";
-import { useTranslatedPath } from "../utilities/useTranslatedPath";
+import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
+import { useTranslatedPath } from "../utilities/use-translated-path.utility";
 import WorldIcon from "./icons/WorldIcon.astro";
 
 const currentLang = getLangFromUrl(Astro.url);

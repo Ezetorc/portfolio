@@ -1,47 +1,41 @@
 ---
 import { Image } from "astro:assets";
-import { getLangFromUrl } from "../utilities/getLangFromUrl";
-import { useTranslatedPath } from "../utilities/useTranslatedPath";
+import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
+import { useTranslatedPath } from "../utilities/use-translated-path.utility";
+import type { Work } from "../models/work.model";
+import { useTranslations } from "../utilities/use-translations.utility";
 
 interface Props {
-  title: string;
-  description: string;
-  colorFrom: string;
-  colorTo: string;
-  image?: ImageMetadata;
-  href: string;
+  work: Work;
 }
 
-const { title, description, colorFrom, colorTo, image, href } = Astro.props;
+const { work } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 <a
-  href={translatePath(href)}
-  class="w-[clamp(320px,90vw,360px)] aspect-[9/11] rounded-default cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[6%] desktop:p-[2%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
-  style={`background: radial-gradient(circle at top, ${colorFrom} 0%, ${colorTo} 100%)`}
+  href={translatePath(`/work/${work.id}`)}
+  class="w-[clamp(320px,90vw,360px)] aspect-[9/11] rounded-default cursor-pointer drop-shadow-2xl flex flex-col items-center mobile:p-[6%] desktop:p-[5%] justify-between tablet:hover:-translate-y-4 tablet:transition-transform"
+  style={`background: radial-gradient(circle at top, ${work.colors.from} 0%, ${work.colors.to} 100%)`}
 >
-  {
-    image && (
-      <Image
-        src={image}
-        alt={`${title} Icon`}
-        class="mt-[12%] w-[70%] aspect-square border-primary-text border-4 rounded-default"
-        decoding="async"
-        loading="eager"
-      />
-    )
-  }
+  <img
+    src={work.images.icon}
+    alt={`${t(`work.${work.id}.title` as any)} Icon`}
+    class="mt-[12%] w-[70%] aspect-square border-primary-text border-4 rounded-default"
+    decoding="async"
+    loading="eager"
+  />
 
   <div>
     <h3
       class="text-primary-text font-poppins-semibold text-left w-full text-[30px]"
     >
-      {title}
+      {t(`work.${work.id}.title` as any)}
     </h3>
     <p class="text-paragraph font-poppins-light text-left text-[16px]">
-      {description}
+      {t(`work.${work.id}.description` as any)}
     </p>
   </div>
 </a>

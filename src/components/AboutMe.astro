@@ -1,12 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import profilePictureImage from "../assets/images/aboutMe/profile-picture.webp";
-import argentineFlagImage from "../assets/images/aboutMe/argentine-flag.webp";
 import H2 from "./H2.astro";
 import Paragraph from "./Paragraph.astro";
 import Section from "./Section.astro";
-import { getLangFromUrl } from "../utilities/getLangFromUrl";
-import { useTranslations } from "../utilities/useTranslations";
+import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
+import { useTranslations } from "../utilities/use-translations.utility";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,16 +24,16 @@ const t = useTranslations(lang);
     </article>
 
     <div class="relative flex items-end justify-end">
-      <Image
-        src={profilePictureImage}
+      <img
+        src={"/assets/images/aboutMe/profile-picture.webp"}
         class="rounded-default w-[190px] tablet:w-[275px] aspect-square absolute z-10 tablet:-translate-x-[clamp(100px,10vw,176px)] -translate-y-14 drop-shadow-2xl mobile:-translate-x-[100px]"
         alt={t("about-me.face-image.alt")}
         decoding="async"
         loading="lazy"
       />
 
-      <Image
-        src={argentineFlagImage}
+      <img
+        src={"/assets/images/aboutMe/argentine-flag.webp"}
         class="rounded-default w-[190px] tablet:w-[275px] aspect-square relative z-0"
         alt={t("about-me.argentine-flag-image.alt")}
         decoding="async"

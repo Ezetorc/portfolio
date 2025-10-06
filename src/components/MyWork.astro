@@ -1,0 +1,23 @@
+---
+import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
+import { useTranslations } from "../utilities/use-translations.utility";
+import H2 from "./H2.astro";
+import Section from "./Section.astro";
+import Subheading from "./Subheading.astro";
+import WorkPreview from "./WorkPreview.astro";
+import { WORKS } from "../configuration/works.configuration";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Section id="work" disableAnimation>
+  <H2>{t("work.title")}</H2>
+  <Subheading>{t("work.subtitle")}</Subheading>
+
+  <div
+    class="w-full mt-[32px] grid mobile:grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-[35px]"
+  >
+    {WORKS.map((work) => <WorkPreview {work} />)}
+  </div>
+</Section>

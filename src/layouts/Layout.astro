@@ -2,7 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import { getLangFromUrl } from "../utilities/getLangFromUrl";
+import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 const lang = getLangFromUrl(Astro.url);
 import "../styles/global.css";
 import { FULL_NAME } from "../configuration/general.configuration";
