@@ -8,10 +8,10 @@ interface Props {
 }
 
 const { id } = Astro.props;
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const IconElement = TECHNOLOGIES[id];
+const technology = TECHNOLOGIES[id];
+const IconElement = TECHNOLOGIES[id].icon;
 ---
 
 <li class="flex mobile:gap-x-[16px] tablet:gap-x-[22px]">
@@ -23,7 +23,7 @@ const IconElement = TECHNOLOGIES[id];
     <h3
       class="text-muted mobile:text-[24px] tablet:text-[32px] font-poppins-regular"
     >
-      {t(`technology.${id}.name` as keyof typeof t)}
+      {technology.name}
     </h3>
     <h4
       class="text-muted-strong mobile:text-[16px] tablet:text-[20px] font-poppins-light"

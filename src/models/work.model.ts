@@ -5,10 +5,12 @@ export type Work = {
     overview: string;
     process: string;
   };
-  technologies: {
-    frontend: string[];
-    backend: string[];
-  };
+  technologies:
+    | {
+        frontend: string[];
+        backend: string[];
+      }
+    | string[];
   colors: {
     from: string;
     to: string;
