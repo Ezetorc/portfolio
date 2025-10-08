@@ -14,7 +14,6 @@ import ReactIcon from "../components/icons/ReactIcon.astro";
 import RedisIcon from "../components/icons/RedisIcon.astro";
 import TailwindIcon from "../components/icons/TailwindIcon.astro";
 import TypeScriptIcon from "../components/icons/TypeScriptIcon.astro";
-import ViteIcon from "../components/icons/ViteIcon.astro";
 import type { AstroComponent } from "../models/astro-component.model";
 
 export const TECHNOLOGIES: {
@@ -28,7 +27,6 @@ export const TECHNOLOGIES: {
   react: { name: "React", icon: ReactIcon },
   tailwind: { name: "Tailwind", icon: TailwindIcon },
   astro: { name: "Astro", icon: AstroIcon },
-  vite: { name: "Vite", icon: ViteIcon },
   mysql: { name: "MySQL", icon: MySQLIcon },
   nodejs: { name: "NodeJS", icon: NodeJSIcon },
   express: { name: "Express", icon: ExpressIcon },
