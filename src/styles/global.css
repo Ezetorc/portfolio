@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("/public/assets/fonts/poppins-light.ttf") format("truetype");
+  src: url("/public/fonts/poppins-light.woff2") format("woff2");
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/public/assets/fonts/poppins-regular.ttf") format("truetype");
+  src: url("/public/fonts/poppins-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/public/assets/fonts/poppins-semibold.ttf") format("truetype");
+  src: url("/public/fonts/poppins-semibold.woff2") format("woff2");
 }
 
 @keyframes fade-in {

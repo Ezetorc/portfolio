@@ -4,9 +4,9 @@ export const WORKS: Work[] = [
   {
     id: "bolsillo-feliz",
     images: {
-      icon: "/assets/images/work/bolsilloFeliz/icon.webp",
-      overview: "/assets/images/work/bolsilloFeliz/register-page.webp",
-      process: "/assets/images/work/bolsilloFeliz/posts-page.webp",
+      icon: "/images/work/bolsilloFeliz/icon.webp",
+      overview: "/images/work/bolsilloFeliz/register-page.webp",
+      process: "/images/work/bolsilloFeliz/posts-page.webp",
     },
     technologies: {
       frontend: ["html", "css", "typescript", "react"],
@@ -23,9 +23,9 @@ export const WORKS: Work[] = [
   {
     id: "vibe-network",
     images: {
-      icon: "/assets/images/work/vibeNetwork/icon.webp",
-      overview: "/assets/images/work/vibeNetwork/register-page.webp",
-      process: "/assets/images/work/vibeNetwork/posts-page.webp",
+      icon: "/images/work/vibeNetwork/icon.webp",
+      overview: "/images/work/vibeNetwork/register-page.webp",
+      process: "/images/work/vibeNetwork/posts-page.webp",
     },
     technologies: {
       frontend: ["html", "css", "typescript", "react"],
@@ -42,9 +42,9 @@ export const WORKS: Work[] = [
   {
     id: "cinetro-backend",
     images: {
-      icon: "/assets/images/work/cinetroBackend/icon.webp",
-      overview: "/assets/images/work/cinetroBackend/register-page.webp",
-      process: "/assets/images/work/cinetroBackend/posts-page.webp",
+      icon: "/images/work/cinetroBackend/icon.webp",
+      overview: "/images/work/cinetroBackend/register-page.webp",
+      process: "/images/work/cinetroBackend/posts-page.webp",
     },
     technologies: [
       "nodejs",
