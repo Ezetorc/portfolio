@@ -5,8 +5,8 @@ export const WORKS: Work[] = [
     id: "bolsillo-feliz",
     images: {
       icon: "/images/work/bolsilloFeliz/icon.webp",
-      overview: "/images/work/bolsilloFeliz/register-page.webp",
-      process: "/images/work/bolsilloFeliz/posts-page.webp",
+      overview: "/images/work/bolsilloFeliz/dashboard-page.webp",
+      process: "/images/work/bolsilloFeliz/transactions-page.webp",
     },
     technologies: {
       frontend: ["html", "css", "typescript", "react"],
@@ -42,9 +42,7 @@ export const WORKS: Work[] = [
   {
     id: "cinetro-backend",
     images: {
-      icon: "/images/work/cinetroBackend/icon.webp",
-      overview: "/images/work/cinetroBackend/register-page.webp",
-      process: "/images/work/cinetroBackend/posts-page.webp",
+      icon: "/images/work/cinetroBackend/icon.webp"
     },
     technologies: [
       "nodejs",

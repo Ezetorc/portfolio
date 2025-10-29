@@ -65,12 +65,16 @@ const t = useTranslations(lang);
         </Paragraph>
       </article>
 
-      <img
-        class="justify-self-end mobile:mt-[24px] desktop:mt-0 rounded-default"
-        src={work.images.overview}
-        alt={t(`work.${work.id}.overview.image.alt` as any)}
-        loading="eager"
-      />
+      {
+        work.images.overview && (
+          <img
+            class="justify-self-end mobile:mt-[24px] desktop:mt-0 rounded-default"
+            src={work.images.overview}
+            alt={t(`work.${work.id}.overview.image.alt` as any)}
+            loading="eager"
+          />
+        )
+      }
     </div>
   </Section>
 
@@ -130,12 +134,16 @@ const t = useTranslations(lang);
         </Paragraph>
       </article>
 
-      <img
-        class="justify-self-end mobile:mt-[24px] desktop:mt-0 rounded-default"
-        src={work.images.process}
-        alt={t(`work.${work.id}.process.image.alt` as any)}
-        loading="lazy"
-      />
+      {
+        work.images.process && (
+          <img
+            class="justify-self-end mobile:mt-[24px] desktop:mt-0 rounded-default"
+            src={work.images.process}
+            alt={t(`work.${work.id}.process.image.alt` as any)}
+            loading="lazy"
+          />
+        )
+      }
     </div>
   </Section>
 
