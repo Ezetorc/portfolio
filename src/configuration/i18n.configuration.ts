@@ -1,9 +1,10 @@
-export const DEFAULT_LANGUAGE = "en";
-
 export const LANGUAGES = {
   en: "English",
   es: "Español",
 };
+
+const browserLanguage = navigator.language.split("-")[0];
+export const DEFAULT_LANGUAGE = Object.keys(LANGUAGES).includes(browserLanguage) ? browserLanguage as keyof typeof LANGUAGES : "en"
 
 export const DICTIONARY = {
   en: {
@@ -132,7 +133,7 @@ export const DICTIONARY = {
     "footer.github.aria-label": "Github de Ezetorc",
     "footer.discord.aria-label": "Discord de Ezetorc",
     "hero.subtitle": "Desarrollador FullStack",
-    "hero.description": "Desde Argentina con 2 años de experiencia.",
+    "hero.description": "De Argentina con 2 años de experiencia.",
     "hero.view-all-work": "Ver proyectos",
     "hero.read-about-me": "Leer sobre mí",
     "work.title": "Trabajo",

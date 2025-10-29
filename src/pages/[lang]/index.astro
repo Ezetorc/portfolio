@@ -4,7 +4,7 @@ import ContactMe from "../../components/ContactMe.astro";
 import Technologies from "../../components/Technologies.astro";
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
-import MyWork from "../../components/MyWork.astro";
+import Work from "../../components/Work.astro";
 
 export async function getStaticPaths() {
   return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 <Layout>
   <Hero />
-  <MyWork />
+  <Work />
   <AboutMe />
   <Technologies />
   <ContactMe />

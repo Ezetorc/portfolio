@@ -88,11 +88,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   background: #001f58;
   background: radial-gradient(circle at 50% 0, #001f58 0%, #000b1f 35%);
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 .appear-from-right {

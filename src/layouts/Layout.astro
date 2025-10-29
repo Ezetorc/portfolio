@@ -13,7 +13,7 @@ import { FULL_NAME } from "../configuration/general.configuration";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
 
     <title>{FULL_NAME} Portfolio</title>
     <meta
@@ -31,11 +31,11 @@ import { FULL_NAME } from "../configuration/general.configuration";
 
     <ClientRouter />
   </head>
-  <body class="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
+  <body>
     <Header />
 
     <main
-      class="flex flex-col w-full max-w-[1280px] min-w-[320px] mx-auto tablet:mt-4 desktop:mt-10 mobile:px-4 gap-y-[32px] pb-[50px] desktop:pb-[120px]"
+      class="flex flex-col w-full max-w-[1280px] min-w-[320px] mx-auto mobile:mt-4 desktop:mt-10 mobile:px-4 gap-y-[32px] pb-[50px] desktop:pb-[120px]"
     >
       <slot />
     </main>

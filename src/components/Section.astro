@@ -7,6 +7,9 @@ interface Props {
 const { disableAnimation = false, id } = Astro.props;
 ---
 
-<section id={id} class={`flex-col scroll-mt-48 my-[16px] ${!disableAnimation && "fade-in"}`}>
+<section
+  id={id}
+  class={`flex-col scroll-mt-32 my-[16px] ${!disableAnimation && "fade-in"}`}
+>
   <slot />
 </section>

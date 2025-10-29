@@ -16,7 +16,7 @@ const t = useTranslations(lang);
   <Subheading>{t("work.subtitle")}</Subheading>
 
   <div
-    class="w-full mt-[32px] grid mobile:grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-[35px]"
+    class="w-full mt-8 grid grid-cols-[repeat(auto-fit,minmax(clamp(200px,90vw,250px),1fr))] gap-9"
   >
     {WORKS.map((work) => <WorkPreview {work} />)}
   </div>

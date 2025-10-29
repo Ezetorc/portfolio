@@ -18,24 +18,31 @@ const t = useTranslations(lang);
   import { SuccessToast } from "../toasts/success.toast";
   import { FailureToast } from "../toasts/failure.toast";
 
-  const buttons = document.querySelectorAll(".copy-button") as NodeListOf<HTMLButtonElement>;
+  function addLogic() {
+    const buttons = document.querySelectorAll(
+      ".copy-button"
+    ) as NodeListOf<HTMLButtonElement>;
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const text = button.dataset.text;
-      const label = button.dataset.label;
-      const error = button.dataset.error;
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const text = button.dataset.text;
+        const label = button.dataset.label;
+        const error = button.dataset.error;
 
-      if (!text) throw new Error("CopyButton text is missing");
-      if (!label) throw new Error("CopyButton label is missing");
-      if (!error) throw new Error("CopyButton error is missing");
+        if (!text) throw new Error("CopyButton text is missing");
+        if (!label) throw new Error("CopyButton label is missing");
+        if (!error) throw new Error("CopyButton error is missing");
 
-      navigator.clipboard
-        .writeText(text)
-        .then(() => SuccessToast(label).showToast())
-        .catch(() => FailureToast(error).showToast());
+        navigator.clipboard
+          .writeText(text)
+          .then(() => SuccessToast(label).showToast())
+          .catch(() => FailureToast(error).showToast());
+      });
     });
-  });
+  }
+
+  addLogic();
+  document.addEventListener("astro:after-swap", addLogic);
 </script>
 
 <button
