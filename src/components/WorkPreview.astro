@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 import { useTranslatedPath } from "../utilities/use-translated-path.utility";
 import type { Work } from "../models/work.model";
@@ -28,7 +27,7 @@ const t = useTranslations(lang);
     loading="eager"
   />
 
-  <div>
+  <div class="self-stretch">
     <h3
       class="text-primary-text font-poppins-semibold text-left w-full text-[30px]"
     >

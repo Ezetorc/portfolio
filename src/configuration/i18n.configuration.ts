@@ -24,7 +24,21 @@ export const DICTIONARY = {
     "work.title": "Work",
     "work.subtitle": "Some of my featured projects.",
     "work.view-code": "View Code",
+    "work.visit-site": "Visit site",
     "work.overview.title": "Overview",
+
+    "work.notievan.title": "Notievan",
+    "work.notievan.description": "My school's official newspaper website with articles made for others students.",
+    "work.notievan.detailed-description": "A real-world FullStack web app developed for my school's newspaper, designed to share news, stories, and events with the school community.",
+    "work.notievan.overview.paragraph.1": "Notievan is a complete web platform for managing and reading school news, built with a minimalist interface inspired by my school's colors.",
+    "work.notievan.overview.paragraph.2": "The system allows authorized users to create, edit, and delete articles, while a role-based permission system ensures proper access control for editors and administrators.",
+    "work.notievan.overview.paragraph.3": "Developed from scratch in just two weeks, this was a real commissioned project requested by a senior student — a genuine opportunity to bring someone's idea to life.",
+    "work.notievan.overview.image.alt": "Notievan Articles Page",
+    "work.notievan.process.paragraph.1": "This project marked my first experience delivering a real-world web app under time pressure. I had to handle everything — from UI design to backend logic and deployment.",
+    "work.notievan.process.paragraph.2": "During development, I implemented authentication, role management, and CRUD operations for articles using a Node.js backend and a React frontend.",
+    "work.notievan.process.paragraph.3": "Completing Notievan in just two weeks taught me how to plan, prioritize, and adapt to real client needs — turning an idea into a polished and functional product.",
+    "work.notievan.process.image.alt": "Notievan Article Page",
+
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
       "Social network to connect with other people and have a lot fun!",
@@ -66,10 +80,6 @@ export const DICTIONARY = {
       "I learned to integrate tools like Swagger for API documentation, Redis for caching, and Docker for consistent development environments.",
     "work.cinetro-backend.overview.paragraph.3":
       "Building a flexible ABAC-based role system deepened my knowledge of security and access control in real-world applications.",
-    "work.cinetro-backend.overview.image.alt":
-      "Cinetro API architecture diagram",
-    "work.cinetro-backend.process.image.alt":
-      "Swagger documentation of Cinetro backend",
     "work.cinetro-backend.process.paragraph.1":
       "I implemented a modular architecture in NestJS, connecting Prisma ORM with MySQL for reliable data management.",
     "work.cinetro-backend.process.paragraph.2":
@@ -110,6 +120,9 @@ export const DICTIONARY = {
     "technology.docker.description": "Container Platform",
     "technology.redis.description": "In-memory cache",
     "technology.prisma.description": "Database ORM",
+    "technology.cloudinary.description": "Image Hosting",
+    "technology.postgresql.description": "Relational Database",
+    "technology.zod.description": "Data Validation",
     "contact-me.title": "Contact Me",
     "contact-me.subtitle":
       "Let's connect and create innovative solutions together.",
@@ -138,6 +151,20 @@ export const DICTIONARY = {
     "hero.read-about-me": "Leer sobre mí",
     "work.title": "Trabajo",
     "work.subtitle": "Algunos de mis proyectos destacados.",
+    "work.visit-site": "Visitar sitio",
+
+    "work.notievan.title": "Notievan",
+    "work.notievan.description": "El sitio web oficial del diario de mi escuela con artículos hechos por otros estudiantes.",
+    "work.notievan.detailed-description": "Una aplicación web FullStack desarrollada para el diario de mi escuela, creada para compartir noticias, historias y eventos con toda la comunidad escolar.",
+    "work.notievan.overview.paragraph.1": "Notievan es una plataforma completa para gestionar y leer noticias escolares, con un diseño minimalista inspirado en los colores de mi escuela.",
+    "work.notievan.overview.paragraph.2": "El sistema permite a los usuarios autorizados crear, editar y eliminar artículos, mientras que un sistema de roles garantiza el control de acceso adecuado para editores y administradores.",
+    "work.notievan.overview.paragraph.3": "Desarrollado desde cero en solo dos semanas, fue un proyecto real encargado por una estudiante de sexto año — una oportunidad genuina de transformar una idea en un producto funcional.",
+    "work.notievan.overview.image.alt": "Página de artículos de Notievan",
+    "work.notievan.process.paragraph.1": "Este proyecto marcó mi primera experiencia entregando una aplicación web real bajo presión de tiempo. Tuve que encargarme de todo — desde el diseño de la interfaz hasta la lógica del backend y el despliegue.",
+    "work.notievan.process.paragraph.2": "Durante el desarrollo implementé autenticación, gestión de roles y operaciones CRUD para los artículos, utilizando un backend en Node.js y un frontend en React.",
+    "work.notievan.process.paragraph.3": "Completar Notievan en solo dos semanas me enseñó a planificar, priorizar y adaptarme a las necesidades reales de un cliente — convirtiendo una idea en un producto completo y pulido.",
+    "work.notievan.process.image.alt": "Página de artículo de Notievan",
+
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
       "Red social para conectar con otros y divertirse mucho!",
@@ -223,6 +250,9 @@ export const DICTIONARY = {
     "technology.docker.description": "Plataforma de contenedores",
     "technology.redis.description": "Cache en memoria",
     "technology.prisma.description": "ORM para bases de datos",
+    "technology.cloudinary.description": "Plataforma de hosting de imágenes",
+    "technology.postgresql.description": "Base de datos relacional",
+    "technology.zod.description": "Validación de datos",
     "contact-me.title": "Contáctame",
     "contact-me.subtitle":
       "Conectemos y creemos soluciones innovadoras juntos.",

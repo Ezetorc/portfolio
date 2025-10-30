@@ -1,4 +1,5 @@
 import AstroIcon from "../components/icons/AstroIcon.astro";
+import CloudinaryIcon from "../components/icons/CloudinaryIcon.astro";
 import CSSIcon from "../components/icons/CSSIcon.astro";
 import DockerIcon from "../components/icons/DockerIcon.astro";
 import ExpressIcon from "../components/icons/ExpressIcon.astro";
@@ -9,11 +10,13 @@ import JavaScriptIcon from "../components/icons/JavaScriptIcon.astro";
 import MySQLIcon from "../components/icons/MySQLIcon.astro";
 import NestJSIcon from "../components/icons/NestJSIcon.astro";
 import NodeJSIcon from "../components/icons/NodeJSIcon.astro";
+import PostgreSQLIcon from "../components/icons/PostgreSQLIcon.astro";
 import PrismaIcon from "../components/icons/PrismaIcon.astro";
 import ReactIcon from "../components/icons/ReactIcon.astro";
 import RedisIcon from "../components/icons/RedisIcon.astro";
 import TailwindIcon from "../components/icons/TailwindIcon.astro";
 import TypeScriptIcon from "../components/icons/TypeScriptIcon.astro";
+import ZodIcon from "../components/icons/ZodIcon.astro";
 import type { AstroComponent } from "../models/astro-component.model";
 
 export const TECHNOLOGIES: {
@@ -35,4 +38,7 @@ export const TECHNOLOGIES: {
   docker: { name: "Docker", icon: DockerIcon },
   redis: { name: "Redis", icon: RedisIcon },
   prisma: { name: "Prisma", icon: PrismaIcon },
+  postgresql: { name: "PostgreSQL", icon: PostgreSQLIcon },
+  cloudinary: { name: "Cloudinary", icon: CloudinaryIcon },
+  zod: { name: "Zod", icon: ZodIcon }
 };

@@ -2,6 +2,26 @@ import type { Work } from "../models/work.model";
 
 export const WORKS: Work[] = [
   {
+    id: "notievan",
+    images: {
+      icon: "/images/work/notievan/icon.webp",
+      overview: "/images/work/notievan/articles-page.webp",
+      process: "/images/work/notievan/article-page.webp",
+    },
+    technologies: {
+      frontend: ["html", "css", "typescript", "react", "tailwind", "zod"],
+      backend: ["typescript", "nodejs", "express", "prisma", "postgresql", "cloudinary", "zod"],
+    },
+    colors: {
+      from: "#1447e6",
+      to: "#041342",
+    },
+    links: {
+      code: "https://github.com/Ezetorc/notievan",
+      site: "https://notievan.vercel.app"
+    },
+  },
+  {
     id: "bolsillo-feliz",
     images: {
       icon: "/images/work/bolsilloFeliz/icon.webp",
@@ -29,7 +49,7 @@ export const WORKS: Work[] = [
     },
     technologies: {
       frontend: ["html", "css", "typescript", "react"],
-      backend: ["nodejs", "express", "typescript", "mysql"],
+      backend: ["nodejs", "express", "typescript", "mysql", "cloudinary"],
     },
     colors: {
       from: "#63B5B1",

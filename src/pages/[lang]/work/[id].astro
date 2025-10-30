@@ -12,6 +12,7 @@ import type { Work } from "../../../models/work.model";
 import { getLangFromUrl } from "../../../utilities/get-lang-from-url.utility";
 import { useTranslations } from "../../../utilities/use-translations.utility";
 import { LANGUAGES } from "../../../configuration/i18n.configuration";
+import PrimaryLink from "../../../components/PrimaryLink.astro";
 
 const { id } = Astro.params;
 const work: Work | undefined = WORKS.find((work) => work.id === id);
@@ -44,9 +45,23 @@ const t = useTranslations(lang);
       {t(`work.${work.id}.detailed-description` as any)}
     </Subheading>
 
-    <SecondaryLink target="_blank" href={work.links.code}>
-      {t("work.view-code")}
-    </SecondaryLink>
+    <div class="flex gap-[32px]">
+      {
+        work.links.site && (
+          <PrimaryLink target="_blank" href={work.links.site}>
+            {t("work.visit-site")}
+          </PrimaryLink>
+        )
+      }
+
+      {
+        work.links.code && (
+          <SecondaryLink target="_blank" href={work.links.code}>
+            {t("work.view-code")}
+          </SecondaryLink>
+        )
+      }
+    </div>
   </Section>
 
   <Section>

@@ -3,7 +3,7 @@ const { class: extraClass = "" } = Astro.props;
 ---
 
 <a
-  class={`inline-flex items-center justify-center clickable secondary ${extraClass}`}
+  class={`flex items-center justify-center clickable secondary ${extraClass}`}
   {...Astro.props}
 >
   <slot />
