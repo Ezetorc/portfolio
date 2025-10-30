@@ -73,7 +73,7 @@ export const DICTIONARY = {
     "work.cinetro-backend.description":
       "Backend application for cinema management.",
     "work.cinetro-backend.detailed-description":
-      "Scalable backend built with NestJS, Prisma, and MySQL, designed to manage a cinema CRUD system — including cinemas, seats, movies, screenings, tickets and more. It features an ABAC system, JWT authentication, Redis caching, and Swagger documentation, all containerized with Docker.",
+      "Scalable backend designed to manage a cinema CRUD system with features like ABAC system, JWT authentication, Redis caching, and Swagger documentation, all containerized with Docker.",
     "work.cinetro-backend.overview.paragraph.1":
       "Developing this backend strengthened my understanding of scalable architectures, database modeling, and backend design patterns.",
     "work.cinetro-backend.overview.paragraph.2":
@@ -195,7 +195,7 @@ export const DICTIONARY = {
     "work.cinetro-backend.title": "Cinetro Backend",
     "work.cinetro-backend.description":
       "Aplicación backend para la gestión de cines.",
-    "work.cinetro-backend.detailed-description": `Backend escalable construido con NestJS, Prisma y MySQL, diseñado para gestionar todos los aspectos clave de un sistema de cine — incluyendo cines, salas, asientos, películas, funciones y tickets. Cuenta con un sistema de control de acceso basado en roles ABAC, autenticación JWT, cache con Redis y documentación con Swagger, todo containerizado con Docker para facilitar el mantenimiento y el despliegue eficiente.`,
+    "work.cinetro-backend.detailed-description": `Backend escalable diseñado para gestionar todos los aspectos clave de un sistema de cine con un sistema de control de acceso basado en roles ABAC, autenticación JWT, cache con Redis y documentación con Swagger, todo containerizado con Docker.`,
     "work.cinetro-backend.overview.paragraph.1": `Desarrollar este backend fortaleció mi comprensión de arquitecturas escalables, modelado de bases de datos y patrones de diseño backend.`,
     "work.cinetro-backend.overview.paragraph.2": `Aprendí a integrar herramientas como Swagger para documentación de APIs, Redis para cache y Docker para entornos de desarrollo consistentes.`,
     "work.cinetro-backend.overview.paragraph.3": `Construir un sistema de roles flexible basado en ABAC profundizó mi conocimiento sobre seguridad y control de acceso en aplicaciones reales.`,
