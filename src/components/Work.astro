@@ -6,18 +6,31 @@ import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
 import WorkPreview from "./WorkPreview.astro";
 import { WORKS } from "../configuration/works.configuration";
+import SecondaryLink from "./SecondaryLink.astro";
+import { useTranslatedPath } from "../utilities/use-translated-path.utility";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const firstWorks = WORKS.slice(0, 3);
 ---
 
 <Section id="work" disableAnimation>
-  <H2>{t("work.title")}</H2>
-  <Subheading>{t("work.subtitle")}</Subheading>
+  <div class="flex justify-between">
+    <div>
+      <H2>{t("work.title")}</H2>
+      <Subheading>{t("work.subtitle")}</Subheading>
+    </div>
+
+    <SecondaryLink href={translatePath("/works")}>
+      {t("work.view-all-work")}
+    </SecondaryLink>
+  </div>
 
   <div
     class="w-full mt-8 grid grid-cols-[repeat(auto-fit,minmax(clamp(200px,90vw,300px),1fr))] gap-9"
   >
-    {WORKS.map((work) => <WorkPreview {work} />)}
+    {firstWorks.map((work) => <WorkPreview {work} />)}
   </div>
 </Section>

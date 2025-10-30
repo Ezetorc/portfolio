@@ -26,6 +26,8 @@ export const DICTIONARY = {
     "work.view-code": "View Code",
     "work.visit-site": "Visit site",
     "work.overview.title": "Overview",
+    "work.view-all-work": "View all",
+    "work.full-subtitle": "All of my projects",
 
     "work.notievan.title": "Notievan",
     "work.notievan.description": "My school's official newspaper website with articles made for others students.",
@@ -138,7 +140,7 @@ export const DICTIONARY = {
   es: {
     "toast.copy.error": "Error al copiar",
     "header.subtitle": "Desarrollador FullStack",
-    "header.work": "Trabajo",
+    "header.work": "Proyectos",
     "header.about-me": "Sobre Mí",
     "header.contact": "Contacto",
     "header.technologies": "Tecnologías",
@@ -149,9 +151,11 @@ export const DICTIONARY = {
     "hero.description": "De Argentina con 2 años de experiencia.",
     "hero.view-all-work": "Ver proyectos",
     "hero.read-about-me": "Leer sobre mí",
-    "work.title": "Trabajo",
+    "work.title": "Proyectos",
     "work.subtitle": "Algunos de mis proyectos destacados.",
     "work.visit-site": "Visitar sitio",
+    "work.full-subtitle": "Todos mis proyectos",
+
 
     "work.notievan.title": "Notievan",
     "work.notievan.description": "El sitio web oficial del diario de mi escuela con artículos hechos por otros estudiantes.",
@@ -164,6 +168,7 @@ export const DICTIONARY = {
     "work.notievan.process.paragraph.2": "Durante el desarrollo implementé autenticación, gestión de roles y operaciones CRUD para los artículos, utilizando un backend en Node.js y un frontend en React.",
     "work.notievan.process.paragraph.3": "Completar Notievan en solo dos semanas me enseñó a planificar, priorizar y adaptarme a las necesidades reales de un cliente — convirtiendo una idea en un producto completo y pulido.",
     "work.notievan.process.image.alt": "Página de artículo de Notievan",
+    "work.view-all-work": "Ver todo",
 
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
