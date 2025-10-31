@@ -12,6 +12,7 @@ import { getLangFromUrl } from "../../../utilities/get-lang-from-url.utility";
 import { useTranslations } from "../../../utilities/use-translations.utility";
 import { LANGUAGES } from "../../../configuration/i18n.configuration";
 import PrimaryLink from "../../../components/PrimaryLink.astro";
+import { useTranslatedPath } from "../../../utilities/use-translated-path.utility";
 
 const { id } = Astro.params;
 const work: Work | undefined = WORKS.find((work) => work.id === id);
@@ -29,6 +30,7 @@ if (!work) {
 }
 
 const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
 
@@ -161,7 +163,7 @@ const t = useTranslations(lang);
     </div>
   </Section>
 
-  <SecondaryLink class="w-full mt-[48px]" href="/">
+  <SecondaryLink class="w-full mt-[48px]" href={translatePath("/")}>
     {t("work.go-back")}
   </SecondaryLink>
 </Layout>
