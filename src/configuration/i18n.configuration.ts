@@ -1,10 +1,12 @@
+import type { Language } from "../models/language.model";
+
 export const LANGUAGES = {
   en: "English",
   es: "Español",
 };
 
 const browserLanguage = navigator.language.split("-")[0];
-export const DEFAULT_LANGUAGE = Object.keys(LANGUAGES).includes(browserLanguage) ? browserLanguage as keyof typeof LANGUAGES : "en"
+export const DEFAULT_LANGUAGE = Object.keys(LANGUAGES).includes(browserLanguage) ? browserLanguage as Language : "en"
 
 export const DICTIONARY = {
   en: {
