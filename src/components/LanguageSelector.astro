@@ -2,7 +2,7 @@
 import { LANGUAGES } from "../configuration/i18n.configuration";
 import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 import { useTranslatedPath } from "../utilities/use-translated-path.utility";
-import WorldIcon from "./icons/WorldIcon.astro";
+import LanguageIcon from "./icons/LanguageIcon.astro";
 
 const currentLang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(currentLang);
@@ -29,12 +29,12 @@ const translatePath = useTranslatedPath(currentLang);
     aria-haspopup="true"
     aria-expanded="false"
   >
-    <WorldIcon />
+    <LanguageIcon />
   </button>
 
   <ul
     id="lang-menu"
-    class="absolute overflow-hidden cursor-pointer right-0 mt-2 w-40 bg-light-bg border-highlight border-[1px] text-primary-text font-poppins-semibold rounded-lg shadow-lg hidden"
+    class="absolute overflow-hidden cursor-pointer left-6 w-40 bg-light-bg border-highlight border-[1px] text-primary-text font-poppins-semibold rounded-lg shadow-lg hidden"
   >
     {
       Object.entries(LANGUAGES).map(([lang, label]) => (

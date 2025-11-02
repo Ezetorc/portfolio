@@ -33,8 +33,8 @@ export const WORKS: Work[] = [
       backend: ["nodejs", "express", "typescript", "mysql", "prisma"],
     },
     colors: {
-      from: "#E5C598",
-      to: "#875D22",
+      from: "#ff8c70",
+      to: "#a23e25",
     },
     links: {
       code: "https://github.com/Ezetorc/bolsillo-feliz",

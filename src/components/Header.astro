@@ -1,5 +1,4 @@
 ---
-import { FULL_NAME } from "../configuration/general.configuration";
 import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 import { useTranslatedPath } from "../utilities/use-translated-path.utility";
 import { useTranslations } from "../utilities/use-translations.utility";
@@ -18,37 +17,22 @@ const isHome =
 ---
 
 <header
-  class="w-full sticky top-0 left-0 mobile:h-[72px] desktop:h-[90px] border-b-highlight border-b-1 bg-light-bg flex items-center justify-center drop-shadow-2xl z-50 mobile:px-4"
+  class="w-full sticky top-0 left-0 mobile:h-[65px] desktop:h-[75px] border-b-highlight border-b-1 bg-light-bg flex items-center justify-center z-50 mobile:px-4"
 >
   <div
     class="w-full max-w-[1280px] min-w-[320px] flex justify-between items-center"
   >
+    <LanguageSelector />
+
     <div>
-      <h2
-        class="text-primary-text mobile:text-[16px] desktop:text-[24px] font-poppins-semibold"
-      >
-        {FULL_NAME}
-      </h2>
-
-      <h3 class="text-muted mobile:text-[14px] desktop:text-[20px]">
-        {t("header.subtitle")}
-      </h3>
-    </div>
-
-    <div class="flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]">
-      {
-        isHome && (
-          <nav class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]">
-            <NavLinks />
-          </nav>
-        )
-      }
-
-      <LanguageSelector />
-
       {
         isHome ? (
-          <SectionSelector />
+          <>
+            <nav class="mobile:hidden desktop:flex items-center mobile:gap-x-[10px] desktop:gap-x-[24px]">
+              <NavLinks />
+            </nav>
+            <SectionSelector />
+          </>
         ) : (
           <HeaderLink aria-label={t("work.go-back")} href={translatePath("/")}>
             <ArrowLeftIcon />

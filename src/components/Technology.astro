@@ -15,20 +15,22 @@ const IconElement = TECHNOLOGIES[id].icon;
 ---
 
 <li class="flex mobile:gap-x-[16px] tablet:gap-x-[22px]">
-  <div class="icon-wrapper">
+  <div
+    class="mobile:w-[70px] tablet:w-[70px] aspect-square shrink-0 [&>svg]:w-full [&>svg]:h-full"
+  >
     <IconElement />
   </div>
 
   <div class="flex flex-col justify-center">
     <h3
-      class="text-muted mobile:text-[24px] tablet:text-[32px] font-poppins-regular"
+      class="text-muted mobile:text-[18px] tablet:text-[24px] font-poppins-regular"
     >
       {technology.name}
     </h3>
     <h4
       class="text-muted-strong mobile:text-[16px] tablet:text-[20px] font-poppins-light"
     >
-      {t(`technology.${id}.description` as keyof typeof t)}
+      {t(`technology.${id}.description` as any)}
     </h4>
   </div>
 </li>

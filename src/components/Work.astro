@@ -6,8 +6,8 @@ import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
 import WorkPreview from "./WorkPreview.astro";
 import { WORKS } from "../configuration/works.configuration";
-import SecondaryLink from "./SecondaryLink.astro";
 import { useTranslatedPath } from "../utilities/use-translated-path.utility";
+import Link from "./Link.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -17,15 +17,21 @@ const firstWorks = WORKS.slice(0, 3);
 ---
 
 <Section id="work" disableAnimation>
-  <div class="flex justify-between">
+  <div
+    class="flex flex-col gap-y-[12px] tablet:flex-row tablet:items-center tablet:justify-between"
+  >
     <div>
       <H2>{t("work.title")}</H2>
-      <Subheading>{t("work.subtitle")}</Subheading>
+      <Subheading class="text-[4px]">{t("work.subtitle")}</Subheading>
     </div>
 
-    <SecondaryLink href={translatePath("/works")}>
+    <Link
+      style="secondary"
+      class="mobile:w-full tablet:w-auto"
+      href={translatePath("/works")}
+    >
       {t("work.view-all-work")}
-    </SecondaryLink>
+    </Link>
   </div>
 
   <div

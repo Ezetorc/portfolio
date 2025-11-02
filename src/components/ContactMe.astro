@@ -6,10 +6,9 @@ import {
 } from "../configuration/contact.configuration";
 import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 import { useTranslations } from "../utilities/use-translations.utility";
+import Button from "./Button.astro";
 import CopyButton from "./CopyButton.astro";
 import H2 from "./H2.astro";
-import Paragraph from "./Paragraph.astro";
-import PrimaryButton from "./PrimaryButton.astro";
 import Section from "./Section.astro";
 import Subheading from "./Subheading.astro";
 
@@ -19,11 +18,7 @@ const t = useTranslations(lang);
 
 <Section id="contact">
   <H2>{t("contact-me.title")}</H2>
-  <Subheading>{t("contact-me.subtitle")}</Subheading>
-
-  <Paragraph class="mt-[24px] max-w-[550px]">
-    {t("contact-me.instructions")}
-  </Paragraph>
+  <Subheading class="max-w-[50ch]">{t("contact-me.subtitle")}</Subheading>
 
   <div class="flex gap-x-[32px] mt-[48px]">
     <CopyButton label={t("contact-me.copy-discord")} text={DISCORD} />
@@ -31,7 +26,7 @@ const t = useTranslations(lang);
   </div>
 
   <form
-    class="bg-light-bg w-full mobile:p-4 tablet:p-9 flex flex-col gap-y-[40px] mt-11 rounded-default"
+    class="bg-light-bg w-[clamp(300px,100%,900px)] mobile:p-4 tablet:p-9 flex flex-col gap-y-[40px] mt-11 rounded-default"
     action={FORM_LINK}
     method="POST"
   >
@@ -49,6 +44,6 @@ const t = useTranslations(lang);
       name="message"
       required></textarea>
 
-    <PrimaryButton>{t("contact-me.send-message")}</PrimaryButton>
+    <Button style="primary">{t("contact-me.send-message")}</Button>
   </form>
 </Section>

@@ -2,8 +2,7 @@
 import { FULL_NAME } from "../configuration/general.configuration";
 import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 import { useTranslations } from "../utilities/use-translations.utility";
-import PrimaryLink from "./PrimaryLink.astro";
-import SecondaryLink from "./SecondaryLink.astro";
+import Link from "./Link.astro";
 import Section from "./Section.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -33,7 +32,7 @@ const t = useTranslations(lang);
   <div
     class="flex tablet:justify-center mobile:mt-[24px] tablet:mt-[48px] gap-x-[30px]"
   >
-    <PrimaryLink href="#work">{t("hero.view-all-work")}</PrimaryLink>
-    <SecondaryLink href="#about-me">{t("hero.read-about-me")}</SecondaryLink>
+    <Link style="primary" href="#work">{t("hero.view-all-work")}</Link>
+    <Link style="secondary" href="#about-me">{t("hero.read-about-me")}</Link>
   </div>
 </Section>

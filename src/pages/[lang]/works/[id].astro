@@ -1,7 +1,6 @@
 ---
 import H2 from "../../../components/H2.astro";
 import Paragraph from "../../../components/Paragraph.astro";
-import SecondaryLink from "../../../components/SecondaryLink.astro";
 import Section from "../../../components/Section.astro";
 import Subheading from "../../../components/Subheading.astro";
 import Technology from "../../../components/Technology.astro";
@@ -11,8 +10,8 @@ import type { Work } from "../../../models/work.model";
 import { getLangFromUrl } from "../../../utilities/get-lang-from-url.utility";
 import { useTranslations } from "../../../utilities/use-translations.utility";
 import { LANGUAGES } from "../../../configuration/i18n.configuration";
-import PrimaryLink from "../../../components/PrimaryLink.astro";
 import { useTranslatedPath } from "../../../utilities/use-translated-path.utility";
+import Link from "../../../components/Link.astro";
 
 const { id } = Astro.params;
 const work: Work | undefined = WORKS.find((work) => work.id === id);
@@ -47,21 +46,21 @@ const t = useTranslations(lang);
     </Subheading>
 
     <div class="flex gap-[32px]">
-      {
-        work.links.site && (
-          <PrimaryLink target="_blank" href={work.links.site}>
-            {t("work.visit-site")}
-          </PrimaryLink>
-        )
-      }
+      <Link
+        style={work.links.site ? "primary" : "unavailable"}
+        target="_blank"
+        href={work.links.site}
+      >
+        {t("work.visit-site")}
+      </Link>
 
-      {
-        work.links.code && (
-          <SecondaryLink target="_blank" href={work.links.code}>
-            {t("work.view-code")}
-          </SecondaryLink>
-        )
-      }
+      <Link
+        style={work.links.code ? "secondary" : "unavailable"}
+        target="_blank"
+        href={work.links.code}
+      >
+        {t("work.view-code")}
+      </Link>
     </div>
   </Section>
 
@@ -163,7 +162,7 @@ const t = useTranslations(lang);
     </div>
   </Section>
 
-  <SecondaryLink class="w-full mt-[48px]" href={translatePath("/")}>
+  <Link style="secondary" class="w-full mt-[48px]" href={translatePath("/")}>
     {t("work.go-back")}
-  </SecondaryLink>
+  </Link>
 </Layout>

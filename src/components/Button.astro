@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"button"> {
+  class?: string;
+  style?: "primary" | "secondary" | "unavailable";
+}
+
+const { style = "primary", class: extraClass = "" } = Astro.props;
+---
+
+{
+  style === "primary" ? (
+    <button class={`clickable primary ${extraClass}`}>
+      <slot />
+    </button>
+  ) : style === "secondary" ? (
+    <button class={`clickable secondary ${extraClass}`}>
+      <slot />
+    </button>
+  ) : style === "unavailable" ? (
+    <button class={`clickable unavailable ${extraClass}`}>
+      <slot />
+    </button>
+  ) : null
+}

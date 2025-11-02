@@ -18,7 +18,7 @@
   --color-muted: #bdf8ff;
   --color-muted-strong: #7eb6ee;
   --color-paragraph: #e6e6e6;
-  --color-placeholder: #b3b3b3;
+  --color-placeholder: #737373;
   --color-primary-text: #ffffff;
 }
 
@@ -108,14 +108,17 @@ body {
   @apply active:scale-95 transition-transform duration-75 desktop:duration-200 ease-in-out desktop:hover:-translate-y-1 cursor-pointer;
 }
 
-.icon-wrapper svg {
-  @apply mobile:w-[69px] mobile:h-[69px] tablet:w-[94px] tablet:h-[94px];
-}
-
 .primary {
-  @apply font-poppins-semibold mobile:py-3 desktop:py-4 mobile:px-3 tablet:px-5 tablet:text-[20px] mobile:text-[16px] text-primary-text rounded-lg bg-[radial-gradient(circle_at_top,#FFB35D_0%,#FF8800_50%)] drop-shadow-2xl;
+  @apply font-poppins-semibold mobile:py-3 desktop:py-4 mobile:px-3 tablet:px-5 tablet:text-[20px] mobile:text-[16px] text-primary-text rounded-lg drop-shadow-2xl;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+    radial-gradient(circle at top, #FFB35D 0%, #FF8800 50%);
 }
 
 .secondary {
   @apply mobile:py-3 desktop:py-4 mobile:px-3 tablet:px-5 font-poppins-semibold text-primary-text mobile:text-[16px] tablet:text-[20px] rounded-lg bg-[#002E5D] border-[1px] border-[#0F4A7B] drop-shadow-2xl;
+}
+
+.unavailable {
+  @apply mobile:py-3 desktop:py-4 mobile:px-3 tablet:px-5 font-poppins-semibold text-primary-text mobile:text-[16px] tablet:text-[20px] rounded-lg bg-[#2D2D2D] border-[1px] border-[#404040] drop-shadow-2xl hover:translate-y-0 active:scale-100 opacity-50 hover:cursor-not-allowed;
 }

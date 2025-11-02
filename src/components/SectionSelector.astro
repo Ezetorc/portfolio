@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks.astro";
   const attachNavListeners = () => {
     const $nav = document.getElementById("nav");
     const $button = document.getElementById("nav-opener-button");
-    
+
     if (!$nav || !$button) return;
 
     const open = () => {
@@ -26,7 +26,7 @@ import NavLinks from "./NavLinks.astro";
           $nav.classList.remove("flex", "disappear-to-left");
           $nav.classList.add("hidden");
         },
-        { once: true }
+        { once: true },
       );
     };
 
@@ -53,9 +53,7 @@ import NavLinks from "./NavLinks.astro";
 
 <nav
   id="nav"
-  class="hidden desktop:hidden flex-col items-end absolute top-[72px] right-0 w-[clamp(280px,50%,560px)] h-[100dvh] bg-light-bg border-l-highlight border-l-[1px] p-6 gap-y-2"
+  class="hidden desktop:hidden flex-col items-end absolute top-[65px] right-0 w-[clamp(280px,50%,560px)] h-[100dvh] bg-light-bg border-l-highlight border-l-[1px] p-6 gap-y-2"
 >
   <NavLinks />
 </nav>
-
-

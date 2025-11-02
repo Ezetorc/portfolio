@@ -1,4 +1,5 @@
 import type { Language } from "../models/language.model";
+import { ENGLISH_LEVEL, YEARS_PROGRAMMING } from "./general.configuration";
 
 export const LANGUAGES = {
   en: "English",
@@ -20,7 +21,7 @@ export const DICTIONARY = {
     "footer.github.aria-label": "Ezetorc's Github",
     "footer.discord.aria-label": "Ezetorc's Discord",
     "hero.subtitle": "FullStack Developer",
-    "hero.description": "From Argentina with 2 years of experience.",
+    "hero.description": `From Argentina with ${YEARS_PROGRAMMING} years of experience`,
     "hero.view-all-work": "View work",
     "hero.read-about-me": "Read about me",
     "work.title": "Work",
@@ -45,7 +46,7 @@ export const DICTIONARY = {
 
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
-      "Social network to connect with other people and have a lot fun!",
+      "Social network to connect with other people and share opinions.",
     "work.vibe-network.detailed-description": `A social network project where users can create profiles, share posts,
       connect with others, and interact in real time.`,
     "work.vibe-network.overview.paragraph.1": `Full-stack social network showcasing skills in authentication, user management, and interactive features.`,
@@ -96,18 +97,18 @@ export const DICTIONARY = {
     "work.go-back": "Go Back",
     "about-me.title": "About Me",
     "about-me.paragraph.1":
-      "<strong>Full-stack</strong> developer from Argentina with <strong>2 years of experience</strong>.",
+      `<strong>Full-stack</strong> developer from Argentina with <strong>${YEARS_PROGRAMMING} years of experience</strong>.`,
     "about-me.paragraph.2":
       "Skilled in <strong>React and NodeJS</strong>, with hands-on expertise in building scalable applications and collaborating in team projects.",
-    "about-me.paragraph.3":
-      "Currently contributing to Biblioteca Code Cafe, an online library application, enhancing skills in <strong>teamwork</strong>, problem-solving, and delivering functional solutions.",
     "about-me.paragraph.4":
-      "Studying <strong>English at a B2 level</strong>, strengthening communication skills for international collaboration.",
-    "about-me.face-image.alt": "My Face",
+      "Currently contributing to Biblioteca Code Cafe, an online library application, enhancing skills in <strong>teamwork</strong>, problem-solving, and delivering functional solutions.",
+    "about-me.paragraph.3":
+      `Studying <strong>English at a ${ENGLISH_LEVEL} level</strong>, strengthening communication skills for international collaboration.`,
+    "about-me.face-image.alt": "Ezequías Torczuk's face",
     "about-me.argentine-flag-image.alt": "Argentine Flag",
     "technologies.title": "Technologies",
     "technologies.subtitle":
-      "Tools and technologies I rely on to build and grow my projects.",
+      "Tools and technologies I rely on.",
     "technology.html.description": "Markup Language",
     "technology.css.description": "Style Sheet Language",
     "technology.javascript.description": "Programming Language",
@@ -129,8 +130,6 @@ export const DICTIONARY = {
     "technology.zod.description": "Data Validation",
     "contact-me.title": "Contact Me",
     "contact-me.subtitle":
-      "Let's connect and create innovative solutions together.",
-    "contact-me.instructions":
       "Complete the form to send me a message via email or contact me directly by my Discord.",
     "contact-me.copy-email": "Copy Email",
     "contact-me.copy-discord": "Copy Discord",
@@ -150,7 +149,7 @@ export const DICTIONARY = {
     "footer.github.aria-label": "Github de Ezetorc",
     "footer.discord.aria-label": "Discord de Ezetorc",
     "hero.subtitle": "Desarrollador FullStack",
-    "hero.description": "De Argentina con 2 años de experiencia.",
+    "hero.description": `De Argentina con ${YEARS_PROGRAMMING} años de experiencia.`,
     "hero.view-all-work": "Ver proyectos",
     "hero.read-about-me": "Leer sobre mí",
     "work.title": "Proyectos",
@@ -174,7 +173,7 @@ export const DICTIONARY = {
 
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
-      "Red social para conectar con otros y divertirse mucho!",
+      "Red social para conectar con otros y compartir opiniones.",
     "work.vibe-network.detailed-description":
       "Un proyecto de red social donde los usuarios pueden crear perfiles, compartir publicaciones, conectarse con otros e interactuar en tiempo real.",
     "work.view-code": "Ver Código",
@@ -229,18 +228,18 @@ export const DICTIONARY = {
     "work.bolsillo-feliz.process.paragraph.3": `Desarrollé la gestión de gastos e ingresos (transacciones).`,
     "about-me.title": "Sobre mí",
     "about-me.paragraph.1":
-      "Desarrollador <strong>FullStack</strong> de Argentina con <strong>2 años de experiencia</strong>.",
+      `Desarrollador <strong>FullStack</strong> de Argentina con <strong>${YEARS_PROGRAMMING} años de experiencia</strong>.`,
     "about-me.paragraph.2":
       "Experto en <strong>React y NodeJS</strong>, con práctica en apps escalables y trabajo en equipo.",
-    "about-me.paragraph.3":
-      "Actualmente trabajando en Biblioteca Code Cafe, plataforma de biblioteca online, mejorando habilidades en <strong>equipo</strong>, resolución de problemas y entrega de soluciones.",
     "about-me.paragraph.4":
-      "Estudio <strong>inglés en nivel B2</strong>, reforzando la comunicación para colaborar internacionalmente.",
-    "about-me.face-image.alt": "Mi cara",
+      "Actualmente trabajando en Biblioteca Code Cafe, plataforma de biblioteca online, mejorando habilidades en <strong>equipo</strong>, resolución de problemas y entrega de soluciones.",
+    "about-me.paragraph.3":
+      `Estudio <strong>inglés en nivel ${ENGLISH_LEVEL}</strong>, reforzando la comunicación para colaborar internacionalmente.`,
+    "about-me.face-image.alt": "Cara de Ezequías Torczuk",
     "about-me.argentine-flag-image.alt": "Bandera de Argentina",
     "technologies.title": "Tecnologías",
     "technologies.subtitle":
-      "Herramientas y tecnologías que uso para crear y hacer crecer mis proyectos.",
+      "Herramientas y tecnologías que uso.",
     "technology.html.description": "Lenguaje de marcado",
     "technology.css.description": "Lenguaje de estilado",
     "technology.javascript.description": "Lenguaje de programación",
@@ -262,8 +261,6 @@ export const DICTIONARY = {
     "technology.zod.description": "Validación de datos",
     "contact-me.title": "Contáctame",
     "contact-me.subtitle":
-      "Conectemos y creemos soluciones innovadoras juntos.",
-    "contact-me.instructions":
       "Completa el formulario para enviarme un mensaje por correo o contáctame directo por Discord.",
     "contact-me.copy-email": "Copiar Email",
     "contact-me.copy-discord": "Copiar Discord",
