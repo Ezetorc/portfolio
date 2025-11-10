@@ -38,6 +38,7 @@ export const WORKS: Work[] = [
     },
     links: {
       code: "https://github.com/Ezetorc/bolsillo-feliz",
+      site: "https://bolsillo-feliz-hazel.vercel.app/login"
     },
   },
   {
