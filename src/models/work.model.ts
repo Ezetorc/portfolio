@@ -17,6 +17,6 @@ export type Work = {
   };
   links: {
     code: string;
-    site?: string
+    site: string | null | undefined
   };
 };

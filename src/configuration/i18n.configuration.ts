@@ -44,6 +44,18 @@ export const DICTIONARY = {
     "work.notievan.process.paragraph.3": "Completing Notievan in just two weeks taught me how to plan, prioritize, and adapt to real client needs — turning an idea into a polished and functional product.",
     "work.notievan.process.image.alt": "Notievan Article Page",
 
+    "work.torcscript.title": "TorcScript",
+    "work.torcscript.description": "My custom programming language designed for simplicity and readability.",
+    "work.torcscript.detailed-description": "A personal project focused on building an interpreted programming language from scratch, featuring its own lexer, parser, and interpreter, with an emphasis on human-readable syntax and developer experience.",
+    "work.torcscript.overview.paragraph.1": "TorcScript is a lightweight programming language built with clarity and expressiveness in mind, aiming to make code feel more natural and intuitive.",
+    "work.torcscript.overview.paragraph.2": "The language supports core features such as variables, functions, basic data types, and control flow, all implemented through a custom interpreter pipeline.",
+    "work.torcscript.overview.paragraph.3": "This project explores the fundamentals of language design, including tokenization, abstract syntax trees, and execution models, providing a deep understanding of how programming languages work internally.",
+    "work.torcscript.overview.image.alt": "TorcScript Code Example",
+    "work.torcscript.process.paragraph.1": "The development process involved building each stage of the language step by step — starting from the lexer, moving to the parser, and finally implementing the interpreter.",
+    "work.torcscript.process.paragraph.2": "Special attention was given to designing a clean and human-readable syntax, while maintaining a solid internal structure using AST representations.",
+    "work.torcscript.process.paragraph.3": "Working on TorcScript provided practical experience in interpreter theory concepts and reinforced skills in Rust, problem-solving, and system design.",
+    "work.torcscript.process.image.alt": "TorcScript Interpreter Output",
+
     "work.vibe-network.title": "Vibe Network",
     "work.vibe-network.description":
       "Social network to connect with other people and share opinions.",
@@ -119,6 +131,7 @@ export const DICTIONARY = {
     "technology.astro.description": "Frontend Framework",
     "technology.mysql.description": "Relational Database",
     "technology.nodejs.description": "Runtime Environment",
+    "technology.rust.description": "Programming Language",
     "technology.express.description": "Framework",
     "technology.nestjs.description": "Backend Framework",
     "technology.git.description": "Version Control",
@@ -157,6 +170,19 @@ export const DICTIONARY = {
     "work.visit-site": "Visitar sitio",
     "work.full-subtitle": "Todos mis proyectos",
 
+    "work.torcscript.title": "TorcScript",
+    "work.torcscript.description": "Mi propio lenguaje de programación diseñado con simplicidad y legibilidad.",
+    "work.torcscript.detailed-description": "Un proyecto personal enfocado en construir un lenguaje de programación interpretado desde cero, con su propio lexer, parser e intérprete, con énfasis en una sintaxis legible para humanos y una buena experiencia de desarrollo.",
+
+    "work.torcscript.overview.paragraph.1": "TorcScript es un lenguaje de programación liviano construido con claridad y expresividad en mente, buscando que el código se sienta más natural e intuitivo.",
+    "work.torcscript.overview.paragraph.2": "El lenguaje soporta características esenciales como variables, funciones, tipos de datos básicos y control de flujo, todo implementado mediante un pipeline de intérprete personalizado.",
+    "work.torcscript.overview.paragraph.3": "Este proyecto explora los fundamentos del diseño de lenguajes, incluyendo la tokenización, los árboles de sintaxis abstracta y los modelos de ejecución, proporcionando una comprensión profunda de cómo funcionan los lenguajes de programación internamente.",
+    "work.torcscript.overview.image.alt": "Ejemplo de código en TorcScript",
+
+    "work.torcscript.process.paragraph.1": "El proceso de desarrollo implicó construir cada etapa del lenguaje paso a paso — comenzando por el lexer, pasando al parser y finalmente implementando el intérprete.",
+    "work.torcscript.process.paragraph.2": "Se puso especial atención en diseñar una sintaxis limpia y legible para humanos, manteniendo al mismo tiempo una estructura interna sólida mediante representaciones AST.",
+    "work.torcscript.process.paragraph.3": "Trabajar en TorcScript brindó experiencia práctica en conceptos de teoría de intérpretes y reforzó habilidades en Rust, resolución de problemas y diseño de sistemas.",
+    "work.torcscript.process.image.alt": "Salida del intérprete de TorcScript",
 
     "work.notievan.title": "Notievan",
     "work.notievan.description": "El sitio web oficial del diario de mi escuela con artículos hechos por otros estudiantes.",
@@ -244,6 +270,7 @@ export const DICTIONARY = {
     "technology.css.description": "Lenguaje de estilado",
     "technology.javascript.description": "Lenguaje de programación",
     "technology.typescript.description": "Lenguaje de programación",
+    "technology.rust.description": "Lenguaje de programación",
     "technology.github.description": "Alojamiento de código",
     "technology.react.description": "Librería de interfaces",
     "technology.tailwind.description": "Librería de utilidades",

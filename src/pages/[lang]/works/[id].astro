@@ -46,13 +46,17 @@ const t = useTranslations(lang);
     </Subheading>
 
     <div class="flex gap-[32px]">
-      <Link
-        style={work.links.site ? "primary" : "unavailable"}
-        target="_blank"
-        href={work.links.site}
-      >
-        {t("work.visit-site")}
-      </Link>
+      {
+        work.links.site != null && (
+          <Link
+            style={work.links.site ? "primary" : "unavailable"}
+            target="_blank"
+            href={work.links.site}
+          >
+            {t("work.visit-site")}
+          </Link>
+        )
+      }
 
       <Link
         style={work.links.code ? "secondary" : "unavailable"}

@@ -14,6 +14,7 @@ import PostgreSQLIcon from "../components/icons/PostgreSQLIcon.astro";
 import PrismaIcon from "../components/icons/PrismaIcon.astro";
 import ReactIcon from "../components/icons/ReactIcon.astro";
 import RedisIcon from "../components/icons/RedisIcon.astro";
+import RustIcon from "../components/icons/RustIcon.astro";
 import TailwindIcon from "../components/icons/TailwindIcon.astro";
 import TypeScriptIcon from "../components/icons/TypeScriptIcon.astro";
 import ZodIcon from "../components/icons/ZodIcon.astro";
@@ -40,5 +41,6 @@ export const TECHNOLOGIES: {
   prisma: { name: "Prisma", icon: PrismaIcon },
   postgresql: { name: "PostgreSQL", icon: PostgreSQLIcon },
   cloudinary: { name: "Cloudinary", icon: CloudinaryIcon },
+  rust: { name: "Rust", icon: RustIcon },
   zod: { name: "Zod", icon: ZodIcon }
 };

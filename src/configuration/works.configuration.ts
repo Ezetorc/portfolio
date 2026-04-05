@@ -2,6 +2,22 @@ import type { Work } from "../models/work.model";
 
 export const WORKS: Work[] = [
   {
+    id: "torcscript",
+    images: {
+      icon: "/images/work/torcScript/icon.webp",
+      overview: "/images/work/torcScript/code-example-1.webp",
+      process: "/images/work/torcScript/code-example-2.webp",
+    },
+    technologies: ["rust"],
+colors: {
+  from: "#0891b2",
+  to: "#083344",
+},
+    links: {
+      code: "https://github.com/Ezetorc/torcscript",
+    },
+  },
+  {
     id: "notievan",
     images: {
       icon: "/images/work/notievan/icon.webp",
