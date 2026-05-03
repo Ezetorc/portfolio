@@ -2,6 +2,7 @@ import AstroIcon from "../components/icons/AstroIcon.astro";
 import CloudinaryIcon from "../components/icons/CloudinaryIcon.astro";
 import CSSIcon from "../components/icons/CSSIcon.astro";
 import DockerIcon from "../components/icons/DockerIcon.astro";
+import DrizzleIcon from "../components/icons/DrizzleIcon.astro";
 import ExpressIcon from "../components/icons/ExpressIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
 import GitIcon from "../components/icons/GitIcon.astro";
@@ -39,8 +40,9 @@ export const TECHNOLOGIES: {
   docker: { name: "Docker", icon: DockerIcon },
   redis: { name: "Redis", icon: RedisIcon },
   prisma: { name: "Prisma", icon: PrismaIcon },
+  drizzle: { name: "Drizzle", icon: DrizzleIcon },
   postgresql: { name: "PostgreSQL", icon: PostgreSQLIcon },
   cloudinary: { name: "Cloudinary", icon: CloudinaryIcon },
   rust: { name: "Rust", icon: RustIcon },
-  zod: { name: "Zod", icon: ZodIcon }
+  zod: { name: "Zod", icon: ZodIcon },
 };

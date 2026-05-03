@@ -7,7 +7,9 @@ export const LANGUAGES = {
 };
 
 const browserLanguage = navigator.language.split("-")[0];
-export const DEFAULT_LANGUAGE = Object.keys(LANGUAGES).includes(browserLanguage) ? browserLanguage as Language : "en"
+export const DEFAULT_LANGUAGE = Object.keys(LANGUAGES).includes(browserLanguage)
+  ? (browserLanguage as Language)
+  : "en";
 
 export const DICTIONARY = {
   en: {
@@ -33,27 +35,43 @@ export const DICTIONARY = {
     "work.full-subtitle": "All of my projects",
 
     "work.notievan.title": "Notievan",
-    "work.notievan.description": "My school's official newspaper website with articles made for others students.",
-    "work.notievan.detailed-description": "A real-world FullStack web app developed for my school's newspaper, designed to share news, stories, and events with the school community.",
-    "work.notievan.overview.paragraph.1": "Notievan is a complete web platform for managing and reading school news, built with a minimalist interface inspired by my school's colors.",
-    "work.notievan.overview.paragraph.2": "The system allows authorized users to create, edit, and delete articles, and users to read and comment on articles.",
-    "work.notievan.overview.paragraph.3": "Developed from scratch in just two weeks, this was a real commissioned project requested by a senior student — a genuine opportunity to bring someone's idea to life.",
+    "work.notievan.description":
+      "My school's official newspaper website with articles made for others students.",
+    "work.notievan.detailed-description":
+      "A real-world FullStack web app developed for my school's newspaper, designed to share news, stories, and events with the school community.",
+    "work.notievan.overview.paragraph.1":
+      "Notievan is a complete web platform for managing and reading school news, built with a minimalist interface inspired by my school's colors.",
+    "work.notievan.overview.paragraph.2":
+      "The system allows authorized users to create, edit, and delete articles, and users to read and comment on articles.",
+    "work.notievan.overview.paragraph.3":
+      "Developed from scratch in just two weeks, this was a real commissioned project requested by a senior student — a genuine opportunity to bring someone's idea to life.",
     "work.notievan.overview.image.alt": "Notievan Articles Page",
-    "work.notievan.process.paragraph.1": "This project marked my first experience delivering a real-world web app under time pressure. I had to handle everything — from UI design to backend logic and deployment.",
-    "work.notievan.process.paragraph.2": "During development, I implemented authentication, role management, and CRUD operations for articles using a NodeJS backend and a React frontend.",
-    "work.notievan.process.paragraph.3": "Completing Notievan in just two weeks taught me how to plan, prioritize, and adapt to real client needs — turning an idea into a polished and functional product.",
+    "work.notievan.process.paragraph.1":
+      "This project marked my first experience delivering a real-world web app under time pressure. I had to handle everything — from UI design to backend logic and deployment.",
+    "work.notievan.process.paragraph.2":
+      "During development, I implemented authentication, role management, and CRUD operations for articles using a NodeJS backend and a React frontend.",
+    "work.notievan.process.paragraph.3":
+      "Completing Notievan in just two weeks taught me how to plan, prioritize, and adapt to real client needs — turning an idea into a polished and functional product.",
     "work.notievan.process.image.alt": "Notievan Article Page",
 
     "work.torcscript.title": "TorcScript",
-    "work.torcscript.description": "My custom programming language designed for simplicity and readability.",
-    "work.torcscript.detailed-description": "A personal project focused on building an interpreted programming language from scratch, featuring its own lexer, parser, and interpreter, with an emphasis on human-readable syntax and developer experience.",
-    "work.torcscript.overview.paragraph.1": "TorcScript is a lightweight programming language built with clarity and expressiveness in mind, aiming to make code feel more natural and intuitive.",
-    "work.torcscript.overview.paragraph.2": "The language supports core features such as variables, functions, basic data types, and control flow, all implemented through a custom interpreter pipeline.",
-    "work.torcscript.overview.paragraph.3": "This project explores the fundamentals of language design, including tokenization, abstract syntax trees, and execution models, providing a deep understanding of how programming languages work internally.",
+    "work.torcscript.description":
+      "My custom programming language designed for simplicity and readability.",
+    "work.torcscript.detailed-description":
+      "A personal project focused on building an interpreted programming language from scratch, featuring its own lexer, parser, and interpreter, with an emphasis on human-readable syntax and developer experience.",
+    "work.torcscript.overview.paragraph.1":
+      "TorcScript is a lightweight programming language built with clarity and expressiveness in mind, aiming to make code feel more natural and intuitive.",
+    "work.torcscript.overview.paragraph.2":
+      "The language supports core features such as variables, functions, basic data types, and control flow, all implemented through a custom interpreter pipeline.",
+    "work.torcscript.overview.paragraph.3":
+      "This project explores the fundamentals of language design, including tokenization, abstract syntax trees, and execution models, providing a deep understanding of how programming languages work internally.",
     "work.torcscript.overview.image.alt": "TorcScript Code Example",
-    "work.torcscript.process.paragraph.1": "The development process involved building each stage of the language step by step — starting from the lexer, moving to the parser, and finally implementing the interpreter.",
-    "work.torcscript.process.paragraph.2": "Special attention was given to designing a clean and human-readable syntax, while maintaining a solid internal structure using AST representations.",
-    "work.torcscript.process.paragraph.3": "Working on TorcScript provided practical experience in interpreter theory concepts and reinforced skills in Rust, problem-solving, and system design.",
+    "work.torcscript.process.paragraph.1":
+      "The development process involved building each stage of the language step by step — starting from the lexer, moving to the parser, and finally implementing the interpreter.",
+    "work.torcscript.process.paragraph.2":
+      "Special attention was given to designing a clean and human-readable syntax, while maintaining a solid internal structure using AST representations.",
+    "work.torcscript.process.paragraph.3":
+      "Working on TorcScript provided practical experience in interpreter theory concepts and reinforced skills in Rust, problem-solving, and system design.",
     "work.torcscript.process.image.alt": "TorcScript Interpreter Output",
 
     "work.vibe-network.title": "Vibe Network",
@@ -108,19 +126,16 @@ export const DICTIONARY = {
     "work.process": "Process",
     "work.go-back": "Go Back",
     "about-me.title": "About Me",
-    "about-me.paragraph.1":
-      `<strong>Full-stack</strong> developer from Argentina with <strong>${YEARS_PROGRAMMING} years of experience</strong>.`,
+    "about-me.paragraph.1": `<strong>Full-stack</strong> developer from Argentina with <strong>${YEARS_PROGRAMMING} years of experience</strong>.`,
     "about-me.paragraph.2":
       "Skilled in <strong>React and NodeJS</strong>, with hands-on expertise in building scalable applications and collaborating in team projects.",
     "about-me.paragraph.4":
-      "Currently contributing to Biblioteca Code Cafe, an online library application, enhancing skills in <strong>teamwork</strong>, problem-solving, and delivering functional solutions.",
-    "about-me.paragraph.3":
-      `Studying <strong>English at a ${ENGLISH_LEVEL} level</strong>, strengthening communication skills for international collaboration.`,
+      "Currently expanding my knowledge in the Rust programming language, creating low-level mini projects.",
+    "about-me.paragraph.3": `Studying <strong>English at a ${ENGLISH_LEVEL} level</strong>, strengthening communication skills for international collaboration.`,
     "about-me.face-image.alt": "Ezequías Torczuk's face",
     "about-me.argentine-flag-image.alt": "Argentine Flag",
     "technologies.title": "Technologies",
-    "technologies.subtitle":
-      "Tools and technologies I rely on.",
+    "technologies.subtitle": "Tools and technologies I rely on.",
     "technology.html.description": "Markup Language",
     "technology.css.description": "Style Sheet Language",
     "technology.javascript.description": "Programming Language",
@@ -138,6 +153,7 @@ export const DICTIONARY = {
     "technology.docker.description": "Container Platform",
     "technology.redis.description": "In-memory cache",
     "technology.prisma.description": "Database ORM",
+    "technology.drizzle.description": "Database ORM",
     "technology.cloudinary.description": "Image Hosting",
     "technology.postgresql.description": "Relational Database",
     "technology.zod.description": "Data Validation",
@@ -171,29 +187,45 @@ export const DICTIONARY = {
     "work.full-subtitle": "Todos mis proyectos",
 
     "work.torcscript.title": "TorcScript",
-    "work.torcscript.description": "Mi propio lenguaje de programación diseñado con simplicidad y legibilidad.",
-    "work.torcscript.detailed-description": "Un proyecto personal enfocado en construir un lenguaje de programación interpretado desde cero, con su propio lexer, parser e intérprete, con énfasis en una sintaxis legible para humanos y una buena experiencia de desarrollo.",
+    "work.torcscript.description":
+      "Mi propio lenguaje de programación diseñado con simplicidad y legibilidad.",
+    "work.torcscript.detailed-description":
+      "Un proyecto personal enfocado en construir un lenguaje de programación interpretado desde cero, con su propio lexer, parser e intérprete, con énfasis en una sintaxis legible para humanos y una buena experiencia de desarrollo.",
 
-    "work.torcscript.overview.paragraph.1": "TorcScript es un lenguaje de programación liviano construido con claridad y expresividad en mente, buscando que el código se sienta más natural e intuitivo.",
-    "work.torcscript.overview.paragraph.2": "El lenguaje soporta características esenciales como variables, funciones, tipos de datos básicos y control de flujo, todo implementado mediante un pipeline de intérprete personalizado.",
-    "work.torcscript.overview.paragraph.3": "Este proyecto explora los fundamentos del diseño de lenguajes, incluyendo la tokenización, los árboles de sintaxis abstracta y los modelos de ejecución, proporcionando una comprensión profunda de cómo funcionan los lenguajes de programación internamente.",
+    "work.torcscript.overview.paragraph.1":
+      "TorcScript es un lenguaje de programación liviano construido con claridad y expresividad en mente, buscando que el código se sienta más natural e intuitivo.",
+    "work.torcscript.overview.paragraph.2":
+      "El lenguaje soporta características esenciales como variables, funciones, tipos de datos básicos y control de flujo, todo implementado mediante un pipeline de intérprete personalizado.",
+    "work.torcscript.overview.paragraph.3":
+      "Este proyecto explora los fundamentos del diseño de lenguajes, incluyendo la tokenización, los árboles de sintaxis abstracta y los modelos de ejecución, proporcionando una comprensión profunda de cómo funcionan los lenguajes de programación internamente.",
     "work.torcscript.overview.image.alt": "Ejemplo de código en TorcScript",
 
-    "work.torcscript.process.paragraph.1": "El proceso de desarrollo implicó construir cada etapa del lenguaje paso a paso — comenzando por el lexer, pasando al parser y finalmente implementando el intérprete.",
-    "work.torcscript.process.paragraph.2": "Se puso especial atención en diseñar una sintaxis limpia y legible para humanos, manteniendo al mismo tiempo una estructura interna sólida mediante representaciones AST.",
-    "work.torcscript.process.paragraph.3": "Trabajar en TorcScript brindó experiencia práctica en conceptos de teoría de intérpretes y reforzó habilidades en Rust, resolución de problemas y diseño de sistemas.",
+    "work.torcscript.process.paragraph.1":
+      "El proceso de desarrollo implicó construir cada etapa del lenguaje paso a paso — comenzando por el lexer, pasando al parser y finalmente implementando el intérprete.",
+    "work.torcscript.process.paragraph.2":
+      "Se puso especial atención en diseñar una sintaxis limpia y legible para humanos, manteniendo al mismo tiempo una estructura interna sólida mediante representaciones AST.",
+    "work.torcscript.process.paragraph.3":
+      "Trabajar en TorcScript brindó experiencia práctica en conceptos de teoría de intérpretes y reforzó habilidades en Rust, resolución de problemas y diseño de sistemas.",
     "work.torcscript.process.image.alt": "Salida del intérprete de TorcScript",
 
     "work.notievan.title": "Notievan",
-    "work.notievan.description": "El sitio web oficial del diario de mi escuela con artículos hechos por otros estudiantes.",
-    "work.notievan.detailed-description": "Una aplicación web FullStack desarrollada para el diario de mi escuela, creada para compartir noticias, historias y eventos con toda la comunidad escolar.",
-    "work.notievan.overview.paragraph.1": "Notievan es una plataforma completa para gestionar y leer noticias escolares, con un diseño minimalista inspirado en los colores de mi escuela.",
-    "work.notievan.overview.paragraph.2": "El sistema permite a los usuarios autorizados crear, editar y eliminar artículos, y los usuarios pueden leer y comentar en los artículos.",
-    "work.notievan.overview.paragraph.3": "Desarrollado desde cero en solo dos semanas, fue un proyecto real encargado por una estudiante de sexto año — una oportunidad de transformar una idea en un producto funcional.",
+    "work.notievan.description":
+      "El sitio web oficial del diario de mi escuela con artículos hechos por otros estudiantes.",
+    "work.notievan.detailed-description":
+      "Una aplicación web FullStack desarrollada para el diario de mi escuela, creada para compartir noticias, historias y eventos con toda la comunidad escolar.",
+    "work.notievan.overview.paragraph.1":
+      "Notievan es una plataforma completa para gestionar y leer noticias escolares, con un diseño minimalista inspirado en los colores de mi escuela.",
+    "work.notievan.overview.paragraph.2":
+      "El sistema permite a los usuarios autorizados crear, editar y eliminar artículos, y los usuarios pueden leer y comentar en los artículos.",
+    "work.notievan.overview.paragraph.3":
+      "Desarrollado desde cero en solo dos semanas, fue un proyecto real encargado por una estudiante de sexto año — una oportunidad de transformar una idea en un producto funcional.",
     "work.notievan.overview.image.alt": "Página de artículos de Notievan",
-    "work.notievan.process.paragraph.1": "Este proyecto marcó mi primera experiencia entregando una aplicación web real bajo presión de tiempo. Tuve que encargarme de todo — desde el diseño de la interfaz hasta la lógica del backend y el despliegue.",
-    "work.notievan.process.paragraph.2": "Durante el desarrollo implementé autenticación, gestión de roles y operaciones CRUD para los artículos, utilizando un backend en Node.js y un frontend en React.",
-    "work.notievan.process.paragraph.3": "Completar Notievan en solo dos semanas me enseñó a planificar, priorizar y adaptarme a las necesidades reales de un cliente — convirtiendo una idea en un producto completo y pulido.",
+    "work.notievan.process.paragraph.1":
+      "Este proyecto marcó mi primera experiencia entregando una aplicación web real bajo presión de tiempo. Tuve que encargarme de todo — desde el diseño de la interfaz hasta la lógica del backend y el despliegue.",
+    "work.notievan.process.paragraph.2":
+      "Durante el desarrollo implementé autenticación, gestión de roles y operaciones CRUD para los artículos, utilizando un backend en Node.js y un frontend en React.",
+    "work.notievan.process.paragraph.3":
+      "Completar Notievan en solo dos semanas me enseñó a planificar, priorizar y adaptarme a las necesidades reales de un cliente — convirtiendo una idea en un producto completo y pulido.",
     "work.notievan.process.image.alt": "Página de artículo de Notievan",
     "work.view-all-work": "Ver todo",
 
@@ -253,19 +285,16 @@ export const DICTIONARY = {
     "work.bolsillo-feliz.process.paragraph.2": `Configuré autenticación JWT para gestionar la autorización de los usuarios de manera segura.`,
     "work.bolsillo-feliz.process.paragraph.3": `Desarrollé la gestión de gastos e ingresos (transacciones).`,
     "about-me.title": "Sobre mí",
-    "about-me.paragraph.1":
-      `Desarrollador <strong>FullStack</strong> de Argentina con <strong>${YEARS_PROGRAMMING} años de experiencia</strong>.`,
+    "about-me.paragraph.1": `Desarrollador <strong>FullStack</strong> de Argentina con <strong>${YEARS_PROGRAMMING} años de experiencia</strong>.`,
     "about-me.paragraph.2":
       "Experto en <strong>React y NodeJS</strong>, con práctica en apps escalables y trabajo en equipo.",
     "about-me.paragraph.4":
-      "Actualmente trabajando en Biblioteca Code Cafe, plataforma de biblioteca online, mejorando habilidades en <strong>equipo</strong>, resolución de problemas y entrega de soluciones.",
-    "about-me.paragraph.3":
-      `Estudio <strong>inglés en nivel ${ENGLISH_LEVEL}</strong>, reforzando la comunicación para colaborar internacionalmente.`,
+      "Actualmente ampliando conocimientos en el lenguaje de programación Rust, creando mini proyectos de más bajo nivel.",
+    "about-me.paragraph.3": `Estudio <strong>inglés en nivel ${ENGLISH_LEVEL}</strong>, reforzando la comunicación para colaborar internacionalmente.`,
     "about-me.face-image.alt": "Cara de Ezequías Torczuk",
     "about-me.argentine-flag-image.alt": "Bandera de Argentina",
     "technologies.title": "Tecnologías",
-    "technologies.subtitle":
-      "Herramientas y tecnologías que uso.",
+    "technologies.subtitle": "Herramientas y tecnologías que uso.",
     "technology.html.description": "Lenguaje de marcado",
     "technology.css.description": "Lenguaje de estilado",
     "technology.javascript.description": "Lenguaje de programación",
@@ -283,6 +312,7 @@ export const DICTIONARY = {
     "technology.docker.description": "Plataforma de contenedores",
     "technology.redis.description": "Cache en memoria",
     "technology.prisma.description": "ORM para bases de datos",
+    "technology.drizzle.description": "ORM para bases de datos",
     "technology.cloudinary.description": "Plataforma de hosting de imágenes",
     "technology.postgresql.description": "Base de datos relacional",
     "technology.zod.description": "Validación de datos",

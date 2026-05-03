@@ -9,10 +9,10 @@ export const WORKS: Work[] = [
       process: "/images/work/torcScript/code-example-2.webp",
     },
     technologies: ["rust"],
-colors: {
-  from: "#0891b2",
-  to: "#083344",
-},
+    colors: {
+      from: "#0891b2",
+      to: "#083344",
+    },
     links: {
       code: "https://github.com/Ezetorc/torcscript",
     },
@@ -26,7 +26,15 @@ colors: {
     },
     technologies: {
       frontend: ["html", "css", "typescript", "react", "tailwind", "zod"],
-      backend: ["typescript", "nodejs", "express", "prisma", "postgresql", "cloudinary", "zod"],
+      backend: [
+        "typescript",
+        "nodejs",
+        "express",
+        "drizzle",
+        "postgresql",
+        "cloudinary",
+        "zod",
+      ],
     },
     colors: {
       from: "#1447e6",
@@ -34,7 +42,7 @@ colors: {
     },
     links: {
       code: "https://github.com/Ezetorc/notievan",
-      site: "https://notievan.vercel.app"
+      site: "https://notievan.vercel.app",
     },
   },
   {
@@ -54,7 +62,6 @@ colors: {
     },
     links: {
       code: "https://github.com/Ezetorc/bolsillo-feliz",
-      site: "https://bolsillo-feliz-hazel.vercel.app/login"
     },
   },
   {
@@ -74,28 +81,6 @@ colors: {
     },
     links: {
       code: "https://github.com/Ezetorc/vibe-frontend",
-    },
-  },
-  {
-    id: "cinetro-backend",
-    images: {
-      icon: "/images/work/cinetroBackend/icon.webp"
-    },
-    technologies: [
-      "nodejs",
-      "nestjs",
-      "typescript",
-      "mysql",
-      "docker",
-      "prisma",
-      "redis",
-    ],
-    colors: {
-      from: "#D33F3F",
-      to: "#681313",
-    },
-    links: {
-      code: "https://github.com/Ezetorc/cinetro-backend",
     },
   },
 ];
