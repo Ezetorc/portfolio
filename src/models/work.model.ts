@@ -1,3 +1,5 @@
+import type { TechnologyId } from "../configuration/technologies.configuration";
+
 export type Work = {
   id: string;
   images: {
@@ -7,10 +9,10 @@ export type Work = {
   };
   technologies:
     | {
-        frontend: string[];
-        backend: string[];
+        frontend: TechnologyId[];
+        backend: TechnologyId[];
       }
-    | string[];
+    | TechnologyId[];
   colors: {
     from: string;
     to: string;

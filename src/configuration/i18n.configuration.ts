@@ -40,16 +40,16 @@ export const DICTIONARY = {
     "work.notievan.detailed-description":
       "A real-world FullStack web app developed for my school's newspaper, designed to share news, stories, and events with the school community.",
     "work.notievan.overview.paragraph.1":
-      "Notievan is a complete web platform for managing and reading school news, built with a minimalist interface inspired by my school's colors.",
+      "Notievan is a complete web platform for managing and reading school news.",
     "work.notievan.overview.paragraph.2":
       "The system allows authorized users to create, edit, and delete articles, and users to read and comment on articles.",
     "work.notievan.overview.paragraph.3":
-      "Developed from scratch in just two weeks, this was a real commissioned project requested by a senior student — a genuine opportunity to bring someone's idea to life.",
+      "Initially developed from scratch in just two weeks, this was a real commissioned project requested by a senior student — a genuine opportunity to bring someone's idea to life.",
     "work.notievan.overview.image.alt": "Notievan Articles Page",
     "work.notievan.process.paragraph.1":
       "This project marked my first experience delivering a real-world web app under time pressure. I had to handle everything — from UI design to backend logic and deployment.",
     "work.notievan.process.paragraph.2":
-      "During development, I implemented authentication, role management, and CRUD operations for articles using a NodeJS backend and a React frontend.",
+      "During development, I implemented authentication, role management, and CRUD operations for articles using a NodeJS backend and a React frontend. Then I migrated to SvelteKit for the entire project.",
     "work.notievan.process.paragraph.3":
       "Completing Notievan in just two weeks taught me how to plan, prioritize, and adapt to real client needs — turning an idea into a polished and functional product.",
     "work.notievan.process.image.alt": "Notievan Article Page",
@@ -104,23 +104,6 @@ export const DICTIONARY = {
     "work.bolsillo-feliz.process.paragraph.1": `Implemented a modular and maintainable architecture with Node.js and Express, connecting Prisma ORM to a MySQL database for reliable data management.`,
     "work.bolsillo-feliz.process.paragraph.2": `Configured JWT authentication to manage user authorization securely.`,
     "work.bolsillo-feliz.process.paragraph.3": `Developed expenses and incomes (transactions) management.`,
-    "work.cinetro-backend.title": "Cinetro Backend",
-    "work.cinetro-backend.description":
-      "Backend application for cinema management.",
-    "work.cinetro-backend.detailed-description":
-      "Scalable backend designed to manage a cinema CRUD system with features like ABAC system, JWT authentication, Redis caching, and Swagger documentation, all containerized with Docker.",
-    "work.cinetro-backend.overview.paragraph.1":
-      "Developing this backend strengthened my understanding of scalable architectures, database modeling, and backend design patterns.",
-    "work.cinetro-backend.overview.paragraph.2":
-      "I learned to integrate tools like Swagger for API documentation, Redis for caching, and Docker for consistent development environments.",
-    "work.cinetro-backend.overview.paragraph.3":
-      "Building a flexible ABAC-based role system deepened my knowledge of security and access control in real-world applications.",
-    "work.cinetro-backend.process.paragraph.1":
-      "I implemented a modular architecture in NestJS, connecting Prisma ORM with MySQL for reliable data management.",
-    "work.cinetro-backend.process.paragraph.2":
-      "I configured JWT authentication and a custom ABAC role system to manage detailed permissions across different user types.",
-    "work.cinetro-backend.process.paragraph.3":
-      "I integrated Redis for caching and performance optimization, with the entire application containerized in Docker for easy deployment.",
     "work.frontend": "Frontend",
     "work.backend": "Backend",
     "work.process": "Process",
@@ -151,12 +134,13 @@ export const DICTIONARY = {
     "technology.nestjs.description": "Backend Framework",
     "technology.git.description": "Version Control",
     "technology.docker.description": "Container Platform",
-    "technology.redis.description": "In-memory cache",
     "technology.prisma.description": "Database ORM",
     "technology.drizzle.description": "Database ORM",
     "technology.cloudinary.description": "Image Hosting",
     "technology.postgresql.description": "Relational Database",
     "technology.zod.description": "Data Validation",
+    "technology.sveltekit.description": "FullStack Framework",
+    "technology.bun.description": "Runtime Environment",
     "contact-me.title": "Contact Me",
     "contact-me.subtitle":
       "Complete the form to send me a message via email or contact me directly by my Discord.",
@@ -212,18 +196,18 @@ export const DICTIONARY = {
     "work.notievan.description":
       "El sitio web oficial del diario de mi escuela con artículos hechos por otros estudiantes.",
     "work.notievan.detailed-description":
-      "Una aplicación web FullStack desarrollada para el diario de mi escuela, creada para compartir noticias, historias y eventos con toda la comunidad escolar.",
+      "Una aplicación web FullStack desarrollada para el diario de mi escuela.",
     "work.notievan.overview.paragraph.1":
       "Notievan es una plataforma completa para gestionar y leer noticias escolares, con un diseño minimalista inspirado en los colores de mi escuela.",
     "work.notievan.overview.paragraph.2":
       "El sistema permite a los usuarios autorizados crear, editar y eliminar artículos, y los usuarios pueden leer y comentar en los artículos.",
     "work.notievan.overview.paragraph.3":
-      "Desarrollado desde cero en solo dos semanas, fue un proyecto real encargado por una estudiante de sexto año — una oportunidad de transformar una idea en un producto funcional.",
+      "Lanzado inicialmente en solo dos semanas, fue un proyecto real encargado por una estudiante de sexto año — una oportunidad de transformar una idea en un producto funcional.",
     "work.notievan.overview.image.alt": "Página de artículos de Notievan",
     "work.notievan.process.paragraph.1":
       "Este proyecto marcó mi primera experiencia entregando una aplicación web real bajo presión de tiempo. Tuve que encargarme de todo — desde el diseño de la interfaz hasta la lógica del backend y el despliegue.",
     "work.notievan.process.paragraph.2":
-      "Durante el desarrollo implementé autenticación, gestión de roles y operaciones CRUD para los artículos, utilizando un backend en Node.js y un frontend en React.",
+      "Pasó por distintos grupos de tecnologías, y actualmente usa SvelteKit para todo en lugar de dividir las carpetas del proyecto entre frontend y backend.",
     "work.notievan.process.paragraph.3":
       "Completar Notievan en solo dos semanas me enseñó a planificar, priorizar y adaptarme a las necesidades reales de un cliente — convirtiendo una idea en un producto completo y pulido.",
     "work.notievan.process.image.alt": "Página de artículo de Notievan",
@@ -256,20 +240,6 @@ export const DICTIONARY = {
     "work.vibe-network.overview.paragraph.3":
       "Este fue mi primer proyecto FullStack.",
     "work.go-back": "Volver",
-    "work.cinetro-backend.title": "Cinetro Backend",
-    "work.cinetro-backend.description":
-      "Aplicación backend para la gestión de cines.",
-    "work.cinetro-backend.detailed-description": `Backend escalable diseñado para gestionar todos los aspectos clave de un sistema de cine con un sistema de control de acceso basado en roles ABAC, autenticación JWT, cache con Redis y documentación con Swagger, todo containerizado con Docker.`,
-    "work.cinetro-backend.overview.paragraph.1": `Desarrollar este backend fortaleció mi comprensión de arquitecturas escalables, modelado de bases de datos y patrones de diseño backend.`,
-    "work.cinetro-backend.overview.paragraph.2": `Aprendí a integrar herramientas como Swagger para documentación de APIs, Redis para cache y Docker para entornos de desarrollo consistentes.`,
-    "work.cinetro-backend.overview.paragraph.3": `Construir un sistema de roles flexible basado en ABAC profundizó mi conocimiento sobre seguridad y control de acceso en aplicaciones reales.`,
-    "work.cinetro-backend.overview.image.alt":
-      "Diagrama de arquitectura de la API de Cinetro",
-    "work.cinetro-backend.process.image.alt":
-      "Documentación Swagger del backend de Cinetro",
-    "work.cinetro-backend.process.paragraph.1": `Implementé una arquitectura modular en NestJS, conectando Prisma ORM con MySQL para una gestión confiable de datos.`,
-    "work.cinetro-backend.process.paragraph.2": `Configuré autenticación JWT y un sistema de roles ABAC personalizado para gestionar permisos detallados entre diferentes tipos de usuarios.`,
-    "work.cinetro-backend.process.paragraph.3": `Integré Redis para caching y optimización de rendimiento, con toda la aplicación containerizada en Docker para un despliegue sencillo.`,
     "work.bolsillo-feliz.title": "Bolsillo Feliz",
     "work.bolsillo-feliz.description":
       "Aplicación web para gestionar tus ingresos y gastos.",
@@ -310,12 +280,13 @@ export const DICTIONARY = {
     "technology.nestjs.description": "Framework de backend",
     "technology.git.description": "Control de versiones",
     "technology.docker.description": "Plataforma de contenedores",
-    "technology.redis.description": "Cache en memoria",
     "technology.prisma.description": "ORM para bases de datos",
     "technology.drizzle.description": "ORM para bases de datos",
     "technology.cloudinary.description": "Plataforma de hosting de imágenes",
     "technology.postgresql.description": "Base de datos relacional",
     "technology.zod.description": "Validación de datos",
+    "technology.sveltekit.description": "Framework FullStack",
+    "technology.bun.description": "Entorno de ejecución",
     "contact-me.title": "Contáctame",
     "contact-me.subtitle":
       "Completa el formulario para enviarme un mensaje por correo o contáctame directo por Discord.",

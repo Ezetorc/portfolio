@@ -24,18 +24,7 @@ export const WORKS: Work[] = [
       overview: "/images/work/notievan/articles-page.webp",
       process: "/images/work/notievan/article-page.webp",
     },
-    technologies: {
-      frontend: ["html", "css", "typescript", "react", "tailwind", "zod"],
-      backend: [
-        "typescript",
-        "nodejs",
-        "express",
-        "drizzle",
-        "postgresql",
-        "cloudinary",
-        "zod",
-      ],
-    },
+    technologies: ["sveltekit", "tailwind", "typescript", "zod", "bun", "drizzle", "postgresql", "cloudinary"],
     colors: {
       from: "#1447e6",
       to: "#041342",

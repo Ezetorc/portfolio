@@ -1,10 +1,10 @@
 ---
-import { TECHNOLOGIES } from "../configuration/technologies.configuration";
+import { TECHNOLOGIES, type TechnologyId } from "../configuration/technologies.configuration";
 import { getLangFromUrl } from "../utilities/get-lang-from-url.utility";
 import { useTranslations } from "../utilities/use-translations.utility";
 
 interface Props {
-  id: string;
+  id: TechnologyId;
 }
 
 const { id } = Astro.props;
