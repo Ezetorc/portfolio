@@ -3,6 +3,8 @@ import { m } from '$i18n/messages'
 import H2 from '$lib/components/H2.svelte'
 import Paragraph from '$lib/components/Paragraph.svelte'
 import Section from '$lib/components/Section.svelte'
+import profilePictureImage from '$lib/assets/images/about-me/profile-picture.webp'
+import argentineFlagImage from '$lib/assets/images/about-me/argentine-flag.webp'
 import {
 	ENGLISH_LEVEL,
 	YEARS_PROGRAMMING
@@ -32,7 +34,7 @@ import {
 
         <div class="relative flex items-end justify-end">
             <img
-                src="src/lib/assets/images/about-me/profile-picture.webp"
+                src={profilePictureImage}
                 class="rounded-default w-47.5 tablet:w-68.75 aspect-square absolute z-10 tablet:-translate-x-[clamp(100px,10vw,176px)] -translate-y-14 drop-shadow-2xl mobile:-translate-x-25"
                 alt={m["about-me_face-image"]()}
                 decoding="async"
@@ -40,7 +42,7 @@ import {
             />
 
             <img
-                src="src/lib/assets/images/about-me/argentine-flag.webp"
+                src={argentineFlagImage}
                 class="rounded-default w-47.5 tablet:w-68.75 aspect-square relative z-0"
                 alt={m["about-me_argentine-flag"]()}
                 decoding="async"
