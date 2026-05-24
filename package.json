@@ -1,20 +1,32 @@
 {
-  "name": "portfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev --host",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.15.2",
-    "tailwindcss": "^4.1.13",
-    "toastify-js": "^1.12.0"
-  },
-  "devDependencies": {
-    "@types/toastify-js": "^1.12.4"
-  }
+	"name": "new-portfolio",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "bunx biome check --write",
+		"machine-translate": "inlang machine translate --project project.inlang"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.15",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@tailwindcss/vite": "^4.2.2",
+		"svelte": "^5.55.2",
+		"svelte-check": "^4.4.6",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.7",
+		"@inlang/paraglide-js": "^2.18.1",
+		"@inlang/cli": "^3.0.0"
+	},
+	"dependencies": {
+		"@sveltejs/adapter-vercel": "^6.3.3",
+		"svelte-sonner": "^1.1.1"
+	}
 }
