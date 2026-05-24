@@ -1,6 +1,6 @@
 <script lang="ts">
 import { m } from '$i18n/messages'
-    import { localizeHref } from '$i18n/runtime';
+import { localizeHref } from '$i18n/runtime'
 import H2 from '$lib/components/H2.svelte'
 import Link from '$lib/components/Link.svelte'
 import Section from '$lib/components/Section.svelte'

@@ -1,7 +1,7 @@
 <script lang="ts">
 import { page } from '$app/state'
 import { m } from '$i18n/messages'
-    import { localizeHref } from '$i18n/runtime';
+import { localizeHref } from '$i18n/runtime'
 import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte'
 import HeaderLink from './HeaderLink.svelte'
 import LanguageSelector from './LanguageSelector.svelte'

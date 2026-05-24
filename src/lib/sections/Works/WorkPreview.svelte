@@ -1,6 +1,6 @@
 <script lang="ts">
 import { m } from '$i18n/messages'
-    import { localizeHref } from '$i18n/runtime';
+import { localizeHref } from '$i18n/runtime'
 import type { Work } from '$lib/models/work.model'
 import { getMessage } from '$lib/utilities/get-message.utility'
 

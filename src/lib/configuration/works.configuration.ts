@@ -1,12 +1,24 @@
+import bolsilloFelizIcon from '$lib/assets/images/work/bolsillo-feliz/icon.webp'
+import bolsilloFelizOverviewImage from '$lib/assets/images/work/bolsillo-feliz/overview.webp'
+import bolsilloFelizProcessImage from '$lib/assets/images/work/bolsillo-feliz/process.webp'
+import notievanIcon from '$lib/assets/images/work/notievan/icon.webp'
+import notievanOverviewImage from '$lib/assets/images/work/notievan/overview.webp'
+import notievanProcessImage from '$lib/assets/images/work/notievan/process.webp'
+import torcscriptIcon from '$lib/assets/images/work/torcscript/icon.webp'
+import torcscriptOverviewImage from '$lib/assets/images/work/torcscript/overview.webp'
+import torcscriptProcessImage from '$lib/assets/images/work/torcscript/process.webp'
+import vibeIcon from '$lib/assets/images/work/vibe/icon.webp'
+import vibeOverviewImage from '$lib/assets/images/work/vibe/overview.webp'
+import vibeProcessImage from '$lib/assets/images/work/vibe/process.webp'
 import type { Work } from '$lib/models/work.model'
 
 export const WORKS: Work[] = [
 	{
 		id: 'torcscript',
 		images: {
-			icon: '/src/lib/assets/images/work/torcscript/icon.webp',
-			overview: '/src/lib/assets/images/work/torcscript/code-example-1.webp',
-			process: '/src/lib/assets/images/work/torcscript/code-example-2.webp'
+			icon: torcscriptIcon,
+			overview: torcscriptOverviewImage,
+			process: torcscriptProcessImage
 		},
 		technologies: ['rust'],
 		colors: {
@@ -20,9 +32,9 @@ export const WORKS: Work[] = [
 	{
 		id: 'notievan',
 		images: {
-			icon: '/src/lib/assets/images/work/notievan/icon.webp',
-			overview: '/src/lib/assets/images/work/notievan/articles-page.webp',
-			process: '/src/lib/assets/images/work/notievan/article-page.webp'
+			icon: notievanIcon,
+			overview: notievanOverviewImage,
+			process: notievanProcessImage
 		},
 		technologies: [
 			'sveltekit',
@@ -46,11 +58,9 @@ export const WORKS: Work[] = [
 	{
 		id: 'bolsillo-feliz',
 		images: {
-			icon: '/src/lib/assets/images/work/bolsillo-feliz/icon.webp',
-			overview:
-				'/src/lib/assets/images/work/bolsillo-feliz/dashboard-page.webp',
-			process:
-				'/src/lib/assets/images/work/bolsillo-feliz/transactions-page.webp'
+			icon: bolsilloFelizIcon,
+			overview: bolsilloFelizOverviewImage,
+			process: bolsilloFelizProcessImage
 		},
 		technologies: {
 			frontend: ['html', 'css', 'typescript', 'react'],
@@ -67,9 +77,9 @@ export const WORKS: Work[] = [
 	{
 		id: 'vibe',
 		images: {
-			icon: '/src/lib/assets/images/work/vibe/icon.webp',
-			overview: '/src/lib/assets/images/work/vibe/register-page.webp',
-			process: '/src/lib/assets/images/work/vibe/posts-page.webp'
+			icon: vibeIcon,
+			overview: vibeOverviewImage,
+			process: vibeProcessImage
 		},
 		technologies: {
 			frontend: ['html', 'css', 'typescript', 'react'],
